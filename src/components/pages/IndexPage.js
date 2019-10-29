@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-import PLayButton from "../shared/PlayButton";
 import styled from "styled-components";
 import headerImage from "../../assets/Radio-1.jpg";
 import { theme } from "../shared/theme";
 import { Container } from "../shared/Container";
 import PlayButton from "../shared/PlayButton";
+import DownloadMpThreeButton from "../shared/DwnMpButton";
 
 export default class IndexPage extends Component {
   render() {
@@ -15,11 +15,16 @@ export default class IndexPage extends Component {
           <Container>
             <Fade left cascade>
               <HeaderText>
-                <h1 id="radio">Radio </h1> <h1 id="city">Tomislavgrad</h1>
+                <h1 id='radio'>Radio </h1> <h1 id='city'>Tomislavgrad</h1>
                 <h4>95.1,95.9 i 103.3Mhz</h4>
               </HeaderText>
             </Fade>
-            <PlayButton />
+            <Fade bottom cascade delay='1000'>
+              <ButtonContainer>
+                <PlayButton />
+                <DownloadMpThreeButton />
+              </ButtonContainer>
+            </Fade>
           </Container>
         </HeaderOverlay>
       </HeaderImage>
@@ -48,6 +53,11 @@ const HeaderOverlay = styled.div`
   align-items: center;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const HeaderText = styled.div`
   color: #fff;
   h1 {
@@ -63,7 +73,7 @@ const HeaderText = styled.div`
 
   h4 {
     font-size: ${theme.h4};
-    padding-top: 50px;
+    padding-top: 40px;
     font-weight: 100;
     letter-spacing: 15px;
   }
