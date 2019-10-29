@@ -6,10 +6,12 @@ export const theme = {
   colorDarkerBck: "#F1EBD2",
   colorFont: "#303030",
   //font size
-  h1: "6.7rem",
-  h2: "5rem",
-  h3: "3.7rem",
-  h4: "2.8rem",
-  h5: "2.1rem",
-  p: "1.2rem"
+  h1: "4.5rem",
+  h2: "4rem",
+  h3: "3.2rem",
+  h4: "2.4rem",
+  h5: "1.8rem",
+  p: "1.1rem",
+  //different sizes
+  mainContainerWeb: "1600px"
 };
