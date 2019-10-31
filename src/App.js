@@ -16,31 +16,31 @@ class App extends Component {
       <Router>
         <NavBar>
           <NavContainer>
-            <Link to='/'>
-              <img src={Logo} alt='logo' />
+            <Link to="/">
+              <img src={Logo} alt="logo" />
             </Link>
 
             <ul>
               <li>
-                <Link to='/'>Pocetna</Link>
+                <Link to="/">Pocetna</Link>
               </li>
               <li>
-                <Link to='/arhiva'>Arhiva</Link>
+                <Link to="/arhiva">Arhiva</Link>
               </li>
               <li>
-                <Link to='/marketing'>Marketing</Link>
+                <Link to="/marketing">Marketing</Link>
               </li>
               <li>
-                <Link to='/kontakt'>Kontakt</Link>
+                <Link to="/kontakt">Kontakt</Link>
               </li>
             </ul>
           </NavContainer>
         </NavBar>
         <Switch>
-          <Route exact path='/' component={IndexPage}></Route>
-          <Route path='/arhiva' component={ArchivePage}></Route>
-          <Route path='/marketing' component={MarketingPage}></Route>
-          <Route path='/kontakt' component={ContactPage}></Route>
+          <Route exact path="/" component={IndexPage}></Route>
+          <Route path="/arhiva" component={ArchivePage}></Route>
+          <Route path="/marketing" component={MarketingPage}></Route>
+          <Route path="/kontakt" component={ContactPage}></Route>
         </Switch>
       </Router>
     );
@@ -80,8 +80,17 @@ const NavContainer = styled.div`
       }
     }
   }
+  @media ${device.tablet} {
+    max-width: 600px;
+  }
   @media ${device.laptop} {
     max-width: 1200px;
+  }
+  @media ${device.laptopL} {
+    max-width: 1600px;
+  }
+  @media ${device.desktop} {
+    min-width: 1600px;
   }
 `;
 

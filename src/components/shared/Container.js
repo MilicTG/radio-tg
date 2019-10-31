@@ -6,7 +6,16 @@ export const Container = styled.div`
   width: 1600px;
   height: fit-content;
   margin: 0 auto;
+  @media ${device.tablet} {
+    max-width: 600px;
+  }
   @media ${device.laptop} {
     max-width: 1200px;
+  }
+  @media ${device.laptopL} {
+    max-width: 1600px;
+  }
+  @media ${device.desktop} {
+    min-width: 1600px;
   }
 `;

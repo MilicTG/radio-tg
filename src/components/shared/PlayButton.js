@@ -8,7 +8,7 @@ import styled from "styled-components";
 const PlayButton = () => {
   return (
     <PlayButtonContainer>
-      Sviraj Uzivo <FontAwesomeIcon icon={faPlay} size='lg' />
+      Sviraj Uzivo <FontAwesomeIcon icon={faPlay} size="lg" />
     </PlayButtonContainer>
   );
 };
@@ -24,7 +24,7 @@ const PlayButtonContainer = styled.button`
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s ease-in-out;
-  color: ${theme.colorFont}
+  color: ${theme.colorFont};
   :hover {
     cursor: pointer;
     background: ${theme.colorTertiary};
