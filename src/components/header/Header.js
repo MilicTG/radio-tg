@@ -3,7 +3,8 @@ import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Container } from "../../styles/Container";
 import { theme } from "../../styles/theme";
-
+import PlayButton from "../buttons/PlayButton";
+import DownloadButton from "../buttons/DownloadButton";
 import headerImage from "../../assets/Radio-1.jpg";
 
 const Header = () => {
@@ -13,9 +14,15 @@ const Header = () => {
         <Container>
           <Fade left cascade>
             <HeaderText>
-              <h1 id='radio'>Radio </h1> <h1 id='city'>Tomislavgrad</h1>
+              <h1 id="radio">Radio </h1> <h1 id="city">Tomislavgrad</h1>
               <h4>95.1,95.9 i 103.3Mhz</h4>
             </HeaderText>
+          </Fade>
+          <Fade bottom delay="1500">
+            <ButtonGroup>
+              <PlayButton />
+              <DownloadButton />
+            </ButtonGroup>
           </Fade>
         </Container>
       </HeaderOverlay>
@@ -64,6 +71,11 @@ const HeaderText = styled.div`
     font-size: ${theme.h4};
     padding-top: 40px;
     font-weight: 100;
-    letter-spacing: 15px;
+    letter-spacing: 1.3rem;
   }
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-flow: row;
 `;

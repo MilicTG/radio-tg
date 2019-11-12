@@ -28,9 +28,9 @@ const Navbar = props => {
         <FlexContainer>
           <Logo />
           <NavLinks style={linkAnimation}>
-            <Link to='/program'>Program</Link>
-            <Link to='/marketing'>Marketing</Link>
-            <Link to='/kontakt'>Kontakt</Link>
+            <Link to="/program">Program</Link>
+            <Link to="/marketing">Marketing</Link>
+            <Link to="/kontakt">Kontakt</Link>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -62,29 +62,31 @@ const NavBar = styled(animated.nav)`
 const FlexContainer = styled.div`
   display: flex;
   margin: auto;
+  padding: 0 2rem;
   justify-content: space-between;
   align-content: center;
-  height: 8rem;
+
   @media ${device.mobileS} {
-    max-width: 300px;
+    height: 5rem;
   }
   @media ${device.mobileM} {
-    max-width: 370px;
+    height: 5.5rem;
   }
-  @media ${device.mobileL} {
-    max-width: 400px;
-  }
+
   @media ${device.tablet} {
-    max-width: 600px;
+    height: 6.5rem;
   }
+
   @media ${device.laptop} {
-    max-width: 1200px;
+    height: 7rem;
   }
   @media ${device.laptopL} {
-    max-width: 1600px;
+    max-width: 1400px;
+    height: 7.5rem;
   }
   @media ${device.desktop} {
     max-width: 1600px;
+    height: 8rem;
   }
 `;
 
@@ -98,12 +100,12 @@ const NavLinks = styled(animated.ul)`
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;
-    margin: 0 1.5rem;
+    margin: 0 0 0 6rem;
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
     &:hover {
-      color: ${theme.colorPrimary};
+      color: ${theme.colorQuartile};
       border-bottom: 1px solid ${theme.colorQuartile};
     }
     @media (max-width: 767px) {

@@ -2,20 +2,14 @@ import styled from "styled-components";
 import { device } from "./responsive";
 
 export const Container = styled.div`
-  max-width: 1600px;
   height: fit-content;
+  width: 100%;
   margin: 0 auto;
-  @media ${device.tablet} {
-    max-width: 600px;
-  }
-  @media ${device.laptop} {
-    max-width: 1200px;
-  }
+  padding: 0 2rem;
   @media ${device.laptopL} {
-    max-width: 1500px;
+    max-width: 1400px;
   }
   @media ${device.desktop} {
     max-width: 1600px;
-    width: 1600px;
   }
 `;

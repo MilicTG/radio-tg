@@ -43,9 +43,10 @@ export default CollapseMenu;
 const CollapseWrapper = styled(animated.div)`
   background: ${theme.colorWhiteBck};
   position: fixed;
-  top: 7.5rem;
+  top: 5rem;
   left: 0;
   right: 0;
+  z-index: 1;
   @media ${device.tablet} {
     visibility: hidden;
   }

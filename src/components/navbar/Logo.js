@@ -27,6 +27,10 @@ const LogoWrapper = styled.div`
   }
 `;
 const LogoItem = styled.img`
+  @media ${device.mobileS} {
+    height: 3rem;
+  }
+
   @media ${device.tablet} {
     height: 3rem;
   }
