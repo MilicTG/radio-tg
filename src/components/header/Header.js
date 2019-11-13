@@ -3,6 +3,7 @@ import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import { Container } from "../../styles/Container";
 import { theme } from "../../styles/theme";
+import { device } from "../../styles/responsive";
 import PlayButton from "../buttons/PlayButton";
 import DownloadButton from "../buttons/DownloadButton";
 import headerImage from "../../assets/Radio-1.jpg";
@@ -18,7 +19,7 @@ const Header = () => {
               <h4>95.1,95.9 i 103.3Mhz</h4>
             </HeaderText>
           </Fade>
-          <Fade bottom delay="1500">
+          <Fade bottom delay="1200">
             <ButtonGroup>
               <PlayButton />
               <DownloadButton />
@@ -57,8 +58,8 @@ const HeaderOverlay = styled.div`
 const HeaderText = styled.div`
   color: #fff;
   h1 {
-    font-size: ${theme.h1};
     display: inline;
+    font-size: ${theme.h1};
   }
   #radio {
     font-weight: 700;
@@ -68,9 +69,9 @@ const HeaderText = styled.div`
   }
 
   h4 {
-    font-size: ${theme.h4};
     padding-top: 40px;
     font-weight: 100;
+    font-size: ${theme.h4};
     letter-spacing: 1.3rem;
   }
 `;

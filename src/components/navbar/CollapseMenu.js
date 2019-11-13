@@ -23,13 +23,13 @@ const CollapseMenu = props => {
       >
         <NavLinks>
           <li>
-            <Link to='/program'>Program</Link>
+            <Link to="/program">Program</Link>
           </li>
           <li>
-            <Link to='/marketing'>Marketing</Link>
+            <Link to="/marketing">Marketing</Link>
           </li>
           <li>
-            <Link to='/kontakt'>Kontakt</Link>
+            <Link to="/kontakt">Kontakt</Link>
           </li>
         </NavLinks>
       </CollapseWrapper>
@@ -47,7 +47,7 @@ const CollapseWrapper = styled(animated.div)`
   left: 0;
   right: 0;
   z-index: 1;
-  @media ${device.tablet} {
+  @media ${device.deviceTablet} {
     visibility: hidden;
   }
 `;
@@ -55,12 +55,12 @@ const CollapseWrapper = styled(animated.div)`
 const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
-
   & li {
     transition: all 300ms linear 0s;
   }
   & a {
-    font-size: ${theme.h5};
+    font-size: ${theme.h2};
+
     line-height: 3;
     color: ${theme.colorFont};
     text-transform: uppercase;

@@ -9,13 +9,14 @@ export const theme = {
   colorFont: "#303030",
   boxShadow: "5px 10px 10px 0px rgba(0, 0, 0, 0.16)",
   //font size
-  h1: "6rem",
-  h2: "4.5rem",
-  h3: "4rem",
-  h4: "3.5rem",
-  h5: "2rem",
-  card: "1.5rem",
-  p: "1.8rem",
+  h1: "4.5vw",
+  h2: "3.5vw",
+  h3: "2.8vw",
+  h4: "2.3vw",
+  h5: "1.1vw",
+  card: "1.3vw",
+  button: "0.8vw",
+  p: "1.4vw",
   //different sizes
   mainContainerWeb: "1600px"
 };

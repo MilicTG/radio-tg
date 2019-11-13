@@ -37,7 +37,7 @@ const ButtonContainer = styled(animated.button)`
   height: 5.5rem;
   background: none;
   border-radius: 3rem;
-  font-size: ${theme.card};
+  font-size: ${theme.button};
   border: solid ${theme.colorWhiteBck} 2px;
   margin: 10rem 0 0 5rem;
   padding: 0 20px;

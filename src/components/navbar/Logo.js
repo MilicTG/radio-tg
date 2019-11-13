@@ -8,8 +8,8 @@ import { device } from "../../styles/responsive";
 const Logo = () => {
   return (
     <LogoWrapper>
-      <Link to='/'>
-        <LogoItem src={logo} alt='Radio Logo' />
+      <Link to="/">
+        <LogoItem src={logo} alt="Radio Logo" />
       </Link>
     </LogoWrapper>
   );
@@ -27,14 +27,10 @@ const LogoWrapper = styled.div`
   }
 `;
 const LogoItem = styled.img`
-  @media ${device.mobileS} {
+  @media ${device.devicePhone} {
     height: 3rem;
   }
-
-  @media ${device.tablet} {
-    height: 3rem;
-  }
-  @media ${device.laptop} {
+  @media ${device.deviceTablet} {
     height: 5rem;
   }
 `;

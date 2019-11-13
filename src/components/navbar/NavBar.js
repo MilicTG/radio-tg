@@ -18,7 +18,7 @@ const Navbar = props => {
   const linkAnimation = useSpring({
     from: { transform: "translate3d(0, 30px, 0)", opacity: 0 },
     to: { transform: "translate3d(0, 0, 0)", opacity: 1 },
-    delay: 800,
+    delay: 1000,
     config: config.wobbly
   });
 
@@ -56,7 +56,15 @@ const NavBar = styled(animated.nav)`
   left: 0;
   background: ${theme.colorWhiteBck};
   z-index: 1;
-  font-size: ${theme.h5};
+  @media ${device.deviceTablet} {
+    font-size: 2vw;
+  }
+  @media ${device.deviceTabletLand} {
+    font-size: 2vw;
+  }
+  @media ${device.deviceDesktop} {
+    font-size: 1.5vw;
+  }
 `;
 
 const FlexContainer = styled.div`
@@ -65,28 +73,17 @@ const FlexContainer = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
   align-content: center;
+  height: 5rem;
 
-  @media ${device.mobileS} {
-    height: 5rem;
-  }
-  @media ${device.mobileM} {
-    height: 5.5rem;
-  }
-
-  @media ${device.tablet} {
+  @media ${device.deviceTablet} {
     height: 6.5rem;
   }
-
-  @media ${device.laptop} {
+  @media ${device.deviceTabletLand} {
     height: 7rem;
   }
-  @media ${device.laptopL} {
-    max-width: 1400px;
-    height: 7.5rem;
-  }
-  @media ${device.desktop} {
-    max-width: 1600px;
+  @media ${device.deviceDesktop} {
     height: 8rem;
+    max-width: 1600px;
   }
 `;
 
@@ -108,7 +105,7 @@ const NavLinks = styled(animated.ul)`
       color: ${theme.colorQuartile};
       border-bottom: 1px solid ${theme.colorQuartile};
     }
-    @media (max-width: 767px) {
+    @media ${device.devicePhone} {
       display: none;
     }
   }
@@ -116,7 +113,8 @@ const NavLinks = styled(animated.ul)`
 
 const BurgerWrapper = styled.div`
   margin: auto 0;
-  @media ${device.tablet} {
-    display: none;
+  display: none;
+  @media ${device.devicePhone} {
+    display: block;
   }
 `;
