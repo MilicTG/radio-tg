@@ -28,12 +28,12 @@ class App extends Component {
           navbarState={this.state.navbarOpen}
           handleNavbar={this.handleNavbar}
         />
-        {/* <Switch>
-          <Route exact path='/' component={IndexPage}></Route>
-          <Route path='/program' component={ProgramPage}></Route>
-          <Route path='/marketing' component={MarketingPage}></Route>
-          <Route path='/kontakt' component={ContactPage}></Route>
-        </Switch> */}
+        <Switch>
+          <Route exact path="/" component={IndexPage}></Route>
+          <Route path="/program" component={ProgramPage}></Route>
+          <Route path="/marketing" component={MarketingPage}></Route>
+          <Route path="/kontakt" component={ContactPage}></Route>
+        </Switch>
       </Router>
     );
   }

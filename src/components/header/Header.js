@@ -36,6 +36,7 @@ export default Header;
 const HeaderImage = styled.header`
   width: 100%;
   height: 90vh;
+  min-height: 50rem;
   background-image: url(${headerImage});
   background-repeat: no-repeat;
   background-position: left top;
@@ -51,15 +52,22 @@ const HeaderOverlay = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 `;
 
 const HeaderText = styled.div`
+  text-align: center;
+  padding-top: 1rem;
+  @media ${device.deviceDesktop} {
+    text-align: start;
+  }
   color: #fff;
   h1 {
     display: inline;
-    font-size: ${theme.h1};
+    font-size: ${theme.fontSizeHeaderPrimaryS};
+    @media ${device.deviceDesktop} {
+      font-size: ${theme.fontSizeHeaderPrimaryL};
+    }
   }
   #radio {
     font-weight: 700;
@@ -71,12 +79,18 @@ const HeaderText = styled.div`
   h4 {
     padding-top: 40px;
     font-weight: 100;
-    font-size: ${theme.h4};
-    letter-spacing: 1.3rem;
+    font-size: ${theme.fontSizeHeaderSecondaryS};
+    letter-spacing: 0.3rem;
+    @media ${device.deviceDesktop} {
+      font-size: ${theme.fontSizeHeaderSecondaryL};
+    }
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-flow: row;
+  justify-content: center;
+  @media ${device.deviceDesktop} {
+    justify-content: flex-start;
+  }
 `;

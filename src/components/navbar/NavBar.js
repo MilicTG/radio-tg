@@ -18,7 +18,7 @@ const Navbar = props => {
   const linkAnimation = useSpring({
     from: { transform: "translate3d(0, 30px, 0)", opacity: 0 },
     to: { transform: "translate3d(0, 0, 0)", opacity: 1 },
-    delay: 1000,
+    delay: 2000,
     config: config.wobbly
   });
 
@@ -56,14 +56,17 @@ const NavBar = styled(animated.nav)`
   left: 0;
   background: ${theme.colorWhiteBck};
   z-index: 1;
+  @media ${device.devicePhone} {
+    font-size: ${theme.fontSizeNavLinksS};
+  }
   @media ${device.deviceTablet} {
-    font-size: 2vw;
+    font-size: ${theme.fontSizeNavLinksM};
   }
   @media ${device.deviceTabletLand} {
-    font-size: 2vw;
+    font-size: ${theme.fontSizeNavLinksL};
   }
   @media ${device.deviceDesktop} {
-    font-size: 1.5vw;
+    font-size: ${theme.fontSizeNavLinksXl};
   }
 `;
 
@@ -74,16 +77,18 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-content: center;
   height: 5rem;
-
+  max-width: 1600px;
+  @media ${device.devicePhone} {
+    height: 6.5;
+  }
   @media ${device.deviceTablet} {
-    height: 6.5rem;
+    height: 7rem;
   }
   @media ${device.deviceTabletLand} {
-    height: 7rem;
+    height: 7.5rem;
   }
   @media ${device.deviceDesktop} {
     height: 8rem;
-    max-width: 1600px;
   }
 `;
 

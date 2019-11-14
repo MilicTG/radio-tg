@@ -9,14 +9,21 @@ export const theme = {
   colorFont: "#303030",
   boxShadow: "5px 10px 10px 0px rgba(0, 0, 0, 0.16)",
   //font size
-  h1: "4.5vw",
-  h2: "3.5vw",
-  h3: "2.8vw",
-  h4: "2.3vw",
-  h5: "1.1vw",
-  card: "1.3vw",
-  button: "0.8vw",
-  p: "1.4vw",
+  fontSizeHeaderPrimaryS: "8vw",
+  fontSizeHeaderPrimaryL: "5vw",
+  fontSizeHeaderSecondaryS: "5vw",
+  fontSizeHeaderSecondaryL: "3vw",
+
+  fontSizeNavLinksXl: "2.6rem",
+  fontSizeNavLinksL: "2.3rem",
+  fontSizeNavLinksM: "1.8rem",
+  fontSizeNavLinksS: "1.5rem",
+  fontSizeNavSecondary: "2rem",
+
+  fontSizeButtonL: "1.5rem",
+  fontSizeButtonM: "1.3rem",
+  fontSizeButtonS: "1.1rem",
+
   //different sizes
   mainContainerWeb: "1600px"
 };

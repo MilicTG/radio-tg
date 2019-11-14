@@ -4,13 +4,10 @@ import { theme } from "../../styles/theme";
 
 const BurgerMenu = props => {
   return (
-    <Wrapper onClick={props.handleNavbar}>
-      <div className={props.navbarState ? "open" : ""}>
-        <span>&nbsp;:</span>
-        <span>&nbsp;:</span>
-        <span>&nbsp;:</span>
-      </div>
-    </Wrapper>
+    <Wrapper
+      onClick={props.handleNavbar}
+      className={props.navbarState ? "active" : ""}
+    ></Wrapper>
   );
 };
 
@@ -18,30 +15,35 @@ export default BurgerMenu;
 
 const Wrapper = styled.div`
   position: relative;
-  padding-top: 0.7rem;
+  padding-top: 1rem;
+  width: 2.5rem;
+  height: 0.3rem;
   cursor: pointer;
-  display: block;
-
-  &span {
-    background: ${theme.colorQuartile};
-    display: block;
-    position: relative;
-    width: 3.5rem;
-    height: 0.4rem;
-    margin-bottom: 0.7rem;
-    transition: all ease-in-out 0.2s;
+  border-top: 0.3rem solid ${theme.colorFont};
+  border-bottom: 0.3rem solid ${theme.colorFont};
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  transform-origin: center;
+  &:before,
+  &:after {
+    content: "";
+    background-color: ${theme.colorFont};
+    width: 2.5rem;
+    height: 0.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: all 0.25s ease;
   }
-  .open span:nth-child(2) {
-    opacity: 0;
+  &:hover {
+    transform: scale(1.1);
   }
-
-  .open span:nth-child(3) {
+  &.active {
     transform: rotate(45deg);
-    top: -11px;
-  }
-
-  .open span:nth-child(1) {
-    transform: rotate(-45deg);
-    top: 11px;
+    border-color: transparent;
+    &:after {
+      transform: translateY(-50%) rotate(-90deg);
+    }
   }
 `;

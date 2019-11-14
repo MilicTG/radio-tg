@@ -16,7 +16,7 @@ const CollapseMenu = props => {
           transform: open
             .interpolate({
               range: [0, 0.2, 0.3, 1],
-              output: [0, -20, 0, -200]
+              output: [0, -20, 0, -100]
             })
             .interpolate(openValue => `translate3d(0, ${openValue}px, 0`)
         }}
@@ -59,8 +59,8 @@ const NavLinks = styled.ul`
     transition: all 300ms linear 0s;
   }
   & a {
-    font-size: ${theme.h2};
-
+    font-size: ${theme.fontSizeNavSecondary};
+    font-weight: 500;
     line-height: 3;
     color: ${theme.colorFont};
     text-transform: uppercase;
