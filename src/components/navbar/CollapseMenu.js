@@ -15,8 +15,8 @@ const CollapseMenu = props => {
         style={{
           transform: open
             .interpolate({
-              range: [0, 0.2, 0.3, 1],
-              output: [0, -20, 0, -100]
+              range: [0, -50, 0, 100],
+              output: [0, 0, 0, -20000]
             })
             .interpolate(openValue => `translate3d(0, ${openValue}px, 0`)
         }}
