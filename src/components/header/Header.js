@@ -37,6 +37,7 @@ const HeaderImage = styled.header`
   width: 100%;
   height: 90vh;
   min-height: 50rem;
+  max-height: 100rem;
   background-image: url(${headerImage});
   background-repeat: no-repeat;
   background-position: left top;

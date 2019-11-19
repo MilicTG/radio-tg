@@ -20,6 +20,9 @@ export const theme = {
   fontSizeNavLinksS: "1.5rem",
   fontSizeNavSecondary: "2rem",
 
+  fontSizeTitleSectionS: "4.5vw",
+  fontSizeTitleSectionL: "2.5vw",
+
   fontSizeButtonL: "1.5rem",
   fontSizeButtonM: "1.3rem",
   fontSizeButtonS: "1.1rem",
