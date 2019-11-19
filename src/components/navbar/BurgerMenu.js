@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   transition: all 0.25s ease;
   box-sizing: border-box;
   transform-origin: center;
+  z-index: 10;
   &:before,
   &:after {
     content: "";

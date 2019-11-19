@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { device } from "../../styles/responsive";
 import { theme } from "../../styles/theme";
 
 const SectionTitle = ({ title }) => {
@@ -14,6 +15,10 @@ const SectionSection = styled.section`
   font-weight: 700;
   color: ${theme.colorFont};
   text-align: center;
+  @media ${device.deviceTablet} {
+    font-size: ${theme.fontSizeTitleSectionL};
+    padding: 3rem 0;
+  }
 `;
 
 export default SectionTitle;

@@ -55,7 +55,7 @@ const NavBar = styled(animated.nav)`
   top: 0;
   left: 0;
   background: ${theme.colorWhiteBck};
-  z-index: 1;
+  z-index: 10;
   @media ${device.devicePhone} {
     font-size: ${theme.fontSizeNavLinksS};
   }

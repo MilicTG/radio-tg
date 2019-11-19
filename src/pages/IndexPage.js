@@ -6,7 +6,7 @@ export default class IndexPage extends Component {
   render() {
     return (
       <>
-        <Header />;
+        <Header />
         <SectionTitle title="Nase najslusanije emisije" />
       </>
     );
