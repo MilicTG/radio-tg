@@ -12,12 +12,12 @@ const SectionSection = styled.section`
   margin: 0 auto;
   padding: 2rem 0;
   font-size: ${theme.fontSizeTitleSectionS};
-  font-weight: 700;
+  font-weight: 600;
   color: ${theme.colorFont};
   text-align: center;
   @media ${device.deviceTablet} {
     font-size: ${theme.fontSizeTitleSectionL};
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 `;
 
