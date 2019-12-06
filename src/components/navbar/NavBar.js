@@ -77,7 +77,6 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-content: center;
   height: 5rem;
-  max-width: 1600px;
   @media ${device.devicePhone} {
     height: 6.5;
   }
@@ -89,6 +88,10 @@ const FlexContainer = styled.div`
   }
   @media ${device.deviceDesktop} {
     height: 8rem;
+    max-width: 1100px;
+  }
+  @media ${device.deviceDesktopHD} {
+    max-width: 1440px;
   }
 `;
 

@@ -10,9 +10,9 @@ export const theme = {
   boxShadow: "5px 10px 10px 0px rgba(0, 0, 0, 0.16)",
   //font size
   fontSizeHeaderPrimaryS: "8vw",
-  fontSizeHeaderPrimaryL: "5vw",
+  fontSizeHeaderPrimaryL: "4.5vw",
   fontSizeHeaderSecondaryS: "5vw",
-  fontSizeHeaderSecondaryL: "3vw",
+  fontSizeHeaderSecondaryL: "2.5vw",
 
   fontSizeNavLinksXl: "2.6rem",
   fontSizeNavLinksL: "2.3rem",

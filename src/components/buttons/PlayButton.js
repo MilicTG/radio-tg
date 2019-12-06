@@ -41,7 +41,7 @@ const ButtonContainer = styled.button`
   }
   :hover {
     transform: scale(1.05);
-    box-shadow: 3px 10px 28px -13px rgba(255, 255, 255, 1);
+    box-shadow: 3px 10px 28px -13px rgba(255, 255, 255, 0.2);
     cursor: pointer;
     background: ${theme.colorQuartile};
     color: #fff;

@@ -57,11 +57,8 @@ const HeaderOverlay = styled.div`
 `;
 
 const HeaderText = styled.div`
-  text-align: center;
   padding-top: 1rem;
-  @media ${device.deviceDesktop} {
-    text-align: start;
-  }
+  text-align: start;
   color: #fff;
   h1 {
     display: inline;
@@ -90,8 +87,5 @@ const HeaderText = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: center;
-  @media ${device.deviceDesktop} {
-    justify-content: flex-start;
-  }
+  justify-content: flex-start;
 `;

@@ -6,10 +6,11 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
-  @media ${device.laptopL} {
-    max-width: 1400px;
+
+  @media ${device.deviceDesktop} {
+    max-width: 1100px;
   }
-  @media ${device.desktop} {
-    max-width: 1600px;
+  @media ${device.deviceDesktopHD} {
+    max-width: 1440px;
   }
 `;
