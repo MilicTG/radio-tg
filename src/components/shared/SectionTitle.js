@@ -10,7 +10,7 @@ const SectionTitle = ({ title }) => {
 
 const SectionSection = styled.section`
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   font-size: ${theme.fontSizeTitleSectionS};
   font-weight: 600;
   color: ${theme.colorFont};

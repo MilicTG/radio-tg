@@ -15,12 +15,10 @@ export default class CardUI extends Component {
 }
 
 const CardContainer = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 3.6rem;
+  height: 4.2rem;
   background-color: #fff;
-  border-radius: 5px;
   margin: 50px;
-  box-shadow: ${theme.boxShadow};
 `;
 
 const CardImage = styled.img`
