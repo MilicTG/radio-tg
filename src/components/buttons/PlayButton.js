@@ -1,17 +1,49 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { theme } from "../../styles/theme";
 import { device } from "../../styles/responsive";
 
-const PlayButton = () => {
-  return (
-    <ButtonContainer>
-      Sviraj Uzivo <FontAwesomeIcon icon={faPlay} size="lg" />
-    </ButtonContainer>
-  );
-};
+class PlayButton extends Component {
+  constructor() {
+    super();
+    this.state = {
+      play: false
+    };
+    this.url = "http://163.172.213.155:8038/";
+    this.audio = new Audio(this.url);
+  }
+
+  componentDidMount() {
+    this.audio.addEventListener("ended", () => this.setState({ play: false }));
+  }
+
+  componentWillUnmount() {
+    this.audio.removeEventListener("ended", () =>
+      this.setState({ play: true })
+    );
+  }
+
+  togglePlay = () => {
+    this.setState({ play: !this.state.play }, () => {
+      this.state.play ? this.audio.play() : this.audio.pause();
+    });
+  };
+
+  // TODO: - make play
+  // <div>
+  //       <button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</button>
+  //     </div>
+
+  render() {
+    return (
+      <ButtonContainer onClick={this.togglePlay}>
+        Sviraj Uzivo <FontAwesomeIcon icon={faPlay} size="lg" />
+      </ButtonContainer>
+    );
+  }
+}
 
 export default PlayButton;
 

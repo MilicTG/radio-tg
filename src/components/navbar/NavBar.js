@@ -76,18 +76,17 @@ const FlexContainer = styled.div`
   padding: 0 2rem;
   justify-content: space-between;
   align-content: center;
-  height: 5rem;
   @media ${device.devicePhone} {
-    height: 6.5;
+    height: 5rem;
   }
   @media ${device.deviceTablet} {
-    height: 7rem;
+    height: 6rem;
   }
   @media ${device.deviceTabletLand} {
-    height: 7.5rem;
+    height: 6.5rem;
   }
   @media ${device.deviceDesktop} {
-    height: 8rem;
+    height: 7rem;
     max-width: 1100px;
   }
   @media ${device.deviceDesktopHD} {

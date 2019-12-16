@@ -28,9 +28,11 @@ const ButtonContainer = styled.button`
   padding: 0 15px;
   justify-content: space-between;
   align-items: center;
+  visibility: hidden;
   transition: all 0.2s ease-in-out;
   color: ${theme.colorWhiteBck};
   @media ${device.deviceTablet} {
+    visibility: visible;
     width: 14rem;
     height: 4.8rem;
     padding: 0 20px;

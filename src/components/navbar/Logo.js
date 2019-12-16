@@ -28,15 +28,15 @@ const LogoWrapper = styled.div`
 `;
 const LogoItem = styled.img`
   @media ${device.devicePhone} {
-    height: 3.5rem;
+    height: 3rem;
   }
   @media ${device.deviceTablet} {
-    height: 4rem;
+    height: 3.5rem;
   }
   @media ${device.deviceTabletLand} {
-    height: 4.5rem;
+    height: 3.7rem;
   }
   @media ${device.deviceDesktop} {
-    height: 5rem;
+    height: 4rem;
   }
 `;
