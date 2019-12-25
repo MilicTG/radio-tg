@@ -25,7 +25,7 @@ export const theme = {
 
   fontSizeButtonL: "1.5rem",
   fontSizeButtonM: "1.3rem",
-  fontSizeButtonS: "1.1rem",
+  fontSizeButtonS: ".9rem",
 
   //different sizes
   mainContainerWeb: "1600px"
