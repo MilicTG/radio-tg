@@ -19,9 +19,13 @@ class PlayButton extends Component {
     this.setState({
       play: false
     });
-    this.audio.pause();
+    if (this.audio == null) {
+      console.log("ne svira");
+    } else {
+      this.audio.pause();
+    }
   }
-
+  
   togglePlay = () => {
     this.setState({
       play: !this.state.play
