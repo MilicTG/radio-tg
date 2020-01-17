@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import SectionTitle from "../components/shared/SectionTitle";
 import CardSection from "../components/card/CardSection";
 import CardUI from "../components/card/CardUI";
+import AboutUs from "../components/about/AboutUs";
 
 import showData from "../data/showData";
 
@@ -23,6 +24,8 @@ export default class IndexPage extends Component {
             />
           ))}
         </CardSection>
+        <SectionTitle title="Malo o nama" />
+        <AboutUs />
       </>
     );
   }

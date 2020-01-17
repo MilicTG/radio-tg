@@ -62,9 +62,17 @@ const HeaderText = styled.div`
   color: #fff;
   h1 {
     display: inline;
-    font-size: ${theme.fontSizeHeaderPrimaryS};
+    @media ${device.devicePhone} {
+      font-size: ${theme.fontSizeS};
+    }
+    @media ${device.deviceTablet} {
+      font-size: ${theme.fontSizeXL};
+    }
+    @media ${device.deviceTabletLand} {
+      font-size: ${theme.fontSizeXXL};
+    }
     @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeHeaderPrimaryL};
+      font-size: ${theme.fontSizeXXXL};
     }
   }
   #radio {
@@ -77,10 +85,18 @@ const HeaderText = styled.div`
   h4 {
     padding-top: 40px;
     font-weight: 100;
-    font-size: ${theme.fontSizeHeaderSecondaryS};
     letter-spacing: 0.3rem;
+    @media ${device.devicePhone} {
+      font-size: ${theme.fontSizeXS};
+    }
+    @media ${device.deviceTablet} {
+      font-size: ${theme.fontSizeM};
+    }
+    @media ${device.deviceTabletLand} {
+      font-size: ${theme.fontSizeL};
+    }
     @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeHeaderSecondaryL};
+      font-size: ${theme.fontSizeXL};
     }
   }
 `;

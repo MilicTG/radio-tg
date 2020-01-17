@@ -57,16 +57,16 @@ const NavBar = styled(animated.nav)`
   background: ${theme.colorWhiteBck};
   z-index: 10;
   @media ${device.devicePhone} {
-    font-size: ${theme.fontSizeNavLinksS};
+    font-size: ${theme.fontSizeXS};
   }
   @media ${device.deviceTablet} {
-    font-size: ${theme.fontSizeNavLinksM};
+    font-size: ${theme.fontSizeXS};
   }
   @media ${device.deviceTabletLand} {
-    font-size: ${theme.fontSizeNavLinksL};
+    font-size: ${theme.fontSizeXS};
   }
   @media ${device.deviceDesktop} {
-    font-size: ${theme.fontSizeNavLinksXl};
+    font-size: ${theme.fontSizeS};
   }
 `;
 
@@ -77,16 +77,16 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-content: center;
   @media ${device.devicePhone} {
-    height: 5rem;
+    height: 5.6rem;
   }
   @media ${device.deviceTablet} {
-    height: 6rem;
+    height: 6.4rem;
   }
   @media ${device.deviceTabletLand} {
-    height: 6.5rem;
+    height: 6.4rem;
   }
   @media ${device.deviceDesktop} {
-    height: 7rem;
+    height: 7.2rem;
     max-width: 1100px;
   }
   @media ${device.deviceDesktopHD} {
@@ -102,7 +102,7 @@ const NavLinks = styled(animated.ul)`
   & a {
     color: ${theme.colorFont};
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 1px solid transparent;
     margin: 0 0 0 6rem;
     transition: all 300ms linear 0s;
