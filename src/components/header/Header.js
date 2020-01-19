@@ -93,10 +93,10 @@ const HeaderText = styled.div`
       font-size: ${theme.fontSizeM};
     }
     @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeL};
+      font-size: ${theme.fontSizeM};
     }
     @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeXL};
+      font-size: ${theme.fontSizeL};
     }
   }
 `;

@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-@import url("'https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,400,500,700&display=swap');
 
 *,
 *::after,

@@ -25,7 +25,7 @@ class PlayButton extends Component {
       this.audio.pause();
     }
   }
-  
+
   togglePlay = () => {
     this.setState({
       play: !this.state.play

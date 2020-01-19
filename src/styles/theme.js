@@ -17,25 +17,6 @@ export const theme = {
   fontSizeXL: "4.8rem",
   fontSizeXXL: "5.6rem",
   fontSizeXXXL: "6.4rem",
-
-  fontSizeHeaderPrimaryS: "8vw",
-  fontSizeHeaderPrimaryL: "4.5vw",
-  fontSizeHeaderSecondaryS: "5vw",
-  fontSizeHeaderSecondaryL: "2.5vw",
-
-  fontSizeNavLinksXl: "2.4rem",
-  fontSizeNavLinksL: "2.4rem",
-  fontSizeNavLinksM: "1.6rem",
-  fontSizeNavLinksS: "1.6rem",
-  fontSizeNavSecondary: "2rem",
-
-  fontSizeTitleSectionS: "1.6rem",
-  fontSizeTitleSectionL: "2.4rem",
-
-  fontSizeButtonL: "1.5rem",
-  fontSizeButtonM: "1.3rem",
-  fontSizeButtonS: ".9rem",
-
   //different sizes
   mainContainerWeb: "1600px"
 };
