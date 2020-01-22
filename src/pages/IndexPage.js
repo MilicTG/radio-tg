@@ -12,7 +12,11 @@ export default class IndexPage extends Component {
     return (
       <>
         <Header />
-        <SectionTitle title="Nase najslusanije emisije" />
+        <SectionTitle
+          title="Nase najslusanije emisije"
+          desc="Sed velit sapien, commodo et dictum porta, varius id nibh.
+           Vivamus sed sapien molestie maximus lorem ut commodo enim."
+        />
         <CardSection>
           {showData.map(data => (
             <CardUI
@@ -24,7 +28,7 @@ export default class IndexPage extends Component {
             />
           ))}
         </CardSection>
-        <SectionTitle title="Malo o nama" />
+        <SectionTitle title="Malo o nama" desc="Sed velit sapien, commodo et dictum porta, varius id nibh. Vivamus sed sapien molestie maximus lorem ut commodo enim." />
         <AboutUs />
       </>
     );

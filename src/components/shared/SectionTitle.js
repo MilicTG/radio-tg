@@ -1,35 +1,75 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "../../styles/Container";
 
 import { device } from "../../styles/responsive";
 import { theme } from "../../styles/theme";
 
-const SectionTitle = ({ title }) => {
-  return <SectionSection>{title}</SectionSection>;
+const SectionTitle = ({ title, desc }) => {
+  return (
+    <Container>
+      <SectionSection>
+        <PrimaryTitle>{title}</PrimaryTitle>
+        <DescTitle>{desc}</DescTitle>
+      </SectionSection>
+    </Container>
+  );
 };
 
 const SectionSection = styled.section`
   margin: 0 auto;
 
-  font-weight: 600;
+  @media ${device.devicePhone} {
+    padding: 5rem 0;
+  }
+  @media ${device.deviceTablet} {
+    padding: 8rem 0;
+  }
+  @media ${device.deviceTabletLand} {
+    padding: 8rem 0;
+  }
+  @media ${device.deviceDesktop} {
+    padding: 10rem 0;
+  }
+`;
+
+const PrimaryTitle = styled.h2`
+  font-weight: 500;
   color: ${theme.colorFont};
   text-align: center;
+  padding-bottom: 2rem;
 
   @media ${device.devicePhone} {
     font-size: ${theme.fontSizeXS};
-    padding: 3.7rem 0;
   }
   @media ${device.deviceTablet} {
     font-size: ${theme.fontSizeS};
-    padding: 4.7rem 0;
   }
   @media ${device.deviceTabletLand} {
     font-size: ${theme.fontSizeM};
-    padding: 5rem 0;
   }
   @media ${device.deviceDesktop} {
     font-size: ${theme.fontSizeM};
-    padding: 8rem 0;
+  }
+`;
+
+const DescTitle = styled.p`
+  font-weight: 200;
+  color: ${theme.colorFont};
+  text-align: center;
+  white-space: pre-line;
+
+  @media ${device.devicePhone} {
+    font-size: ${theme.fontSizeXXS};
+  }
+  @media ${device.deviceTablet} {
+    font-size: 1.8rem;
+  }
+  @media ${device.deviceTabletLand} {
+    font-size: 1.8rem;
+  }
+  @media ${device.deviceDesktop} {
+    font-size: 2rem;
   }
 `;
 

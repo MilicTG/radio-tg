@@ -77,16 +77,16 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-content: center;
   @media ${device.devicePhone} {
-    height: 5.6rem;
+    height: 6.2rem;
   }
   @media ${device.deviceTablet} {
-    height: 6.4rem;
+    height: 7rem;
   }
   @media ${device.deviceTabletLand} {
-    height: 6.4rem;
+    height: 7rem;
   }
   @media ${device.deviceDesktop} {
-    height: 7.2rem;
+    height: 8.6rem;
     max-width: 1100px;
   }
   @media ${device.deviceDesktopHD} {
@@ -102,6 +102,7 @@ const NavLinks = styled(animated.ul)`
   & a {
     color: ${theme.colorFont};
     text-transform: uppercase;
+    font-size: ${theme.fontSizeS};
     font-weight: 500;
     border-bottom: 1px solid transparent;
     margin: 0 0 0 6rem;
