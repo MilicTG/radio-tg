@@ -58,6 +58,8 @@ const DescTitle = styled.p`
   color: ${theme.colorFont};
   text-align: center;
   white-space: pre-line;
+  display: inline-block;
+  margin: 0 10%;
 
   @media ${device.devicePhone} {
     font-size: ${theme.fontSizeXXS};
