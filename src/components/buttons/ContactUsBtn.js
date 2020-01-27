@@ -22,17 +22,15 @@ const DownloadButton = () => {
 export default DownloadButton;
 
 const ButtonContainer = styled.button`
-  display: flex;
-  width: 11rem;
+  display: none;
+  width: 14rem;
   height: 4.2rem;
   border-radius: 3rem;
   background: ${theme.colorPrimary};
   border: none;
   padding: 0 15px;
-  margin-bottom: 2.5rem;
   justify-content: space-between;
   align-items: center;
-  visibility: hidden;
   transition: all 0.2s ease-in-out;
   p {
     color: ${theme.colorWhiteBck};
@@ -45,12 +43,13 @@ const ButtonContainer = styled.button`
     width: 14rem;
     height: 4.8rem;
     padding: 0 20px;
-    visibility: visible;
+    display: flex;
     p {
       font-size: ${theme.fontSizeButtonM};
     }
   }
   @media ${device.deviceDesktop} {
+    display: flex;
     width: 16rem;
     height: 5.5rem;
     p {

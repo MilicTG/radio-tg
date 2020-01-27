@@ -6,7 +6,7 @@ export const theme = {
   colorQuartile: "#00A8E8",
   colorWhiteBck: "#FFFFFF",
   colorDarkBck: "#F1EBD2",
-  colorLightBck: "#cccccc",
+  colorLightBck: "#eeeeee",
   colorFont: "#303030",
   boxShadow: "5px 10px 10px 0px rgba(0, 0, 0, 0.16)",
   //font size

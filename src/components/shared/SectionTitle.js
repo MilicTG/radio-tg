@@ -21,16 +21,16 @@ const SectionSection = styled.section`
   text-align: center;
 
   @media ${device.devicePhone} {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
   @media ${device.deviceTablet} {
-    padding: 6rem 0;
+    padding: 5.5rem 0;
   }
   @media ${device.deviceTabletLand} {
-    padding: 7rem 0;
+    padding: 6.5rem 0;
   }
   @media ${device.deviceDesktop} {
-    padding: 8rem 0;
+    padding: 7.5rem 0;
   }
 `;
 
@@ -55,14 +55,14 @@ const PrimaryTitle = styled.h2`
 `;
 
 const DescTitle = styled.p`
-  font-weight: 200;
+  font-weight: 300;
   color: ${theme.colorFont};
   text-align: center;
   white-space: pre-line;
   display: inline-block;
 
   @media ${device.devicePhone} {
-    font-size: ${theme.fontSizeXXS};
+    font-size: 1.3rem;
   }
   @media ${device.deviceTablet} {
     font-size: 1.8rem;

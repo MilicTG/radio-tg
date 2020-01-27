@@ -21,7 +21,7 @@ const CardContainer = styled.div`
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 5px;
-  :hover{
+  :hover {
     border: 1px solid #777;
   }
 `;
@@ -42,11 +42,11 @@ const CardTitle = styled.h2`
 `;
 const CardImg = styled.img`
   width: 100%;
-  border-radius: 5px 5px 0 0; 
+  border-radius: 5px 5px 0 0;
 `;
 const CardDesc = styled.p`
   color: ${theme.colorFont};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 1.5rem 0 0 1.5rem;
   font-weight: 300;
 
