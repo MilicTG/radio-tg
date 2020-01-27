@@ -55,11 +55,12 @@ const CollapseWrapper = styled(animated.div)`
 const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
+  overflow: hidden;
   & li {
     transition: all 300ms linear 0s;
   }
   & a {
-    font-size: ${theme.fontSizeNavSecondary};
+    font-size: ${theme.fontSizeS};
     font-weight: 500;
     line-height: 3;
     color: ${theme.colorFont};

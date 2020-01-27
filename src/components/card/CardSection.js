@@ -13,10 +13,10 @@ const CardSection = props => {
 
 const CardSectionContainer = styled.div`
   width: 100%;
-  padding: 0 0.3rem;
+  padding: 0 0.3rem 5rem 0.3rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 1rem;
+  grid-row-gap: 3rem;
 
   @media ${device.deviceTablet} {
     grid-template-columns: 1fr 1fr;
@@ -28,7 +28,7 @@ const CardSectionContainer = styled.div`
   }
   @media ${device.deviceDesktop} {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2.5rem;
+    grid-column-gap: 4rem;
   }
 `;
 

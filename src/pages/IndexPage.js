@@ -14,8 +14,7 @@ export default class IndexPage extends Component {
         <Header />
         <SectionTitle
           title="Nase najslusanije emisije"
-          desc="Sed velit sapien, commodo et dictum porta, varius id nibh.
-           Vivamus sed sapien molestie maximus lorem ut commodo enim."
+          desc="Pronadjite ono sto se vama najvise svidja"
         />
         <CardSection>
           {showData.map(data => (
@@ -28,7 +27,7 @@ export default class IndexPage extends Component {
             />
           ))}
         </CardSection>
-        <SectionTitle title="Malo o nama" desc="Sed velit sapien, commodo et dictum porta, varius id nibh. Vivamus sed sapien molestie maximus lorem ut commodo enim." />
+       
         <AboutUs />
       </>
     );

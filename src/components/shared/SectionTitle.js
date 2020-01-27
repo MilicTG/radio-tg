@@ -18,18 +18,19 @@ const SectionTitle = ({ title, desc }) => {
 
 const SectionSection = styled.section`
   margin: 0 auto;
+  text-align: center;
 
   @media ${device.devicePhone} {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
   @media ${device.deviceTablet} {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
   @media ${device.deviceTabletLand} {
-    padding: 8rem 0;
+    padding: 7rem 0;
   }
   @media ${device.deviceDesktop} {
-    padding: 10rem 0;
+    padding: 8rem 0;
   }
 `;
 
@@ -37,7 +38,7 @@ const PrimaryTitle = styled.h2`
   font-weight: 500;
   color: ${theme.colorFont};
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
   @media ${device.devicePhone} {
     font-size: ${theme.fontSizeXS};
@@ -59,7 +60,6 @@ const DescTitle = styled.p`
   text-align: center;
   white-space: pre-line;
   display: inline-block;
-  margin: 0 10%;
 
   @media ${device.devicePhone} {
     font-size: ${theme.fontSizeXXS};
