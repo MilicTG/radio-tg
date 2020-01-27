@@ -45,26 +45,75 @@ class PlayButton extends Component {
 
   render() {
     return (
-      <ButtonContainer onClick={this.togglePlay}>
-        {!this.state.play ? (
-          <p>
-            Slusajte uzivo <FontAwesomeIcon icon={faPlay} size="lg" />
-          </p>
-        ) : (
-          <p>
-            Slusate uzivo <FontAwesomeIcon icon={faPause} size="lg" />
-          </p>
-        )}
-      </ButtonContainer>
+      <>
+        <PhoneBtn onClick={this.togglePlay}>
+          {!this.state.play ? (
+            <p>
+              <FontAwesomeIcon icon={faPlay} size="lg" />
+            </p>
+          ) : (
+            <p>
+              <FontAwesomeIcon icon={faPause} size="lg" />
+            </p>
+          )}
+        </PhoneBtn>
+        <ButtonContainer onClick={this.togglePlay}>
+          {!this.state.play ? (
+            <p>
+              Slusajte uzivo <FontAwesomeIcon icon={faPlay} size="lg" />
+            </p>
+          ) : (
+            <p>
+              Slusate uzivo <FontAwesomeIcon icon={faPause} size="lg" />
+            </p>
+          )}
+        </ButtonContainer>
+      </>
     );
   }
 }
 
 export default PlayButton;
 
-const ButtonContainer = styled.button`
+const PhoneBtn = styled.button`
   display: flex;
-  width: 11rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  background: #fff;
+  border-radius: 3rem;
+  border: none;
+  margin: 100px 0 0 0;
+  padding-left: 15px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  color: ${theme.colorFont};
+  p {
+    width: 100%;
+    display: inherit;
+    justify-content: space-between;
+  }
+  @media ${device.deviceTablet} {
+    display: none;
+  }
+  @media ${device.deviceDesktop} {
+    display: none;
+  }
+  :hover {
+    box-shadow: 3px 10px 28px -13px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    background: ${theme.colorQuartile};
+    color: #fff;
+  }
+  :active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+`;
+
+const ButtonContainer = styled.button`
+  display: none;
+  width: 14rem;
   height: 4.2rem;
   background: #fff;
   border-radius: 3rem;
@@ -81,7 +130,8 @@ const ButtonContainer = styled.button`
     font-size: ${theme.fontSizeButtonS};
   }
   @media ${device.deviceTablet} {
-    width: 14rem;
+    display: flex;
+    width: 15rem;
     height: 4.8rem;
     padding: 0 20px;
     p {
@@ -89,7 +139,8 @@ const ButtonContainer = styled.button`
     }
   }
   @media ${device.deviceDesktop} {
-    width: 16rem;
+    display: flex;
+    width: 17rem;
     height: 5.5rem;
     p {
       font-size: ${theme.fontSizeButtonL};

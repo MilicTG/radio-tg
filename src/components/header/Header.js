@@ -58,12 +58,12 @@ const HeaderOverlay = styled.div`
 
 const HeaderText = styled.div`
   padding-top: 1rem;
-  text-align: start;
+  text-align: center;
   color: #fff;
   h1 {
     display: inline;
     @media ${device.devicePhone} {
-      font-size: ${theme.fontSizeS};
+      font-size: 7vw;
     }
     @media ${device.deviceTablet} {
       font-size: ${theme.fontSizeXL};
@@ -99,9 +99,27 @@ const HeaderText = styled.div`
       font-size: ${theme.fontSizeL};
     }
   }
+  @media ${device.deviceTablet} {
+    text-align: start;
+  }
+  @media ${device.deviceTabletLand} {
+    text-align: start;
+  }
+  @media ${device.deviceDesktop} {
+    text-align: start;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  @media ${device.deviceTablet} {
+    justify-content: flex-start;
+  }
+  @media ${device.deviceTabletLand} {
+    justify-content: flex-start;
+  }
+  @media ${device.deviceDesktop} {
+    justify-content: flex-start;
+  }
 `;

@@ -47,7 +47,7 @@ const CollapseWrapper = styled(animated.div)`
   left: 0;
   right: 0;
   z-index: 1;
-  @media ${device.deviceTablet} {
+  @media ${device.deviceDesktop} {
     visibility: hidden;
   }
 `;

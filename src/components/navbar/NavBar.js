@@ -97,6 +97,7 @@ const FlexContainer = styled.div`
 const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
+  flex-flow: row;
   margin: auto 0;
 
   & a {
@@ -116,13 +117,30 @@ const NavLinks = styled(animated.ul)`
     @media ${device.devicePhone} {
       display: none;
     }
+    @media ${device.deviceTablet} {
+      display: none;
+    }
+    @media ${device.deviceTabletLand} {
+      display: none;
+    }
+    @media ${device.deviceDesktop} {
+      display: inline-block;
+    }
   }
 `;
 
 const BurgerWrapper = styled.div`
   margin: auto 0;
-  display: none;
   @media ${device.devicePhone} {
     display: block;
+  }
+  @media ${device.deviceTablet} {
+    display: block;
+  }
+  @media ${device.deviceTabletLand} {
+    display: block;
+  }
+  @media ${device.deviceDesktop} {
+    display: none;
   }
 `;

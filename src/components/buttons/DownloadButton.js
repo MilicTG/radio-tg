@@ -22,8 +22,8 @@ const DownloadButton = () => {
 export default DownloadButton;
 
 const ButtonContainer = styled.button`
-  display: flex;
-  width: 11rem;
+  display: none;
+  width: 14rem;
   height: 4.2rem;
   border-radius: 3rem;
   background: transparent;
@@ -42,7 +42,8 @@ const ButtonContainer = styled.button`
     font-size: ${theme.fontSizeButtonS};
   }
   @media ${device.deviceTablet} {
-    width: 14rem;
+    display: flex;
+    width: 15rem;
     height: 4.8rem;
     padding: 0 20px;
     visibility: visible;
@@ -51,7 +52,8 @@ const ButtonContainer = styled.button`
     }
   }
   @media ${device.deviceDesktop} {
-    width: 16rem;
+    display: flex;
+    width: 17rem;
     height: 5.5rem;
     p {
       font-size: ${theme.fontSizeButtonL};

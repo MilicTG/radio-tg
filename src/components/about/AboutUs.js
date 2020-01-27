@@ -4,6 +4,7 @@ import ContactButton from "../buttons/ContactUsBtn";
 
 import { theme } from "../../styles/theme";
 import { Container } from "../../styles/Container";
+import { device } from "../../styles/responsive";
 import ampImg from "../../assets/amp.jpg";
 
 const AboutUs = () => {
@@ -34,10 +35,20 @@ const AboutUs = () => {
 const AboutContainer = styled.section`
   width: 100%;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  grid-column-gap: 10rem;
+  grid-template-columns: 1fr;
   justify-items: end;
   padding-bottom: 20rem;
+
+  @media ${device.deviceTablet} {
+    grid-template-columns: 1fr;
+  }
+  @media ${device.deviceTabletLand} {
+    grid-template-columns: 1fr;
+  }
+  @media ${device.deviceDesktop} {
+    grid-template-columns: 1.3fr 1fr;
+    grid-column-gap: 10rem;
+  }
 `;
 
 const AboutTextContainer = styled.div`
