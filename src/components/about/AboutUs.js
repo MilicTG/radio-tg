@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ContactButton from "../buttons/ContactUsBtn";
-
+import Fade from "react-reveal/Fade";
 import { theme } from "../../styles/theme";
 import { Container } from "../../styles/Container";
 import { device } from "../../styles/responsive";
@@ -13,30 +12,33 @@ const AboutUs = () => {
       <Container>
         <AboutContainer>
           <AboutTextContainer>
-            <AboutTitle>Malo o nama</AboutTitle>
-            <AboutText>
-              <p className="rowOne">
-                Radio Tomislavgrad osnovan je 18. svibnja 1992. godine, u
-                vrijeme najžešćih ratnih operacija na kupreško – duvanjskoj
-                bojišnici, što znači da je utemeljen radi potrebe informiranja
-                stanovništva u tim kaotičnim ratnim prilikama.
-              </p>
-              <p className="rowOne">
-                Od početnih nekoliko sati, danas emitiramo 24 sata vlastitoga
-                programa, s tim da su mikrofoni u studiju aktivni od 7 do 20
-                sati, a ostatak dana nudimo dobru glazbu i reprizne sadržaje.
-              </p>
-              <p className="rowOne">
-                Program emitiramo s tri odašiljača, na frekvencijama: 103.3,
-                95.9 i 95.1 MHZ, odnosno s Tušnice, Rudina i Drvenika.
-                Zahvaljujući internetu imamo određeni broj slušatelja u cijelome
-                svijetu. Uglavnom su to naši ljudi koji žele čuti informacije iz
-                rodnoga kraja.
-              </p>
-            </AboutText>
-            <ContactButton />
+            <Fade left delay="600" cascade>
+              <AboutTitle>Malo o nama</AboutTitle>
+              <AboutText>
+                <p className="rowOne">
+                  Radio Tomislavgrad osnovan je 18. svibnja 1992. godine, u
+                  vrijeme najžešćih ratnih operacija na kupreško – duvanjskoj
+                  bojišnici, što znači da je utemeljen radi potrebe informiranja
+                  stanovništva u tim kaotičnim ratnim prilikama.
+                </p>
+                <p className="rowOne">
+                  Od početnih nekoliko sati, danas emitiramo 24 sata vlastitoga
+                  programa, s tim da su mikrofoni u studiju aktivni od 7 do 20
+                  sati, a ostatak dana nudimo dobru glazbu i reprizne sadržaje.
+                </p>
+                <p className="rowOne">
+                  Program emitiramo s tri odašiljača, na frekvencijama: 103.3,
+                  95.9 i 95.1 MHZ, odnosno s Tušnice, Rudina i Drvenika.
+                  Zahvaljujući internetu imamo određeni broj slušatelja u
+                  cijelome svijetu. Uglavnom su to naši ljudi koji žele čuti
+                  informacije iz rodnoga kraja.
+                </p>
+              </AboutText>
+            </Fade>
           </AboutTextContainer>
-          <AboutImg />
+          <Fade right delay="600">
+            <AboutImg />
+          </Fade>
         </AboutContainer>
       </Container>
     </AboutSectionContainer>
@@ -51,21 +53,21 @@ const AboutSectionContainer = styled.section`
 const AboutContainer = styled.div`
   width: 100%;
   display: grid;
-  padding: 3rem 0 3rem 0;
+  padding: 2.5rem 0 2.5rem 0;
   grid-template-columns: 1fr;
-  justify-items: end;
+  justify-items: center;
   grid-column-gap: 3rem;
 
   @media ${device.deviceTablet} {
-    padding: 4rem 0 4rem 0;
+    padding: 3rem 0 3rem 0;
     grid-template-columns: 1fr 1fr;
   }
   @media ${device.deviceTabletLand} {
-    padding: 5rem 0 5rem 0;
+    padding: 4rem 0 4rem 0;
     grid-template-columns: 1fr 1fr;
   }
   @media ${device.deviceDesktop} {
-    padding: 6rem 0 6rem 0;
+    padding: 5.5rem 0 5.5rem 0;
     grid-template-columns: 1.1fr 1fr;
     grid-column-gap: 5rem;
   }
@@ -75,7 +77,7 @@ const AboutTextContainer = styled.div`
   width: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 const AboutTitle = styled.h3`
@@ -123,9 +125,8 @@ const AboutText = styled.article`
 `;
 
 const AboutImg = styled.img`
-  position: relative;
   border-radius: 10px;
-  width: 100%;
+  width: 30rem;
   height: 20rem;
   margin: 0 auto;
   background-image: url(${ampImg});
@@ -133,18 +134,18 @@ const AboutImg = styled.img`
   background-position: left top;
   background-size: cover;
   @media ${device.deviceTablet} {
-    width: 100%;
+    width: 40rem;
     height: 30rem;
     margin: 0;
   }
   @media ${device.deviceTabletLand} {
-    width: 100%;
+    width: 40rem;
     height: 30rem;
     margin: 0;
   }
   @media ${device.deviceDesktop} {
-    width: 100%;
-    height: 45rem;
+    width: 60rem;
+    height: 40rem;
     margin: 0;
   }
 `;

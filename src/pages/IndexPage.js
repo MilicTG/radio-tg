@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Fade from "react-reveal/Fade";
 import Header from "../components/header/Header";
 import SectionTitle from "../components/shared/SectionTitle";
 import CardSection from "../components/card/CardSection";
@@ -19,13 +20,15 @@ export default class IndexPage extends Component {
         />
         <CardSection>
           {showData.map(data => (
-            <CardUI
-              id={data.id}
-              title={data.showName}
-              img={data.showPic}
-              desc={data.showDesc}
-              time={data.showTime}
-            />
+            <Fade bottom>
+              <CardUI
+                id={data.id}
+                title={data.showName}
+                img={data.showPic}
+                desc={data.showDesc}
+                time={data.showTime}
+              />
+            </Fade>
           ))}
         </CardSection>
         <AboutUs />

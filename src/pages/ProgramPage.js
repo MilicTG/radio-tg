@@ -1,11 +1,11 @@
 import React from "react";
 
-const ArchivePage = () => {
+const ProgramPage = () => {
   return (
     <div>
-      <h1>Arhiva</h1>
+      <h1>Program</h1>
     </div>
   );
 };
 
-export default ArchivePage;
+export default ProgramPage;
