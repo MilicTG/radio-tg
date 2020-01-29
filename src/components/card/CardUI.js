@@ -27,17 +27,17 @@ const CardContainer = styled.div`
 `;
 const CardTitle = styled.h2`
   color: ${theme.colorFont};
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 500;
   padding: 1.5rem 0 0 1.5rem;
   @media ${device.deviceTablet} {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   @media ${device.deviceTabletLand} {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   @media ${device.deviceDesktop} {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 `;
 const CardImg = styled.img`
@@ -46,18 +46,21 @@ const CardImg = styled.img`
 `;
 const CardDesc = styled.p`
   color: ${theme.colorFont};
-  font-size: 1.3rem;
-  padding: 1.5rem 0 0 1.5rem;
+  font-size: 1.8rem;
+  height: 15rem;
+
+  padding: 1.5rem;
   font-weight: 300;
+  text-align: start;
 
   @media ${device.deviceTablet} {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   @media ${device.deviceTabletLand} {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   @media ${device.deviceDesktop} {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 `;
 const CardTime = styled.p`

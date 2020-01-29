@@ -5,7 +5,7 @@ import { useSpring, animated, config } from "react-spring";
 import Logo from "./Logo";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
-
+import OnlineBtn from "../buttons/OnlineBtn";
 import { theme } from "../../styles/theme";
 import { device } from "../../styles/responsive";
 
@@ -31,6 +31,9 @@ const Navbar = props => {
             <Link to="/program">Program</Link>
             <Link to="/marketing">Marketing</Link>
             <Link to="/kontakt">Kontakt</Link>
+            <Link to="/onlinertg">
+              <OnlineBtn />
+            </Link>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu

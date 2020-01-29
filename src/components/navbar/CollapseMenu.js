@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 import { Link } from "react-router-dom";
+import OnlineBtn from "../buttons/OnlineBtn";
 
 import { theme } from "../../styles/theme";
 import { device } from "../../styles/responsive";
@@ -30,6 +31,11 @@ const CollapseMenu = props => {
           </li>
           <li>
             <Link to="/kontakt">Kontakt</Link>
+          </li>
+          <li>
+            <Link to="/onlinertg">
+              <OnlineBtn />
+            </Link>
           </li>
         </NavLinks>
       </CollapseWrapper>

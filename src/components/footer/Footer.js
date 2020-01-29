@@ -120,16 +120,17 @@ const InfoColumn = styled.div`
   flex-flow: column;
   h3 {
     color: ${theme.colorSecondary};
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 1rem 0;
+    text-align: start;
   }
   table {
     display: table;
     tr {
       display: table-cell;
-      text-align: center;
+      text-align: start;
       td {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: 300;
         padding: 0.7rem 0;
         display: block;
@@ -143,7 +144,7 @@ const InfoColumn = styled.div`
     }
     table {
       tr {
-        text-align: center;
+        text-align: start;
         td {
           font-size: ${theme.fontSizeXS};
         }
@@ -156,7 +157,7 @@ const InfoColumn = styled.div`
     }
     table {
       tr {
-        text-align: center;
+        text-align: start;
         td {
           font-size: ${theme.fontSizeXS};
         }
