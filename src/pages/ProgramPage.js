@@ -27,8 +27,9 @@ const ProgramPage = () => {
 
 const ButtonContainer = styled.section`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-flow: row;
+  padding: 10rem 0;
 `;
 
 export default ProgramPage;

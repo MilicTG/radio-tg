@@ -4,7 +4,11 @@ import { theme } from "../../styles/theme";
 import { device } from "../../styles/responsive";
 
 const OnlineBtn = props => {
-  return <ButtonContainer>{props.day}</ButtonContainer>;
+  return (
+    <ButtonContainer>
+      <p>{props.children}</p>
+    </ButtonContainer>
+  );
 };
 
 const ButtonContainer = styled.button`
@@ -33,10 +37,10 @@ const ButtonContainer = styled.button`
   }
   @media ${device.deviceDesktop} {
     display: flex;
-    width: 15rem;
-    height: 5rem;
+    width: 12rem;
+    height: 4rem;
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
   :hover {
