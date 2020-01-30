@@ -40,7 +40,7 @@ const ButtonContainer = styled.button`
     width: 12rem;
     height: 4rem;
     p {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
   :hover {
