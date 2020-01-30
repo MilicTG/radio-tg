@@ -11,15 +11,12 @@ const OnlineBtn = props => {
   );
 };
 
-const ButtonContainer = styled.button`
-  width: 14rem;
-  height: 4.2rem;
-  background: ${theme.colorQuartile};
-  border-radius: 3rem;
-  border: none;
+const ButtonContainer = styled.a`
+  height: 4rem;
+  border-bottom: solid 1px ${theme.colorPrimary};
   align-items: center;
   transition: all 0.2s ease-in-out;
-  color: ${theme.colorWhiteBck};
+  color: ${theme.colorFont};
   p {
     width: 100%;
     display: inherit;
@@ -30,7 +27,6 @@ const ButtonContainer = styled.button`
     display: flex;
     width: 15rem;
     height: 4.8rem;
-    padding: 0 20px;
     p {
       font-size: ${theme.fontSizeButtonXL};
     }
@@ -46,7 +42,7 @@ const ButtonContainer = styled.button`
   :hover {
     box-shadow: 3px 10px 28px -13px rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    background: ${theme.colorPrimary};
+    background: ${theme.colorSecondary};
     color: #fff;
   }
   :active {
