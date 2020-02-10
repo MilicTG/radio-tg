@@ -1,3 +1,11 @@
 {
-  "jsxSingleQuote": false
+    "jsxSingleQuote": true,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "semi": true,
+    "trailingComma": "es5",
+    "tabWidth": 3,
+    "singleQuote": true,
+    "printWidth": 70
 }
