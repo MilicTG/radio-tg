@@ -5,39 +5,57 @@ import { Container } from '../styles/Container';
 import DayBtn from '../components/buttons/DayBtn';
 import programImg from '../assets/img-program.jpg';
 
-import dayInWeak from '../data/dayInWeak';
-import { monday, tuesday } from '../data/scheduleData';
+import mondayMorning from '../data/mondayMorning';
+import mondayAfternoon from '../data/mondayAfternoon';
+import tuesdayMorning from '../data/tuesdayMorning';
+import tuesdayAfternoon from '../data/tuesdayAfternoon';
 
 const title = 'Raspored programa';
 const desc = 'Pregled naseg tjednog programa';
 
 class ProgramPage extends Component {
-   constructor() {
-      super();
-
+   constructor(props) {
+      super(props);
       this.state = {
-         day: monday,
+         morning: mondayMorning,
+         afternoon: mondayAfternoon,
       };
+
+      this.changeToMonday = this.changeToMonday.bind(this);
+      this.changeToTuesday = this.changeToTuesday.bind(this);
    }
 
-   changeSchedule = props => {
-      switch (props.data.day) {
-         case 0:
-            this.setState({
-               day: monday,
-            });
-            break;
-         case 1:
-            this.setState({
-               day: tuesday,
-            });
-            break;
-         default:
-            this.setState({
-               day: monday,
-            });
-      }
-   };
+   // changeSchedule = e => {
+   //    switch (e) {
+   //       case 'monday':
+   //          this.setState({
+   //             morning: mondayMorning,
+   //             afternoon: mondayAfternoon,
+   //          });
+   //          break;
+   //       case 'tuesday':
+   //          this.setState({
+   //             morning: tuesdayMorning,
+   //             afternoon: tuesdayAfternoon,
+   //          });
+   //          break;
+   //    }
+   // };
+
+   changeToMonday() {
+      this.setState({
+         morning: mondayMorning,
+         afternoon: mondayAfternoon,
+      });
+      console.log('upro');
+   }
+
+   changeToTuesday() {
+      this.setState({
+         morning: tuesdayMorning,
+         afternoon: tuesdayAfternoon,
+      });
+   }
 
    render() {
       return (
@@ -49,23 +67,39 @@ class ProgramPage extends Component {
             ></SmallHeader>
             <Container>
                <ButtonContainer>
-                  {dayInWeak.map(data => (
-                     <DayBtn id={data.id}>{data.day}</DayBtn>
-                  ))}
+                  <DayBtn onClick={this.changeToMonday}>Ponedjeljak</DayBtn>
+                  <DayBtn onClick={this.changeToTuesday}>Utorak</DayBtn>
+                  <DayBtn>Srijeda</DayBtn>
+                  <DayBtn>Cetvrtak</DayBtn>
+                  <DayBtn>Petak</DayBtn>
+                  <DayBtn>Subota</DayBtn>
+                  <DayBtn>Nedjelja</DayBtn>
                </ButtonContainer>
                <ScheduleContainer>
-                  {this.state.day.map(data => (
-                     <table>
-                        <thead>
-                           <tr colspan='1'>
-                              <h3>Jutarnji program</h3>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <td id={data.morningProgram.id}></td>
-                        </tbody>
-                     </table>
-                  ))}
+                  <table>
+                     <thead>
+                        <tr>Jutarnji program</tr>
+                        <tr>Popodnevni program</tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           {this.state.morning.map(shows => (
+                              <td id={shows.id}>
+                                 <p>{shows.time}</p>
+                                 <h4>{shows.name}</h4>
+                              </td>
+                           ))}
+                        </tr>
+                        <tr>
+                           {this.state.afternoon.map(shows => (
+                              <td id={shows.id}>
+                                 <p>{shows.time}</p>
+                                 <h4>{shows.name}</h4>
+                              </td>
+                           ))}
+                        </tr>
+                     </tbody>
+                  </table>
                </ScheduleContainer>
             </Container>
          </>
@@ -82,8 +116,38 @@ const ButtonContainer = styled.section`
 
 const ScheduleContainer = styled.div`
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    flex-flow: row;
+   table {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      justify-content: space-evenly;
+      thead {
+         display: flex;
+         flex-flow: row;
+         justify-content: space-evenly;
+      }
+      tbody {
+         display: flex;
+         flex-flow: row;
+         justify-content: space-evenly;
+         tr {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            td {
+               justify-content: start;
+               display: inherit;
+               flex-flow: row;
+               padding: 2rem 0 2rem 0;
+               p {
+                  padding: 0 2rem 0 0;
+               }
+            }
+         }
+      }
+   }
 `;
 
 export default ProgramPage;

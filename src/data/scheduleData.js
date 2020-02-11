@@ -3,7 +3,8 @@ const monday = [
       morningProgram: [
          {
             id: '01',
-            name: 'Jutarnje vijesti prvog programa HR radija',
+            name:
+               'Jutarnje vijesti prvog programa HR radija',
             time: '07:00',
          },
          {
@@ -53,7 +54,8 @@ const monday = [
          },
          {
             id: '11',
-            name: 'Vijesti hrvatskog radija Herceg bosne',
+            name:
+               'Vijesti hrvatskog radija Herceg bosne',
             time: '12:00',
          },
       ],
@@ -75,7 +77,8 @@ const monday = [
          },
          {
             id: '04',
-            name: 'Dnevne novosti 1. Programa hrvatskog radija',
+            name:
+               'Dnevne novosti 1. Programa hrvatskog radija',
             time: '15:00',
          },
          {
@@ -102,7 +105,8 @@ const tuesday = [
       morningProgram: [
          {
             id: '01',
-            name: 'Jutarnje vijesti prvog programa HR radija',
+            name:
+               'Jutarnje vijesti prvog programa HR radija',
             time: '07:00',
          },
          {
@@ -152,7 +156,8 @@ const tuesday = [
          },
          {
             id: '11',
-            name: 'Vijesti hrvatskog radija Herceg bosne',
+            name:
+               'Vijesti hrvatskog radija Herceg bosne',
             time: '12:00',
          },
       ],
@@ -174,7 +179,8 @@ const tuesday = [
          },
          {
             id: '04',
-            name: 'Dnevne novosti 1. Programa hrvatskog radija',
+            name:
+               'Dnevne novosti 1. Programa hrvatskog radija',
             time: '15:00',
          },
          {
