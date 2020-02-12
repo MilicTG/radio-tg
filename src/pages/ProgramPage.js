@@ -42,20 +42,20 @@ class ProgramPage extends Component {
    //    }
    // };
 
-   changeToMonday() {
+   changeToMonday = () => {
       this.setState({
          morning: mondayMorning,
          afternoon: mondayAfternoon,
       });
       console.log('upro');
-   }
+   };
 
-   changeToTuesday() {
+   changeToTuesday = () => {
       this.setState({
          morning: tuesdayMorning,
          afternoon: tuesdayAfternoon,
       });
-   }
+   };
 
    render() {
       return (
@@ -68,7 +68,17 @@ class ProgramPage extends Component {
             <Container>
                <ButtonContainer>
                   <DayBtn onClick={this.changeToMonday}>Ponedjeljak</DayBtn>
-                  <DayBtn onClick={this.changeToTuesday}>Utorak</DayBtn>
+                  <DayBtn
+                     onClick={() => {
+                        console.log('upro');
+                        this.setState({
+                           morning: tuesdayMorning,
+                           afternoon: tuesdayAfternoon,
+                        });
+                     }}
+                  >
+                     Utorak
+                  </DayBtn>
                   <DayBtn>Srijeda</DayBtn>
                   <DayBtn>Cetvrtak</DayBtn>
                   <DayBtn>Petak</DayBtn>
