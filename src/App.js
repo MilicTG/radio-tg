@@ -11,15 +11,20 @@ import ContactPage from './pages/ContactPage';
 import OnlineRTG from './pages/OnlineRTG';
 import FourZeroFourPage from './pages/404Page';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import OnlineBtn from './components/buttons/OnlineBtn';
 
 class App extends Component {
    state = {
       navbarOpen: false,
    };
 
-   handleNavbar = () => {
-      this.setState({ navbarOpen: !this.state.navbarOpen });
+   drawerToggleClickHandler = () => {
+      this.setState(prevState => {
+         return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      });
+   };
+
+   backdropClickHandler = () => {
+      this.setState({ sideDrawerOpen: false });
    };
 
    render() {

@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
+import BurgerBtn from './BurgerBtn';
 
 const Navbar = props => (
    <NavbarWrapper>
       <NavbarContainer>
          <Logo />
          <Spacer />
+
          <NavigationItems>
             <ul>
                <li>
@@ -23,6 +25,7 @@ const Navbar = props => (
                </li>
             </ul>
          </NavigationItems>
+         <BurgerBtn />
       </NavbarContainer>
    </NavbarWrapper>
 );
