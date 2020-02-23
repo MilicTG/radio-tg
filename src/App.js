@@ -17,11 +17,11 @@ class App extends Component {
       sideDrawerOpen: false,
    };
 
-   // drawerToggleClickHandler = () => {
-   //    this.setState(prevState => {
-   //       return { sideDrawerOpen: !prevState.sideDrawerOpen };
-   //    });
-   // };
+   drawerToggleClickHandler = () => {
+      this.setState(prevState => {
+         return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      });
+   };
 
    // backdropClickHandler = () => {
    //    this.setState({ sideDrawerOpen: false });
@@ -31,7 +31,8 @@ class App extends Component {
       return (
          <Router>
             <GlobalStyles />
-            <Navbar />
+            <Navbar drawerToggleClickHandler={this.drawerToggleClickHandler} />
+            <SideDrawer show={this.state.sideDrawerOpen} />
             <Switch>
                <Route exact path='/' component={IndexPage}></Route>
                <Route path='/program' component={ProgramPage}></Route>

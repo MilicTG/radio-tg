@@ -11,7 +11,7 @@ const Navbar = props => (
       <NavbarContainer>
          <Logo />
          <Spacer />
-         <BurgerBtn />
+         <BurgerBtn onClick={props.drawerToggleClickHandler} />
          <NavigationItems>
             <ul>
                <li>
@@ -42,6 +42,7 @@ const NavbarContainer = styled.div`
    margin: auto;
    padding: 0 2rem;
    align-content: center;
+   align-items: center;
    height: 100%;
    @media ${device.deviceDesktop} {
       max-width: 1100px;

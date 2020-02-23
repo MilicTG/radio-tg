@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
-const BurgerBtn = () => (
-   <BurgerBtnContainer>
+const BurgerBtn = props => (
+   <BurgerBtnContainer onClick={props.click}>
       <div />
       <div />
       <div />
@@ -14,8 +14,8 @@ const BurgerBtnContainer = styled.button`
    display: flex;
    flex-direction: column;
    justify-content: space-around;
-   height: 24px;
-   width: 30px;
+   height: 25px;
+   width: 35px;
    background: transparent;
    border: none;
    cursor: pointer;
@@ -27,10 +27,9 @@ const BurgerBtnContainer = styled.button`
    @media (min-width: 769px) {
       display: none;
    }
-
    div {
       width: 30px;
-      height: 2px;
+      height: 3px;
       background: ${theme.colorFont};
    }
 `;

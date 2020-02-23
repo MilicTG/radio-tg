@@ -5,12 +5,14 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 const SideDrawer = props => {
-   // if (props.show) {
-   //    drawerClasses = 'open';
-   // }
+   let drawerClasses;
+
+   if (props.show) {
+      drawerClasses = 'open';
+   }
 
    return (
-      <SideDrawerContainer>
+      <SideDrawerContainer className={drawerClasses}>
          <ul>
             <li>
                <Link to='/program'>Program</Link>
@@ -36,9 +38,9 @@ const SideDrawerContainer = styled.nav`
    width: 70%;
    max-width: 400px;
    z-index: 200;
-   transform: translateX(-100%);
+   transform: translateX(-150%);
    transition: transform 0.3s ease-out;
-   .open {
+   &.open {
       transform: translateX(0);
    }
    ul {
