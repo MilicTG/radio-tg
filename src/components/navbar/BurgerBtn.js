@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
-const BurgerBtn = props => {
+const BurgerBtn = () => (
    <BurgerBtnContainer>
       <div />
       <div />
       <div />
-   </BurgerBtnContainer>;
-};
+   </BurgerBtnContainer>
+);
 
 const BurgerBtnContainer = styled.button`
    display: flex;

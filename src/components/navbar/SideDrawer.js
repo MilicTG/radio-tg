@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 const SideDrawer = props => {
-   if (props.show) {
-      drawerClasses = 'open';
-   }
+   // if (props.show) {
+   //    drawerClasses = 'open';
+   // }
 
    return (
       <SideDrawerContainer>
