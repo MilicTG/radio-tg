@@ -30,20 +30,23 @@ const SideDrawer = props => {
 
 const SideDrawerContainer = styled.nav`
    height: 100%;
-   background: rgba(255, 255, 255, 0.9);
+   background: white;
    /* box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); */
    position: fixed;
    top: 8rem;
    left: 0;
    width: 100%;
-   max-width: 400px;
-   z-index: 100;
+   z-index: 1000;
+   overflow: hidden;
    transition: transform 0.5s ease-out;
    &.open {
       transform: translateX(0);
    }
    &.close {
       transform: translateX(120%);
+      @media (min-width: 769px) {
+         display: none;
+      }
    }
    ul {
       padding-top: 5rem;
