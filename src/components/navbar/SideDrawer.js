@@ -5,23 +5,23 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 const SideDrawer = props => {
-   let drawerClasses = 'close';
-
-   if (props.show) {
-      drawerClasses = 'open';
-   }
-
    return (
-      <SideDrawerContainer className={drawerClasses}>
+      <SideDrawerContainer className={props.drawer ? 'open' : 'close'}>
          <ul>
             <li>
-               <Link to='/program'>Program</Link>
+               <Link onClick={props.onClick} to='/program'>
+                  Program
+               </Link>
             </li>
             <li>
-               <Link to='/marketing'>Marketing</Link>
+               <Link onClick={props.onClick} to='/marketing'>
+                  Marketing
+               </Link>
             </li>
             <li>
-               <Link to='/kontakt'>Kontakt</Link>
+               <Link onClick={props.onClick} to='/kontakt'>
+                  Kontakt
+               </Link>
             </li>
          </ul>
       </SideDrawerContainer>
@@ -30,33 +30,35 @@ const SideDrawer = props => {
 
 const SideDrawerContainer = styled.nav`
    height: 100%;
-   background: white;
-   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+   background: rgba(255, 255, 255, 0.9);
+   /* box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); */
    position: fixed;
-   top: 0;
+   top: 8rem;
    left: 0;
-   width: 70%;
+   width: 100%;
    max-width: 400px;
-   z-index: 200;
-   transition: transform 0.3s ease-out;
+   z-index: 100;
+   transition: transform 0.5s ease-out;
    &.open {
       transform: translateX(0);
    }
    &.close {
-      transform: translateX(-150%);
+      transform: translateX(120%);
    }
    ul {
+      padding-top: 5rem;
       height: 100%;
       list-style: none;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
+      align-items: center;
       li {
-         margin: 0.5rem 0;
+         margin: 2rem 0;
          a {
             text-decoration: none;
             color: ${theme.colorFont};
-            font-size: ${theme.fontSizeS};
+            font-size: ${theme.fontSizeM};
             font-weight: 500;
             transition: all 0.3s ease;
             :hover {

@@ -15,20 +15,11 @@ class Navbar extends Component {
       };
    }
 
-   componentDidMount() {
-      console.log(this.state);
-   }
-
    drawerToggleClickHandler = () => {
       this.setState(prevState => {
          return { sideDrawerOpen: !prevState.sideDrawerOpen };
       });
-      console.log(this.state);
    };
-
-   // backdropClickHandler = () => {
-   //    this.setState({ sideDrawerOpen: false });
-   // };
 
    render() {
       return (
@@ -37,7 +28,10 @@ class Navbar extends Component {
                <Logo />
                <Spacer />
                <BurgerBtn onClick={this.drawerToggleClickHandler} />
-               <SideDrawer />
+               <SideDrawer
+                  drawer={this.state.sideDrawerOpen}
+                  onClick={this.drawerToggleClickHandler}
+               />
                <NavigationItems>
                   <ul>
                      <li>
@@ -58,11 +52,13 @@ class Navbar extends Component {
 }
 
 const NavbarWrapper = styled.nav`
+   position: relative;
    width: 100%;
    height: 8rem;
    top: 0;
    left: 0;
    background: ${theme.colorWhiteBck};
+   z-index: 200;
 `;
 
 const NavbarContainer = styled.div`
