@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 const BurgerBtn = props => (
-   <BurgerBtnContainer onClick={props.click}>
+   <BurgerBtnContainer onClick={props.onClick}>
       <div />
       <div />
       <div />

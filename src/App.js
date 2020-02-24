@@ -13,26 +13,11 @@ import OnlineRTG from './pages/OnlineRTG';
 import FourZeroFourPage from './pages/404Page';
 
 class App extends Component {
-   state = {
-      sideDrawerOpen: false,
-   };
-
-   drawerToggleClickHandler = () => {
-      this.setState(prevState => {
-         return { sideDrawerOpen: !prevState.sideDrawerOpen };
-      });
-   };
-
-   // backdropClickHandler = () => {
-   //    this.setState({ sideDrawerOpen: false });
-   // };
-
    render() {
       return (
          <Router>
             <GlobalStyles />
-            <Navbar drawerToggleClickHandler={this.drawerToggleClickHandler} />
-            <SideDrawer show={this.state.sideDrawerOpen} />
+            <Navbar />
             <Switch>
                <Route exact path='/' component={IndexPage}></Route>
                <Route path='/program' component={ProgramPage}></Route>

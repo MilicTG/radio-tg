@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 
 const SideDrawer = props => {
-   let drawerClasses;
+   let drawerClasses = 'close';
 
    if (props.show) {
       drawerClasses = 'open';
@@ -38,10 +38,12 @@ const SideDrawerContainer = styled.nav`
    width: 70%;
    max-width: 400px;
    z-index: 200;
-   transform: translateX(-150%);
    transition: transform 0.3s ease-out;
    &.open {
       transform: translateX(0);
+   }
+   &.close {
+      transform: translateX(-150%);
    }
    ul {
       height: 100%;

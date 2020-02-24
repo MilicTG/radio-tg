@@ -1,33 +1,61 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 import BurgerBtn from '../navbar/BurgerBtn';
+import SideDrawer from '../navbar/SideDrawer';
 
-const Navbar = props => (
-   <NavbarWrapper>
-      <NavbarContainer>
-         <Logo />
-         <Spacer />
-         <BurgerBtn onClick={props.drawerToggleClickHandler} />
-         <NavigationItems>
-            <ul>
-               <li>
-                  <Link to='/program'>Program</Link>
-               </li>
-               <li>
-                  <Link to='/marketing'>Marketing</Link>
-               </li>
-               <li>
-                  <Link to='/kontakt'>Kontakt</Link>
-               </li>
-            </ul>
-         </NavigationItems>
-      </NavbarContainer>
-   </NavbarWrapper>
-);
+class Navbar extends Component {
+   constructor() {
+      super();
+      this.state = {
+         sideDrawerOpen: false,
+      };
+   }
+
+   componentDidMount() {
+      console.log(this.state);
+   }
+
+   drawerToggleClickHandler = () => {
+      this.setState(prevState => {
+         return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      });
+      console.log(this.state);
+   };
+
+   // backdropClickHandler = () => {
+   //    this.setState({ sideDrawerOpen: false });
+   // };
+
+   render() {
+      return (
+         <NavbarWrapper>
+            <NavbarContainer>
+               <Logo />
+               <Spacer />
+               <BurgerBtn onClick={this.drawerToggleClickHandler} />
+               <SideDrawer />
+               <NavigationItems>
+                  <ul>
+                     <li>
+                        <Link to='/program'>Program</Link>
+                     </li>
+                     <li>
+                        <Link to='/marketing'>Marketing</Link>
+                     </li>
+                     <li>
+                        <Link to='/kontakt'>Kontakt</Link>
+                     </li>
+                  </ul>
+               </NavigationItems>
+            </NavbarContainer>
+         </NavbarWrapper>
+      );
+   }
+}
 
 const NavbarWrapper = styled.nav`
    width: 100%;
