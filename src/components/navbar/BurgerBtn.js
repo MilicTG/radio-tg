@@ -4,9 +4,9 @@ import { theme } from '../../styles/theme';
 
 const BurgerBtn = props => (
    <BurgerBtnContainer onClick={props.onClick}>
-      <div />
-      <div />
-      <div />
+      <div className={props.navBarState ? 'active-top' : ''} />
+      <div className={props.navBarState ? 'active-mid' : ''} />
+      <div className={props.navBarState ? 'active-bottom' : ''} />
    </BurgerBtnContainer>
 );
 
@@ -36,6 +36,17 @@ const BurgerBtnContainer = styled.button`
       width: 30px;
       height: 3px;
       background: ${theme.colorFont};
+      transition: all 0.5s ease;
+      transform-origin: center;
+      &.active-top {
+         transform: translateY(200%) rotate(45deg);
+      }
+      &.active-mid {
+         display: none;
+      }
+      &.active-bottom {
+         transform: translateY(-200%) rotate(-45deg);
+      }
    }
 `;
 

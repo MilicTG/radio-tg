@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
 import GlobalStyles from './styles/Global';
-import SideDrawer from './components/navbar/SideDrawer';
 
 import IndexPage from './pages/IndexPage';
 import ProgramPage from './pages/ProgramPage';

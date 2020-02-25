@@ -12,13 +12,24 @@ class Navbar extends Component {
       super();
       this.state = {
          sideDrawerOpen: false,
+         bodyScrollLock: false,
       };
    }
 
    drawerToggleClickHandler = () => {
       this.setState(prevState => {
-         return { sideDrawerOpen: !prevState.sideDrawerOpen };
+         return {
+            sideDrawerOpen: !prevState.sideDrawerOpen,
+            bodyScrollLock: !prevState.bodyScrollLock,
+         };
       });
+      this.onScrollBodyLock();
+   };
+
+   onScrollBodyLock = () => {
+      !this.state.bodyScrollLock
+         ? (document.body.style.overflow = 'hidden')
+         : (document.body.style.overflow = 'unset');
    };
 
    render() {
@@ -27,7 +38,10 @@ class Navbar extends Component {
             <NavbarContainer>
                <Logo />
                <Spacer />
-               <BurgerBtn onClick={this.drawerToggleClickHandler} />
+               <BurgerBtn
+                  onClick={this.drawerToggleClickHandler}
+                  navBarState={this.state.sideDrawerOpen}
+               />
                <SideDrawer
                   drawer={this.state.sideDrawerOpen}
                   onClick={this.drawerToggleClickHandler}

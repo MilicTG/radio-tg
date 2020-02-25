@@ -4,15 +4,20 @@ import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 
 const OnlineBtn = props => {
-   return <ButtonContainer>{props.children}</ButtonContainer>;
+   return (
+      <ButtonContainer onClick={props.onClick}>
+         {props.children}
+      </ButtonContainer>
+   );
 };
 
 const ButtonContainer = styled.button`
    height: 4rem;
-   border-bottom: solid 1px ${theme.colorPrimary};
+   background-color: ${theme.colorQuartile};
+   border: none;
    align-items: center;
    transition: all 0.2s ease-in-out;
-   color: ${theme.colorFont};
+   color: ${theme.colorWhiteBck};
    p {
       width: 100%;
       display: inherit;

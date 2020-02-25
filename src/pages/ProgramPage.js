@@ -14,40 +14,19 @@ const title = 'Raspored programa';
 const desc = 'Pregled naseg tjednog programa';
 
 class ProgramPage extends Component {
-   constructor(props) {
-      super(props);
+   constructor() {
+      super();
       this.state = {
          morning: mondayMorning,
          afternoon: mondayAfternoon,
       };
-
-      this.changeToMonday = this.changeToMonday.bind(this);
-      this.changeToTuesday = this.changeToTuesday.bind(this);
    }
-
-   // changeSchedule = e => {
-   //    switch (e) {
-   //       case 'monday':
-   //          this.setState({
-   //             morning: mondayMorning,
-   //             afternoon: mondayAfternoon,
-   //          });
-   //          break;
-   //       case 'tuesday':
-   //          this.setState({
-   //             morning: tuesdayMorning,
-   //             afternoon: tuesdayAfternoon,
-   //          });
-   //          break;
-   //    }
-   // };
 
    changeToMonday = () => {
       this.setState({
          morning: mondayMorning,
          afternoon: mondayAfternoon,
       });
-      console.log('upro');
    };
 
    changeToTuesday = () => {
@@ -68,17 +47,7 @@ class ProgramPage extends Component {
             <Container>
                <ButtonContainer>
                   <DayBtn onClick={this.changeToMonday}>Ponedjeljak</DayBtn>
-                  <DayBtn
-                     onClick={() => {
-                        console.log('upro');
-                        this.setState({
-                           morning: tuesdayMorning,
-                           afternoon: tuesdayAfternoon,
-                        });
-                     }}
-                  >
-                     Utorak
-                  </DayBtn>
+                  <DayBtn onClick={this.changeToTuesday}>Utorak</DayBtn>
                   <DayBtn>Srijeda</DayBtn>
                   <DayBtn>Cetvrtak</DayBtn>
                   <DayBtn>Petak</DayBtn>
