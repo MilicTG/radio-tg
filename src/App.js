@@ -9,6 +9,7 @@ import ProgramPage from './pages/ProgramPage';
 import MarketingPage from './pages/MarketingPage';
 import ContactPage from './pages/ContactPage';
 import OnlineRTG from './pages/OnlineRTG';
+import ShowPage from './pages/ShowPage';
 import FourZeroFourPage from './pages/404Page';
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
                <Route path='/marketing' component={MarketingPage}></Route>
                <Route path='/kontakt' component={ContactPage}></Route>
                <Route path='/onlinertg' component={OnlineRTG}></Route>
+               <Route path='/emisija' component={ShowPage}></Route>
             </Switch>
          </Router>
       );
