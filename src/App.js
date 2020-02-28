@@ -17,7 +17,7 @@ class App extends Component {
       return (
          <Router>
             <GlobalStyles />
-            <Navbar />
+            {/* <Navbar /> */}
             <Switch>
                <Route exact path='/' component={IndexPage}></Route>
                <Route path='/program' component={ProgramPage}></Route>
