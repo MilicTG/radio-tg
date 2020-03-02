@@ -6,6 +6,7 @@ import CardSection from '../components/card/CardSection';
 import CardUI from '../components/card/CardUI';
 import AboutUs from '../components/about/AboutUs';
 import Footer from '../components/footer/Footer';
+import NavBar from '../components/navbar/Navbar';
 
 import showData from '../data/showData';
 
@@ -13,6 +14,7 @@ export default class IndexPage extends Component {
    render() {
       return (
          <>
+            <NavBar />
             <Header />
             <SectionTitle
                title='Nase najslusanije emisije'
