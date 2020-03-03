@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 //components
+import EnterButton from '../../components/buttonTransparent/btnTransparent.component';
 
 //styles
 import {
@@ -10,7 +12,7 @@ import {
    leftIndexOverlay as LeftOverlay,
    rightIndexSide as RightSide,
    rightIndexOverlay as RightOverlay,
-} from './styles/index.style';
+} from './index.style';
 
 class IndexPage extends Component {
    constructor() {
@@ -55,6 +57,8 @@ class IndexPage extends Component {
             >
                <LeftOverlay className={this.state.classMain}>
                   <h1>Radio Tomislavgrad</h1>
+                  <p>Vaš domaći radio</p>
+                  <EnterButton text='Ulaz    ' icon={faArrowRight} size='m' />
                </LeftOverlay>
             </LeftSide>
             <RightSide
@@ -64,6 +68,8 @@ class IndexPage extends Component {
             >
                <RightOverlay className={this.state.classMain}>
                   <h1>Duvanjski radio</h1>
+                  <p>Najbolji online radio</p>
+                  <EnterButton text='Ulaz    ' icon={faArrowRight} size='m' />
                </RightOverlay>
             </RightSide>
          </IndexContainer>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import SmallHeader from '../components/header/SmallHeader';
+// import SmallHeader from '../components/header/SmallHeader';
 import { Container } from '../styles/Container';
-import DayBtn from '../components/buttons/DayBtn';
+// import DayBtn from '../components/buttons/DayBtn';
 import programImg from '../assets/img-program.jpg';
 
 import mondayMorning from '../data/mondayMorning';
@@ -39,20 +39,20 @@ class ProgramPage extends Component {
    render() {
       return (
          <>
-            <SmallHeader
+            {/* <SmallHeader
                picture={programImg}
                title={title}
                desc={desc}
-            ></SmallHeader>
+            ></SmallHeader> */}
             <Container>
                <ButtonContainer>
-                  <DayBtn onClick={this.changeToMonday}>Ponedjeljak</DayBtn>
+                  {/* <DayBtn onClick={this.changeToMonday}>Ponedjeljak</DayBtn>
                   <DayBtn onClick={this.changeToTuesday}>Utorak</DayBtn>
                   <DayBtn>Srijeda</DayBtn>
                   <DayBtn>Cetvrtak</DayBtn>
                   <DayBtn>Petak</DayBtn>
                   <DayBtn>Subota</DayBtn>
-                  <DayBtn>Nedjelja</DayBtn>
+                  <DayBtn>Nedjelja</DayBtn> */}
                </ButtonContainer>
                <ScheduleContainer>
                   <table>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { theme } from '../../../styles/theme';
-import imgRadioTG from '../../../assets/img-rtg.jpg';
-import imgDuvanjski from '../../../assets/img-duvanjski.jpg';
+import { theme } from '../../styles/theme';
+import imgRadioTG from '../../assets/img-rtg.jpg';
+import imgDuvanjski from '../../assets/img-duvanjski.jpg';
 
 export const indexContainer = styled.div`
    position: relative;
@@ -21,7 +21,6 @@ export const leftIndexSide = styled.div`
    background-repeat: no-repeat;
    background-position: left top;
    transition: 1000ms all ease-in-out;
-
    &.enter-left {
       width: 75%;
    }
@@ -33,20 +32,30 @@ export const leftIndexSide = styled.div`
 export const leftIndexOverlay = styled.div`
    width: 100%;
    height: 100%;
-   background-color: rgba(0, 106, 192, 0.5);
+   background-color: ${theme.colorPrimaryTransparent};
    transition: 1000ms all ease-in-out;
    display: flex;
+   flex-flow: column;
    justify-content: center;
    align-items: center;
    h1 {
       color: white;
       font-size: ${theme.fontSizeXL};
+      white-space: nowrap;
+   }
+   p {
+      color: white;
+      white-space: nowrap;
+      font-size: ${theme.fontSizeM};
+      font-weight: 200;
+      letter-spacing: 5px;
+      padding: 3rem 0 6rem 0;
    }
    &.enter-left {
-      background-color: rgba(0, 106, 192, 0.5);
+      background-color: ${theme.colorPrimaryTransparent};
    }
    &.enter-right {
-      background-color: rgba(33, 33, 33, 0.5);
+      background-color: ${theme.colorTransparentOverlay};
    }
 `;
 
@@ -71,19 +80,29 @@ export const rightIndexSide = styled.div`
 export const rightIndexOverlay = styled.div`
    width: 100%;
    height: 100%;
-   background-color: rgba(180, 82, 37, 0.5);
+   background-color: ${theme.colorSecondaryTransparent};
    transition: 1000ms all ease-in-out;
    display: flex;
+   flex-flow: column;
    justify-content: center;
    align-items: center;
    h1 {
       color: white;
       font-size: ${theme.fontSizeXL};
+      white-space: nowrap;
+   }
+   p {
+      color: white;
+      white-space: nowrap;
+      font-size: ${theme.fontSizeM};
+      font-weight: 200;
+      letter-spacing: 5px;
+      padding: 3rem 0 6rem 0;
    }
    &.enter-right {
-      background-color: rgba(180, 82, 37, 0.5);
+      background-color: ${theme.colorSecondaryTransparent};
    }
    &.enter-left {
-      background-color: rgba(33, 33, 33, 0.5);
+      background-color: ${theme.colorTransparentOverlay};
    }
 `;
