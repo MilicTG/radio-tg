@@ -1,54 +1,25 @@
-import React from 'react';
-import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import { Container } from '../../styles/Container';
 import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
-import PlayButton from '../buttons/PlayButton';
-import DownloadButton from '../buttons/DownloadButton';
-import headerImage from '../../assets/Radio-1.jpg';
 
-const Header = () => {
-   return (
-      <HeaderImage>
-         <HeaderOverlay>
-            <Container>
-               <Fade left cascade>
-                  <HeaderText>
-                     <h1 id='radio'>Radio </h1> <h1 id='city'>Tomislavgrad</h1>
-                     <h4>95.1,95.9 i 103.3Mhz</h4>
-                  </HeaderText>
-               </Fade>
-               <Fade bottom delay='1200'>
-                  <ButtonGroup>
-                     <PlayButton />
-                     <DownloadButton />
-                  </ButtonGroup>
-               </Fade>
-            </Container>
-         </HeaderOverlay>
-      </HeaderImage>
-   );
-};
+import headerImageSource from '../../assets/img-rtg.jpg';
 
-export default Header;
-
-const HeaderImage = styled.header`
+export const headerImage = styled.header`
    width: 100%;
    height: 90vh;
    min-height: 50rem;
    max-height: 100rem;
-   background-image: url(${headerImage});
+   background-image: url(${headerImageSource});
    background-repeat: no-repeat;
    background-position: left top;
    background-size: cover;
 `;
 
-const HeaderOverlay = styled.div`
+export const headerOverlay = styled.div`
    background-image: linear-gradient(
       to left,
-      rgba(0, 168, 232, 0.5),
-      rgba(0, 52, 89, 0.9)
+      rgba(0, 164, 230, 0.5),
+      rgba(0, 51, 87, 0.9)
    );
    width: 100%;
    height: 100%;
@@ -56,7 +27,7 @@ const HeaderOverlay = styled.div`
    align-items: center;
 `;
 
-const HeaderText = styled.div`
+export const headerText = styled.div`
    padding-top: 1rem;
    text-align: center;
    color: #fff;
@@ -110,7 +81,7 @@ const HeaderText = styled.div`
    }
 `;
 
-const ButtonGroup = styled.div`
+export const buttonWrapper = styled.div`
    display: flex;
    justify-content: center;
    @media ${device.deviceTablet} {

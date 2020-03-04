@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 //components
 import Logo from '../logo/logo.component';
-import BurgerBtn from '../burgerButton/burgerBtn.component';
+import BurgerBtn from '../buttonBurger/burgerBtn.component';
+import SideDrawer from '../sideDrawer/sideDrawer.component';
 
 //styles
 import {
@@ -47,6 +48,10 @@ class Navbar extends Component {
                <BurgerBtn
                   onClick={this.drawerToggleClickHandler}
                   navBarState={this.state.sideDrawerOpen}
+               />
+               <SideDrawer
+                  drawer={this.state.sideDrawerOpen}
+                  onClick={this.drawerToggleClickHandler}
                />
                <Navigation>
                   <ul>

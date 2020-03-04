@@ -1,18 +1,14 @@
 export const theme = {
    //colors
-   colorPrimary: '#084e63',
-   colorSecondary: '#db4d48',
-   colorPrimaryTransparent: 'rgba(8, 78, 99, 0.8)',
-   colorSecondaryTransparent: 'rgba(219, 77, 72, 0.8)',
+   colorPrimary: '#003459',
+   colorSecondary: '#00A8E8',
+   colorTertiary: '#00171F',
+   colorPrimaryTransparent: 'rgba(0, 51, 87, 0.8)',
+   colorSecondaryTransparent: 'rgba(0, 164, 230, 0.8)',
    colorTransparentOverlay: 'rgba(33, 33, 33, 0.8)',
    colorFont: '#303030',
-
-   //main colors old
-   colorTertiary: '#00171F',
-   colorQuartile: '#00A8E8',
    colorDarkBck: '#F1EBD2',
    colorLightBck: '#eeeeee',
-   boxShadow: '5px 10px 10px 0px rgba(0, 0, 0, 0.16)',
    //font size
    fontSizeXXS: '0.8rem',
    fontSizeXS: '1.6rem',
@@ -24,4 +20,5 @@ export const theme = {
    fontSizeXXXL: '6.4rem',
    //different sizes
    mainContainerWeb: '1600px',
+   boxShadow: '5px 10px 10px 0px rgba(0, 0, 0, 0.16)',
 };

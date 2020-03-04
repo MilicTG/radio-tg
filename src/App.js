@@ -6,7 +6,7 @@ import GlobalStyles from './styles/Global';
 import Navbar from './components/navBar/navbar.component';
 
 //pages
-import IndexPage from './pages/index/index.page.jsx';
+import IndexPage from './pages/indexPage/index.page';
 import ProgramPage from './pages/ProgramPage';
 import MarketingPage from './pages/MarketingPage';
 import ContactPage from './pages/ContactPage';
