@@ -4,7 +4,7 @@ import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 
 export const buttonContainer = styled.button`
-   display: none;
+   display: flex;
    width: 14rem;
    height: 4.2rem;
    background: #fff;
@@ -22,7 +22,6 @@ export const buttonContainer = styled.button`
       font-size: ${theme.fontSizeButtonS};
    }
    @media ${device.deviceTablet} {
-      display: flex;
       width: 15rem;
       height: 4.8rem;
       padding: 0 20px;
@@ -31,7 +30,6 @@ export const buttonContainer = styled.button`
       }
    }
    @media ${device.deviceDesktop} {
-      display: flex;
       width: 17rem;
       height: 5.5rem;
       p {

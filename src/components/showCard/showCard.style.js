@@ -1,23 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
-import styled from 'styled-components';
 
-const CardUI = props => {
-   return (
-      <CardContainer>
-         <Link onClick={props.onClick} to='/emisija'>
-            <CardImg src={props.img} alt='show image' />
-            <CardTitle>{props.title}</CardTitle>
-            <CardDesc>{props.desc}</CardDesc>
-            <CardTime>{props.time}</CardTime>
-         </Link>
-      </CardContainer>
-   );
-};
-
-const CardContainer = styled.div`
+export const cardContainer = styled.div`
    width: 100%;
    padding-bottom: 2.5rem;
    margin: 0 auto;
@@ -31,7 +16,8 @@ const CardContainer = styled.div`
       text-decoration: none;
    }
 `;
-const CardTitle = styled.h2`
+
+export const cardTitle = styled.h2`
    color: ${theme.colorFont};
    font-size: 2rem;
    font-weight: 500;
@@ -46,11 +32,13 @@ const CardTitle = styled.h2`
       font-size: 2.6rem;
    }
 `;
-const CardImg = styled.img`
+
+export const cardImg = styled.img`
    width: 100%;
    border-radius: 5px 5px 0 0;
 `;
-const CardDesc = styled.p`
+
+export const cardDesc = styled.p`
    color: ${theme.colorFont};
    font-size: 1.8rem;
    height: 15rem;
@@ -69,7 +57,8 @@ const CardDesc = styled.p`
       font-size: 2rem;
    }
 `;
-const CardTime = styled.p`
+
+export const cardTime = styled.p`
    color: ${theme.colorSecondary};
    font-size: 1rem;
    padding: 1.5rem 0 0 1.5rem;
@@ -84,5 +73,3 @@ const CardTime = styled.p`
       font-size: 1.3rem;
    }
 `;
-
-export default CardUI;

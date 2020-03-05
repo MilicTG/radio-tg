@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
+
+//styles
+import { cardSectionContainer as CardContainer } from './index.style';
+import { Container } from '../../styles/Container';
 
 //components
 import Header from '../../components/headerBig/headerBig.component';
 import PlayButton from '../../components/buttonPlay/buttonPlay.component';
+import DownloadBtn from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
+import ShowCard from '../../components/showCard/showCard.component';
+
+//data
+import dataForCard from '../../data/showData';
 
 export default class IndexPage extends Component {
    constructor() {
@@ -14,6 +24,7 @@ export default class IndexPage extends Component {
          titleSecond: 'Tomislavgrad',
          titleFreq: '95.1,95.9 i 103.3Mhz',
          play: false,
+         cardData: dataForCard,
       };
       this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
@@ -56,11 +67,27 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
             >
                <PlayButton onClick={this.togglePlay} play={this.state.play} />
+               <DownloadBtn text='Preuzmite pls' />
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
             />
+            <Container>
+               <CardContainer>
+                  {this.state.cardData.map(data => (
+                     <Fade bottom key={data.id}>
+                        <ShowCard
+                           key={data.id}
+                           title={data.showName}
+                           img={data.showPic}
+                           desc={data.showDesc}
+                           time={data.showTime}
+                        />
+                     </Fade>
+                  ))}
+               </CardContainer>
+            </Container>
          </>
       );
    }

@@ -83,7 +83,7 @@ export const headerText = styled.div`
 
 export const buttonWrapper = styled.div`
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    @media ${device.deviceTablet} {
       justify-content: flex-start;
    }

@@ -56,6 +56,23 @@ export const navigationItems = styled.div`
          transition: all 0.3s ease;
          :hover {
             color: ${theme.colorPrimary};
+            transition: all 0.3s ease-out;
+         }
+         :after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 2px;
+            left: 50%;
+            background: ${theme.colorPrimary};
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            margin-top: 2px;
+         }
+         :hover:after {
+            width: 100%;
+            left: 0;
          }
       }
    }
