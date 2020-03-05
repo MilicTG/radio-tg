@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 
 //styles
-import { cardSectionContainer as CardContainer } from './index.style';
+import {
+   cardSectionContainer as CardContainer,
+   aboutSectionContainer as AboutSection,
+} from './index.style';
 import { Container } from '../../styles/Container';
 
 //components
@@ -88,6 +91,9 @@ export default class IndexPage extends Component {
                   ))}
                </CardContainer>
             </Container>
+            <AboutSection>
+               <Container></Container>
+            </AboutSection>
          </>
       );
    }

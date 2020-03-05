@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../styles/responsive';
+import { theme } from '../../styles/theme';
 
 export const cardSectionContainer = styled.section`
    width: 100%;
@@ -20,4 +21,9 @@ export const cardSectionContainer = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 4rem;
    }
+`;
+
+export const aboutSectionContainer = styled.section`
+   width: 100%;
+   background-color: ${theme.colorLightBck};
 `;
