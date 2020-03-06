@@ -12,7 +12,7 @@ import { Container } from '../../styles/Container';
 
 const header = props => {
    return (
-      <HeroImage>
+      <HeroImage colorLight={props.colorOverlay}>
          <Overlay>
             <Container>
                <Fade left cascade>

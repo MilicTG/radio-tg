@@ -16,11 +16,19 @@ export const headerImage = styled.header`
 `;
 
 export const headerOverlay = styled.div`
-   background-image: linear-gradient(
+   background-image: ${props =>
+      (props.colorOverlay = 'light'
+         ? `linear-gradient(
       to left,
-      rgba(0, 164, 230, 0.5),
+      rgba(0, 51, 87, 0.1),
       rgba(0, 51, 87, 0.9)
-   );
+   );`
+         : `linear-gradient(
+      to left,
+      rgba(33, 33, 33, 0.1),
+      rgba(33, 33, 33, 0.9)
+   );`)};
+
    width: 100%;
    height: 100%;
    display: flex;

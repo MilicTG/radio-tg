@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 //components
 import Logo from '../logo/logo.component';
 import BurgerBtn from '../buttonBurger/burgerBtn.component';
+import RTGMusicBTN from '../buttonRTGMusic/buttonRTGMusic.component';
 import SideDrawer from '../sideDrawer/sideDrawer.component';
 
 //styles
@@ -43,7 +45,9 @@ class Navbar extends Component {
       return (
          <Wrapper>
             <Container>
-               <Logo />
+               <Fade left>
+                  <Logo />
+               </Fade>
                <Spacer />
                <BurgerBtn
                   onClick={this.drawerToggleClickHandler}
@@ -55,15 +59,22 @@ class Navbar extends Component {
                />
                <Navigation>
                   <ul>
-                     <li>
-                        <Link to='/program'>Program</Link>
-                     </li>
-                     <li>
-                        <Link to='/marketing'>Marketing</Link>
-                     </li>
-                     <li>
-                        <Link to='/kontakt'>Kontakt</Link>
-                     </li>
+                     <Fade top cascade>
+                        <li>
+                           <Link to='/program'>Program</Link>
+                        </li>
+                        <li>
+                           <Link to='/marketing'>Marketing</Link>
+                        </li>
+                        <li>
+                           <Link to='/kontakt'>Kontakt</Link>
+                        </li>
+                     </Fade>
+                     <Fade right>
+                        <li>
+                           <RTGMusicBTN text='RTG Music' />
+                        </li>
+                     </Fade>
                   </ul>
                </Navigation>
             </Container>

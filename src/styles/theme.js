@@ -5,9 +5,8 @@ export const theme = {
    colorTertiary: '#00171F',
    colorPrimaryTransparent: 'rgba(0, 51, 87, 0.8)',
    colorSecondaryTransparent: 'rgba(0, 164, 230, 0.8)',
-   colorTransparentOverlay: 'rgba(33, 33, 33, 0.8)',
+   colorDarkOverlay: 'rgba(33, 33, 33, 0.8)',
    colorFont: '#303030',
-   colorDarkBck: '#F1EBD2',
    colorLightBck: '#eeeeee',
    //font size
    fontSizeXXS: '0.8rem',

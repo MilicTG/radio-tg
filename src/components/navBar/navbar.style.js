@@ -47,6 +47,8 @@ export const navigationItems = styled.div`
 
       li {
          padding-left: 5rem;
+         display: flex;
+         align-items: center;
       }
       a {
          text-decoration: none;

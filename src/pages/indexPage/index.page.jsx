@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 
 //styles
-import {
-   cardSectionContainer as CardContainer,
-   aboutSectionContainer as AboutSection,
-} from './index.style';
+import { cardSectionContainer as CardContainer } from './index.style';
 import { Container } from '../../styles/Container';
 
 //components
@@ -32,6 +29,7 @@ export default class IndexPage extends Component {
          titleFreq: '95.1,95.9 i 103.3Mhz',
          play: false,
          cardData: dataForCard,
+         colorOverlay: 'light',
       };
       this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
@@ -72,6 +70,7 @@ export default class IndexPage extends Component {
                titleMain={this.state.titleMain}
                titleSecond={this.state.titleSecond}
                titleFreq={this.state.titleFreq}
+               colorOverlay={this.state.colorOverlay}
             >
                <PlayButton onClick={this.togglePlay} play={this.state.play} />
                <DownloadBtn text='Preuzmite pls' />
