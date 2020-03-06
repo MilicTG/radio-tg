@@ -14,9 +14,12 @@ import PlayButton from '../../components/buttonPlay/buttonPlay.component';
 import DownloadBtn from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
+import SectionInfo from '../../components/sectionInfo/sectionInfo.component';
 
 //data
 import dataForCard from '../../data/showData';
+import { indexPageInfoData } from '../../data/infoSectionsData';
+import imgAmp from '../../assets/img-amp.jpg';
 
 export default class IndexPage extends Component {
    constructor() {
@@ -91,9 +94,14 @@ export default class IndexPage extends Component {
                   ))}
                </CardContainer>
             </Container>
-            <AboutSection>
-               <Container></Container>
-            </AboutSection>
+            <SectionInfo
+               color='dark'
+               title={indexPageInfoData.title}
+               rowOne={indexPageInfoData.rowOne}
+               rowTwo={indexPageInfoData.rowTwo}
+               rowThree={indexPageInfoData.rowThree}
+               image={imgAmp}
+            />
          </>
       );
    }
