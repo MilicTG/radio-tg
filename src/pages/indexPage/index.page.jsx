@@ -15,6 +15,7 @@ import DownloadBtn from '../../components/buttonTransparent/btnTransparent.compo
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
 import SectionInfo from '../../components/sectionInfo/sectionInfo.component';
+import Footer from '../../components/footer/footer.component';
 
 //data
 import dataForCard from '../../data/showData';
@@ -102,6 +103,7 @@ export default class IndexPage extends Component {
                rowThree={indexPageInfoData.rowThree}
                image={imgAmp}
             />
+            <Footer />
          </>
       );
    }

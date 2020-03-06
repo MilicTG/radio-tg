@@ -7,13 +7,6 @@ import Navbar from './components/navBar/navbar.component';
 
 //pages
 import IndexPage from './pages/indexPage/index.page';
-import ProgramPage from './pages/ProgramPage';
-import MarketingPage from './pages/MarketingPage';
-import ContactPage from './pages/ContactPage';
-import OnlineRTG from './pages/OnlineRTG';
-import ShowPage from './pages/ShowPage';
-import RadioTgPage from './pages/RadioTGPage';
-import FourZeroFourPage from './pages/404Page';
 
 const App = () => {
    return (
