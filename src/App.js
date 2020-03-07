@@ -7,6 +7,7 @@ import Navbar from './components/navBar/navbar.component';
 
 //pages
 import IndexPage from './pages/indexPage/index.page';
+import RTGMusicPage from './pages/RTGMusicPage/RTGMusicPage.component';
 
 const App = () => {
    return (
@@ -15,6 +16,7 @@ const App = () => {
          <Navbar />
          <Switch>
             <Route exact path='/' component={IndexPage}></Route>
+            <Route exact path='/rtg-music' component={RTGMusicPage}></Route>
             {/* <Route exact path='/RadioTG' component={RadioTgPage}></Route>
                <Route path='/program' component={ProgramPage}></Route>
                <Route path='/marketing' component={MarketingPage}></Route>

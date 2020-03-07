@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 //components
@@ -41,6 +41,11 @@ class Navbar extends Component {
          : (document.body.style.overflow = 'unset');
    };
 
+   handleClick = () => {
+      const history = useHistory();
+      history.push('/rtg-music');
+   };
+
    render() {
       return (
          <Wrapper>
@@ -72,7 +77,11 @@ class Navbar extends Component {
                      </Fade>
                      <Fade right>
                         <li>
-                           <RTGMusicBTN text='RTG Music' />
+                           <RTGMusicBTN
+                              text='RTG Music'
+                              component={Link}
+                              to='/rtg-music'
+                           />
                         </li>
                      </Fade>
                   </ul>

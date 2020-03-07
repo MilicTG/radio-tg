@@ -2,14 +2,12 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 
-import headerImageSource from '../../assets/img-rtg.jpg';
-
 export const headerImage = styled.header`
    width: 100%;
    height: 90vh;
    min-height: 50rem;
    max-height: 100rem;
-   background-image: url(${headerImageSource});
+   background-image: url(${props => props.background});
    background-repeat: no-repeat;
    background-position: left top;
    background-size: cover;

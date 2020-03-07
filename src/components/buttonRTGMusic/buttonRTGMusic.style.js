@@ -13,10 +13,10 @@ const buttonContainer = styled.button`
    align-items: center;
    transition: all 0.2s ease-in-out;
    color: white;
+   outline: none;
    p {
-    display: flex;
-    align-items: center;
-
+      display: flex;
+      align-items: center;
       width: 100%;
       display: inherit;
       justify-content: space-between;
