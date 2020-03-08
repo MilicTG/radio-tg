@@ -39,10 +39,13 @@ export const buttonContainer = styled.button`
    :hover {
       box-shadow: 3px 10px 28px -13px rgba(255, 255, 255, 0.2);
       cursor: pointer;
-      background: ${theme.colorQuartile};
+      color: white;
+      background: ${theme.colorSecondary};
    }
    :active {
       transform: scale(0.95);
       box-shadow: none;
+      color: white;
+      background: ${theme.colorSecondary};
    }
 `;

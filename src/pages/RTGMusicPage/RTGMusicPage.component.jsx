@@ -6,6 +6,9 @@ import Fade from 'react-reveal/Fade';
 //Components
 import Header from '../../components/headerBig/headerBig.component';
 
+//helpers
+import getHeaderBackground from '../../helpers/getHeaderBackground';
+
 //data
 
 export default class RTGMusicPage extends Component {
@@ -13,19 +16,24 @@ export default class RTGMusicPage extends Component {
       super();
 
       this.state = {
-         titleMain: 'RTG',
+         titleMain: 'RTG ',
          titleSecond: 'Music',
          titleFreq: 'Vas najbolji internet radio',
          play: false,
-         colorOverlay: 'dark',
+         headerBackground: '',
       };
       this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
    }
 
+   componentWillMount() {
+      this.setHeaderBackground();
+   }
+
    componentWillUnmount() {
       this.setState({
          play: false,
+         headerBackground: this.getHeaderBackground,
       });
       if (this.audio == null) {
          console.log('ne svira');
@@ -33,6 +41,13 @@ export default class RTGMusicPage extends Component {
          this.audio.pause();
       }
    }
+
+   setHeaderBackground = () => {
+      let background = getHeaderBackground();
+      this.setState({
+         headerBackground: background,
+      });
+   };
 
    togglePlay = () => {
       this.setState({
@@ -58,7 +73,7 @@ export default class RTGMusicPage extends Component {
                titleMain={this.state.titleMain}
                titleSecond={this.state.titleSecond}
                titleFreq={this.state.titleFreq}
-               colorOverlay={this.state.colorOverlay}
+               background={this.state.headerBackground}
             />
          </>
       );

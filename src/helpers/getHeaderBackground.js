@@ -26,9 +26,9 @@ const imageArray = [
    imgTwelve,
 ];
 
-const getBackground = () => {
+const getHeaderBackground = () => {
    let background = imageArray[Math.floor(Math.random() * imageArray.length)];
    return background;
 };
 
-export default getBackground;
+export default getHeaderBackground;

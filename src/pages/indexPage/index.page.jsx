@@ -14,6 +14,9 @@ import ShowCard from '../../components/showCard/showCard.component';
 import SectionInfo from '../../components/sectionInfo/sectionInfo.component';
 import Footer from '../../components/footer/footer.component';
 
+//helpers
+import getHeaderBackground from '../../helpers/getHeaderBackground';
+
 //data
 import dataForCard from '../../data/showData';
 import { indexPageInfoData } from '../../data/infoSectionsData';
@@ -29,10 +32,14 @@ export default class IndexPage extends Component {
          titleFreq: '95.1,95.9 i 103.3Mhz',
          play: false,
          cardData: dataForCard,
-         colorOverlay: 'light',
+         headerBackground: '',
       };
       this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
+   }
+
+   componentWillMount() {
+      this.setHeaderBackground();
    }
 
    componentWillUnmount() {
@@ -45,6 +52,13 @@ export default class IndexPage extends Component {
          this.audio.pause();
       }
    }
+
+   setHeaderBackground = () => {
+      let background = getHeaderBackground();
+      this.setState({
+         headerBackground: background,
+      });
+   };
 
    togglePlay = () => {
       this.setState({
@@ -67,13 +81,18 @@ export default class IndexPage extends Component {
       return (
          <>
             <Header
+               key='1'
                titleMain={this.state.titleMain}
                titleSecond={this.state.titleSecond}
                titleFreq={this.state.titleFreq}
-               colorOverlay={this.state.colorOverlay}
+               background={this.state.headerBackground}
             >
-               <PlayButton onClick={this.togglePlay} play={this.state.play} />
-               <DownloadBtn text='Preuzmite pls' />
+               <PlayButton
+                  key='2'
+                  onClick={this.togglePlay}
+                  play={this.state.play}
+               />
+               <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'

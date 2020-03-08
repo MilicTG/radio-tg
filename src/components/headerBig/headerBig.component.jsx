@@ -10,12 +10,9 @@ import {
 } from './headerBig.style';
 import { Container } from '../../styles/Container';
 
-//helper
-import getBackground from '../../helpers/getBackground';
-
 const header = props => {
    return (
-      <HeroImage colorLight={props.colorOverlay} background={getBackground}>
+      <HeroImage colorLight={props.colorOverlay} background={props.background}>
          <Overlay>
             <Container>
                <Fade left cascade>
