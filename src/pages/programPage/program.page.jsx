@@ -9,6 +9,7 @@ import { Container } from '../../styles/Container';
 
 //components
 import SmallHeader from '../../components/headerSmall/headerSmall.component';
+import ScheduleButton from '../../components/buttonSchedule/buttonSchedule.component';
 
 //data
 import headImage from '../../assets/img-program.jpg';
@@ -51,6 +52,11 @@ export default class ProgramPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
+            <Container>
+               <BtnWrapper>
+                  <ScheduleButton />
+               </BtnWrapper>
+            </Container>
          </>
       );
    }
