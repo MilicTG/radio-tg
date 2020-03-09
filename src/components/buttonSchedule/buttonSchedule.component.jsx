@@ -8,7 +8,7 @@ import {
 
 const buttonSchedule = props => {
    return (
-      <Container>
+      <Container onClick={props.onClick}>
          <Text>{props.text}</Text>
       </Container>
    );

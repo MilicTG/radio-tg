@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 //styles
 import {
@@ -10,6 +11,7 @@ import { Container } from '../../styles/Container';
 //components
 import SmallHeader from '../../components/headerSmall/headerSmall.component';
 import ScheduleButton from '../../components/buttonSchedule/buttonSchedule.component';
+import Footer from '../../components/footer/footer.component';
 
 //data
 import headImage from '../../assets/img-program.jpg';
@@ -53,10 +55,51 @@ export default class ProgramPage extends Component {
                desc={this.state.headDesc}
             />
             <Container>
-               <BtnWrapper>
-                  <ScheduleButton />
-               </BtnWrapper>
+               <Fade bottom cascade>
+                  <BtnWrapper>
+                     <ScheduleButton
+                        text='ponedjeljak'
+                        onClick={this.changeToMonday}
+                     />
+                     <ScheduleButton
+                        text='utorak'
+                        onClick={this.changeToTuesday}
+                     />
+                     <ScheduleButton text='srijeda' />
+                     <ScheduleButton text='cetvrtak' />
+                     <ScheduleButton text='petak' />
+                     <ScheduleButton text='subota' />
+                     <ScheduleButton text='nedjelja' />
+                  </BtnWrapper>
+               </Fade>
+               <SchWrap>
+                  <table>
+                     <thead>
+                        <tr>Jutarnji program</tr>
+                        <tr>Popodnevni program</tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           {this.state.morning.map(shows => (
+                              <td id={shows.id}>
+                                 <p>{shows.time}</p>
+                                 <h4>{shows.name}</h4>
+                              </td>
+                           ))}
+                        </tr>
+                        <tr>
+                           {this.state.afternoon.map(shows => (
+                              <td id={shows.id}>
+                                 <p>{shows.time}</p>
+                                 <h4>{shows.name}</h4>
+                              </td>
+                           ))}
+                        </tr>
+                     </tbody>
+                  </table>
+               </SchWrap>
             </Container>
+            <Footer />
          </>
       );
    }
