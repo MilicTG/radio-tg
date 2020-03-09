@@ -18,7 +18,7 @@ const infoSection = props => {
          <Container>
             <InfoSide>
                <TextWrapper>
-                  <Fade left delay='600' cascade>
+                  <Fade left delay={600} cascade>
                      <Title>{props.title}</Title>
                      <Text>
                         <p className='rowOne'>{props.rowOne}</p>
@@ -27,7 +27,7 @@ const infoSection = props => {
                      </Text>
                   </Fade>
                </TextWrapper>
-               <Fade right delay='600'>
+               <Fade right delay={600}>
                   <Image src={props.image} />
                </Fade>
             </InfoSide>

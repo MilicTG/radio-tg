@@ -4,8 +4,10 @@ import { device } from '../../styles/responsive';
 
 export const infoSectionContainer = styled.section`
    width: 100%;
+   min-height: 40rem;
+   padding: 5rem 0;
    background-color: ${props =>
-      (props.color = 'dark' ? theme.colorLightBck : '#fff')};
+      props.color ? `${theme.colorLightBck}` : `white;`};
 `;
 
 export const textInfoSide = styled.div`
@@ -13,7 +15,6 @@ export const textInfoSide = styled.div`
    display: grid;
    padding: 2.5rem 0 2.5rem 0;
    grid-template-columns: 1fr;
-   justify-items: center;
    grid-column-gap: 3rem;
 
    @media ${device.deviceTablet} {
@@ -26,7 +27,7 @@ export const textInfoSide = styled.div`
    }
    @media ${device.deviceDesktop} {
       padding: 5.5rem 0 5.5rem 0;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-column-gap: 5rem;
    }
 `;
@@ -34,8 +35,9 @@ export const textInfoSide = styled.div`
 export const infoTextWrapper = styled.div`
    display: flex;
    flex-flow: column;
-   justify-content: center;
+   justify-content: space-between;
    text-align: center;
+   width: 80%;
 `;
 
 export const infoTextTitle = styled.h3`
@@ -67,6 +69,12 @@ export const infoText = styled.article`
    .rowOne {
       padding-bottom: 1rem;
    }
+   .rowTwo {
+      padding-bottom: 1rem;
+   }
+   .rowThree {
+      padding-bottom: 1rem;
+   }
    @media ${device.deviceTablet} {
       font-size: ${theme.fontSizeXS};
       text-align: start;
@@ -84,7 +92,6 @@ export const infoText = styled.article`
 
 export const infoImg = styled.img`
    border-radius: 10px;
-   width: 25rem;
    height: 20rem;
    margin: 0 auto;
    background-image: ${props => props.image};
@@ -92,18 +99,15 @@ export const infoImg = styled.img`
    background-position: left top;
    background-size: cover;
    @media ${device.deviceTablet} {
-      width: 50rem;
-      height: 20rem;
+      height: 25rem;
       margin: 0;
    }
    @media ${device.deviceTabletLand} {
-      width: 50rem;
-      height: 20rem;
+      height: 30rem;
       margin: 0;
    }
    @media ${device.deviceDesktop} {
-      width: 60rem;
-      height: 40rem;
+      height: 35rem;
       margin: 0;
    }
 `;

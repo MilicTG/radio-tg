@@ -72,32 +72,34 @@ export default class ProgramPage extends Component {
                      <ScheduleButton text='nedjelja' />
                   </BtnWrapper>
                </Fade>
-               <SchWrap>
-                  <table>
-                     <thead>
-                        <tr>Jutarnji program</tr>
-                        <tr>Popodnevni program</tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           {this.state.morning.map(shows => (
-                              <td id={shows.id}>
-                                 <p>{shows.time}</p>
-                                 <h4>{shows.name}</h4>
-                              </td>
-                           ))}
-                        </tr>
-                        <tr>
-                           {this.state.afternoon.map(shows => (
-                              <td id={shows.id}>
-                                 <p>{shows.time}</p>
-                                 <h4>{shows.name}</h4>
-                              </td>
-                           ))}
-                        </tr>
-                     </tbody>
-                  </table>
-               </SchWrap>
+               <Fade bottom delay={1000} effect='fadeInUp'>
+                  <SchWrap>
+                     <table>
+                        <thead>
+                           <tr>Jutarnji program</tr>
+                           <tr>Popodnevni program</tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              {this.state.morning.map(shows => (
+                                 <td id={shows.id}>
+                                    <p>{shows.time}</p>
+                                    <h4>{shows.name}</h4>
+                                 </td>
+                              ))}
+                           </tr>
+                           <tr>
+                              {this.state.afternoon.map(shows => (
+                                 <td id={shows.id}>
+                                    <p>{shows.time}</p>
+                                    <h4>{shows.name}</h4>
+                                 </td>
+                              ))}
+                           </tr>
+                        </tbody>
+                     </table>
+                  </SchWrap>
+               </Fade>
             </Container>
             <Footer />
          </>

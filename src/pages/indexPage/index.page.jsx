@@ -11,7 +11,7 @@ import PlayButton from '../../components/buttonPlay/buttonPlay.component';
 import DownloadBtn from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
-import SectionInfo from '../../components/sectionInfo/sectionInfo.component';
+import SectionInfo from '../../components/sectionInfo/sectionInfoLeft.component';
 import Footer from '../../components/footer/footer.component';
 
 //helpers
@@ -114,7 +114,7 @@ export default class IndexPage extends Component {
                </CardContainer>
             </Container>
             <SectionInfo
-               color='dark'
+               color={true}
                title={indexPageInfoData.title}
                rowOne={indexPageInfoData.rowOne}
                rowTwo={indexPageInfoData.rowTwo}
