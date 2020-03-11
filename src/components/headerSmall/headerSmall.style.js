@@ -7,7 +7,7 @@ export const smallHeaderContainer = styled.header`
    height: 30vh;
    background: url(${props => props.background});
    background-repeat: no-repeat;
-   background-position: left top;
+   background-position: left center;
    background-size: cover;
 `;
 

@@ -108,6 +108,7 @@ export default class IndexPage extends Component {
                <CardContainer>
                   <Fade bottom delay={300}>
                      <ShowCard
+                        route={`/zrcalo`}
                         img={dnevnoZrcalo.showPic}
                         title={dnevnoZrcalo.showName}
                         desc={dnevnoZrcalo.showDesc}
