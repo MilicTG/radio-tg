@@ -18,9 +18,16 @@ import Footer from '../../components/footer/footer.component';
 import getHeaderBackground from '../../helpers/getHeaderBackground';
 
 //data
-import dataForCard from '../../data/showData';
 import { indexPageInfoData } from '../../data/infoSectionsData';
 import imgAmp from '../../assets/img-amp.jpg';
+import {
+   dnevnoZrcalo,
+   strunica,
+   klubPetmil,
+   razgovoriUgodni,
+   vzr,
+   obiteljskiAlbum,
+} from '../../data/showData';
 
 export default class IndexPage extends Component {
    constructor() {
@@ -31,7 +38,6 @@ export default class IndexPage extends Component {
          titleSecond: 'Tomislavgrad',
          titleFreq: '95.1,95.9 i 103.3Mhz',
          play: false,
-         cardData: dataForCard,
          headerBackground: '',
       };
       this.url = 'http://cast2.name.ba:8038/;';
@@ -100,17 +106,44 @@ export default class IndexPage extends Component {
             />
             <Container>
                <CardContainer>
-                  {this.state.cardData.map(data => (
-                     <Fade bottom key={data.id}>
-                        <ShowCard
-                           key={data.id}
-                           title={data.showName}
-                           img={data.showPic}
-                           desc={data.showDesc}
-                           time={data.showTime}
-                        />
-                     </Fade>
-                  ))}
+                  <Fade bottom delay={300}>
+                     <ShowCard
+                        img={dnevnoZrcalo.showPic}
+                        title={dnevnoZrcalo.showName}
+                        desc={dnevnoZrcalo.showDesc}
+                        time={dnevnoZrcalo.showTime}
+                     />
+                     <ShowCard
+                        img={strunica.showPic}
+                        title={strunica.showName}
+                        desc={strunica.showDesc}
+                        time={strunica.showTime}
+                     />
+                     <ShowCard
+                        img={klubPetmil.showPic}
+                        title={klubPetmil.showName}
+                        desc={klubPetmil.showDesc}
+                        time={klubPetmil.showTime}
+                     />
+                     <ShowCard
+                        img={razgovoriUgodni.showPic}
+                        title={razgovoriUgodni.showName}
+                        desc={razgovoriUgodni.showDesc}
+                        time={razgovoriUgodni.showTime}
+                     />
+                     <ShowCard
+                        img={vzr.showPic}
+                        title={vzr.showName}
+                        desc={vzr.showDesc}
+                        time={vzr.showTime}
+                     />
+                     <ShowCard
+                        img={obiteljskiAlbum.showPic}
+                        title={obiteljskiAlbum.showName}
+                        desc={obiteljskiAlbum.showDesc}
+                        time={obiteljskiAlbum.showTime}
+                     />
+                  </Fade>
                </CardContainer>
             </Container>
             <SectionInfo

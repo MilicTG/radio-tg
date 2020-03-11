@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 //styles
 import {
@@ -12,14 +12,20 @@ import {
 
 const showCard = props => {
    return (
-      <CardContainer
-      // onClick={props.onClick} to='/emisija'
-      >
-         <Image src={props.img} alt='show image' />
-         <Title>{props.title}</Title>
-         <Description>{props.desc}</Description>
-         <Time>{props.time}</Time>
-      </CardContainer>
+      <Route
+         render={({ history }) => (
+            <CardContainer
+            // onClick={() => {
+            //    history.push('/emisija', props);
+            // }}
+            >
+               <Image src={props.img} alt='show image' />
+               <Title>{props.title}</Title>
+               <Description>{props.desc}</Description>
+               <Time>{props.time}</Time>
+            </CardContainer>
+         )}
+      />
    );
 };
 

@@ -10,7 +10,7 @@ export const cardContainer = styled.div`
    border: 1px solid #ccc;
    border-radius: 5px;
    :hover {
-      border: 1px solid #777;
+      border: 1.1px solid #777;
    }
    a {
       text-decoration: none;
@@ -36,6 +36,7 @@ export const cardTitle = styled.h2`
 export const cardImg = styled.img`
    width: 100%;
    border-radius: 5px 5px 0 0;
+   filter: grayscale(50%);
 `;
 
 export const cardDesc = styled.p`
