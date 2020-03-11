@@ -15,9 +15,9 @@ const showCard = props => {
       <Route
          render={({ history }) => (
             <CardContainer
-            // onClick={() => {
-            //    history.push('/emisija', props);
-            // }}
+               onClick={() => {
+                  history.push(props.route);
+               }}
             >
                <Image src={props.img} alt='show image' />
                <Title>{props.title}</Title>

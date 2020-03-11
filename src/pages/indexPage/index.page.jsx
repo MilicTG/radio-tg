@@ -114,6 +114,7 @@ export default class IndexPage extends Component {
                         time={dnevnoZrcalo.showTime}
                      />
                      <ShowCard
+                        route={`/strunica`}
                         img={strunica.showPic}
                         title={strunica.showName}
                         desc={strunica.showDesc}
