@@ -34,3 +34,30 @@ export const marketingPageInfoWedding = {
    rowThree:
       'Suspendisse euismod interdum eros, nec viverra dolor euismod ac. Mauris est nisi, pharetra sit amet pretium id, pulvinar in quam. Quisque ut enim neque. Vivamus luctus vitae justo sit amet hendrerit. Pellentesque interdum velit in gravida convallis. Sed ultricies, enim nec dignissim sollicitudin, justo quam dignissim tellus, vitae ultricies diam urna quis neque. Donec ipsum purus, blandit sed ligula sed, finibus fermentum libero.',
 };
+
+export const musicPageInfoNonStop = {
+   title: 'Glazba od 0-24',
+   rowOne: 'Sviramo od 0-24 bla bla sit amet luctus felis laoreet vel.',
+   rowTwo:
+      'Aenean eu elit placerat, interdum diam a, euismod velit. Praesent condimentum rhoncus felis et vulputate. Morbi venenatis euismod risus ut posuere. Quisque quis mi luctus, accumsan lacus quis, dignissim purus',
+   rowThree:
+      'Suspendisse euismod interdum eros, nec viverra dolor euismod ac. Mauris est nisi, pharetra sit amet pretium id, pulvinar in quam. Quisque ut enim neque. Vivamus luctus vitae justo sit amet hendrerit. Pellentesque interdum velit in gravida convallis. Sed ultricies, enim nec dignissim sollicitudin, justo quam dignissim tellus, vitae ultricies diam urna quis neque. Donec ipsum purus, blandit sed ligula sed, finibus fermentum libero.',
+};
+
+export const musicPageInfoParty = {
+   title: 'Samo Hitovi',
+   rowOne: 'Sviramo hitove bla bla sit amet luctus felis laoreet vel.',
+   rowTwo:
+      'Aenean eu elit placerat, interdum diam a, euismod velit. Praesent condimentum rhoncus felis et vulputate. Morbi venenatis euismod risus ut posuere. Quisque quis mi luctus, accumsan lacus quis, dignissim purus',
+   rowThree:
+      'Suspendisse euismod interdum eros, nec viverra dolor euismod ac. Mauris est nisi, pharetra sit amet pretium id, pulvinar in quam. Quisque ut enim neque. Vivamus luctus vitae justo sit amet hendrerit. Pellentesque interdum velit in gravida convallis. Sed ultricies, enim nec dignissim sollicitudin, justo quam dignissim tellus, vitae ultricies diam urna quis neque. Donec ipsum purus, blandit sed ligula sed, finibus fermentum libero.',
+};
+
+export const musicPageInfoCaffeBar = {
+   title: 'Idealo za kafice i ugostiteljske objekte',
+   rowOne: 'Ne slusajte Naxi bla bla sit amet luctus felis laoreet vel.',
+   rowTwo:
+      'Aenean eu elit placerat, interdum diam a, euismod velit. Praesent condimentum rhoncus felis et vulputate. Morbi venenatis euismod risus ut posuere. Quisque quis mi luctus, accumsan lacus quis, dignissim purus',
+   rowThree:
+      'Suspendisse euismod interdum eros, nec viverra dolor euismod ac. Mauris est nisi, pharetra sit amet pretium id, pulvinar in quam. Quisque ut enim neque. Vivamus luctus vitae justo sit amet hendrerit. Pellentesque interdum velit in gravida convallis. Sed ultricies, enim nec dignissim sollicitudin, justo quam dignissim tellus, vitae ultricies diam urna quis neque. Donec ipsum purus, blandit sed ligula sed, finibus fermentum libero.',
+};

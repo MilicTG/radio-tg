@@ -16,7 +16,8 @@ const showCard = props => {
          render={({ history }) => (
             <CardContainer
                onClick={() => {
-                  history.push(props.route);
+                  alert('Arhiva u izradi');
+                  // history.push(props.route);
                }}
             >
                <Image src={props.img} alt='show image' />

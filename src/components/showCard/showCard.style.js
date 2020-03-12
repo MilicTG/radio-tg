@@ -9,6 +9,7 @@ export const cardContainer = styled.div`
    cursor: pointer;
    border: 1px solid #ccc;
    border-radius: 5px;
+   transition: all 0.2s ease-in-out;
    :hover {
       border: 1.1px solid #777;
    }
@@ -43,7 +44,7 @@ export const cardDesc = styled.p`
    color: ${theme.colorFont};
    font-size: 1.8rem;
    height: 15rem;
-
+   width: 90%;
    padding: 1.5rem;
    font-weight: 300;
    text-align: start;
