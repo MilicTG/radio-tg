@@ -10,6 +10,7 @@ import IndexPage from './pages/indexPage/index.page';
 import RTGMusicPage from './pages/RTGMusicPage/RTGMusicPage.component';
 import ProgramPage from './pages/programPage/program.page';
 import MarketingPage from './pages/marketingPage/marketingPage.page';
+import ContactPage from './pages/contactPage/contact.page';
 
 //showPages
 import StrunicaPage from './pages/showPage/showPageStrunica.page';
@@ -25,6 +26,7 @@ const App = () => {
             <Route path='/rtg-music' component={RTGMusicPage}></Route>
             <Route path='/program' component={ProgramPage}></Route>
             <Route path='/marketing' component={MarketingPage}></Route>
+            <Route path='/kontakt' component={ContactPage}></Route>
             <Route path='/strunica' component={StrunicaPage}></Route>
             <Route path='/zrcalo' component={ZrcaloPage}></Route>
          </Switch>
