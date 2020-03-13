@@ -9,7 +9,14 @@ import {
 } from './contactCard.style';
 
 const contactCard = props => {
-   return <div>Karta</div>;
+   return (
+      <Wrapper>
+         <Icon>
+            <FontAwesomeIcon icon={props.icon} size='3x' />
+         </Icon>
+         <Text>{props.children}</Text>
+      </Wrapper>
+   );
 };
 
 export default contactCard;

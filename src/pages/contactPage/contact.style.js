@@ -7,4 +7,5 @@ export const contactCardsWrapper = styled.section`
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    grid-column-gap: 4rem;
+   padding-bottom: 7rem;
 `;
