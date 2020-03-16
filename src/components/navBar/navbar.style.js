@@ -59,7 +59,7 @@ export const navigationItems = styled.div`
       a {
          text-decoration: none;
          color: ${theme.colorFont};
-         font-size: ${theme.fontSizeS};
+         font-size: ${theme.fontSizeBig1X};
          font-weight: 500;
          transition: all 0.3s ease;
          :hover {

@@ -38,6 +38,7 @@ export const textInfoSide = styled.div`
    }
    @media ${device.deviceTabletLand} {
       padding: 4rem 0 4rem 0;
+      flex-flow: row;
    }
    @media ${device.deviceDesktop} {
       padding: 5.5rem 0 5.5rem 0;
@@ -59,13 +60,13 @@ export const infoTextWrapper = styled.div`
          padding: 0;
       }
       @media ${device.deviceTabletLand} {
-         padding: 0;
+         padding: 0 15rem 0 0;
       }
       @media ${device.deviceDesktop} {
-         padding: 0 5rem 0 0;
+         padding: 0 15rem 0 0;
       }
       @media ${device.deviceDesktopHD} {
-         padding: 0 5rem 0 0;
+         padding: 0 15rem 0 0;
       }
    }
    &.right {
@@ -76,12 +77,13 @@ export const infoTextWrapper = styled.div`
          padding: 0;
       }
       @media ${device.deviceTabletLand} {
-         padding: 0;
+         padding: 0 0 0 5rem;
       }
       @media ${device.deviceDesktop} {
          padding: 0 0 0 5rem;
       }
       @media ${device.deviceDesktopHD} {
+         width: 70%;
          padding: 0 0 0 5rem;
       }
    }
@@ -92,7 +94,7 @@ export const infoTextTitle = styled.h3`
    text-align: center;
    font-size: ${theme.fontSizeM};
    font-weight: 500;
-   padding-bottom: 2rem;
+   padding-bottom: 5rem;
    media ${device.devicePhone} {
       font-size: 6vw;
    }
@@ -143,23 +145,28 @@ export const infoText = styled.article`
 export const infoImg = styled.img`
    border-radius: 10px;
    width: 100%;
-   height: 30rem;
+   height: auto;
    margin: 0 auto;
    filter: grayscale(50%);
    background-image: ${props => props.image};
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   object-fit: cover;
    @media ${device.deviceTablet} {
-      height: 30rem;
-      margin: 0;
+      width: 100%;
+      height: 26rem;
    }
    @media ${device.deviceTabletLand} {
-      height: 30rem;
-      margin: 0;
+      width: 35rem;
+      height: 40rem;
    }
    @media ${device.deviceDesktop} {
+      height: 32rem;
+      width: auto;
+   }
+   @media ${device.deviceDesktopHD} {
       height: 35rem;
-      margin: 0;
+      width: auto;
    }
 `;

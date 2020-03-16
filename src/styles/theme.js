@@ -9,6 +9,17 @@ export const theme = {
    colorFont: '#303030',
    colorLightBck: '#eeeeee',
    //font size
+   fontSizeSmall3X: `0.8rem`,
+   fontSizeSmall2X: `1rem`,
+   fontSizeSmall1X: `1.3rem`,
+   fontSizeNorm: `1.6rem`,
+   fontSizeBig: `2rem`,
+   fontSizeBig1X: `2.5rem`,
+   fontSizeBig2X: `3.1rem`,
+   fontSizeBig3X: `3.9rem`,
+   fontSizeBig4X: `4.8rem`,
+   fontSizeBig5X: `5.2rem`,
+
    fontSizeXXS: '0.8rem',
    fontSizeXS: '1.6rem',
    fontSizeS: '2.4rem',

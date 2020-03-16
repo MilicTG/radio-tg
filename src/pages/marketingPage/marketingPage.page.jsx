@@ -28,7 +28,7 @@ class MarketingPage extends Component {
          headTitle: 'Marketing',
          headDesc: 'Omogucite da se vasa reklama daleko cuje',
          headBackground: imgMarketing,
-         sectionTitle: 'Saznajte zasto se oglasavati na RTG',
+         sectionTitle: 'Zasto se oglasavati na RTG',
          sectionDesc: 'Osigurajte svoje minute u nasem eteru',
       };
    }
