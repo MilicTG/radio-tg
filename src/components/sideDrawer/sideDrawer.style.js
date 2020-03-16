@@ -5,7 +5,7 @@ export const sideDrawerContainer = styled.nav`
    height: 100%;
    background: white;
    position: fixed;
-   top: 8rem;
+   top: 6rem;
    left: 0;
    width: 100%;
    z-index: 1000;
@@ -16,7 +16,7 @@ export const sideDrawerContainer = styled.nav`
    }
    &.close {
       transform: translateX(120%);
-      @media (min-width: 769px) {
+      @media (min-width: 899px) {
          display: none;
       }
    }
@@ -41,8 +41,21 @@ export const sideDrawerContainer = styled.nav`
             }
          }
       }
-      @media (min-width: 769px) {
+      @media (min-width: 899px) {
          display: none;
       }
+   }
+   .rtg-music--wrapper {
+      background: ${theme.colorSecondary};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 17rem;
+      height: 5rem;
+      border-radius: 5rem;
+   }
+   .rtg-music--link {
+      color: white;
+      font-size: 2.2rem;
    }
 `;

@@ -20,7 +20,7 @@ export const burgerBtnContainer = styled.button`
    :focus {
       outline: none;
    }
-   @media (min-width: 769px) {
+   @media (min-width: 899px) {
       display: none;
    }
    div {

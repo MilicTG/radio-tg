@@ -27,16 +27,16 @@ export const primaryTitle = styled.h2`
    padding-bottom: 1rem;
 
    @media ${device.devicePhone} {
-      font-size: ${theme.fontSizeXS};
+      font-size: 6vw;
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeS};
+      font-size: ${theme.fontSizeM};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeM};
+      font-size: ${theme.fontSizeL};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeM};
+      font-size: ${theme.fontSizeX};
    }
 `;
 

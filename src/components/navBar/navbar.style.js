@@ -5,11 +5,17 @@ import { device } from '../../styles/responsive';
 export const navbarWrapper = styled.nav`
    position: relative;
    width: 100%;
-   height: 8rem;
+   height: 6rem;
    top: 0;
    left: 0;
    background: white;
    z-index: 200;
+   @media ${device.deviceTabletLand} {
+      height: 7rem;
+   }
+   @media ${device.deviceDesktop} {
+      height: 8rem;
+   }
 `;
 
 export const navbarContainer = styled.div`
@@ -34,7 +40,7 @@ export const spacer = styled.div`
 export const navigationItems = styled.div`
    display: flex;
    align-items: center;
-   @media (max-width: 768px) {
+   @media (max-width: 900px) {
       display: none;
    }
    ul {

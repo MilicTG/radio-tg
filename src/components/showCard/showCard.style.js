@@ -24,13 +24,13 @@ export const cardTitle = styled.h2`
    font-weight: 500;
    padding: 1.5rem 0 0 1.5rem;
    @media ${device.deviceTablet} {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
    }
    @media ${device.deviceTabletLand} {
-      font-size: 2.5rem;
+      font-size: 2.1rem;
    }
    @media ${device.deviceDesktop} {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
    }
 `;
 
@@ -42,7 +42,7 @@ export const cardImg = styled.img`
 
 export const cardDesc = styled.p`
    color: ${theme.colorFont};
-   font-size: 1.8rem;
+   font-size: 1.4rem;
    height: 15rem;
    width: 90%;
    padding: 1.5rem;
@@ -50,28 +50,28 @@ export const cardDesc = styled.p`
    text-align: start;
 
    @media ${device.deviceTablet} {
-      font-size: 2rem;
+      font-size: 1.6rem;
    }
    @media ${device.deviceTabletLand} {
-      font-size: 2rem;
+      font-size: 1.6rem;
    }
    @media ${device.deviceDesktop} {
-      font-size: 2rem;
+      font-size: 1.8rem;
    }
 `;
 
 export const cardTime = styled.p`
    color: ${theme.colorSecondary};
-   font-size: 1rem;
+   font-size: 1.2rem;
    padding: 1.5rem 0 0 1.5rem;
 
    @media ${device.deviceTablet} {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
    }
    @media ${device.deviceTabletLand} {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
    }
    @media ${device.deviceDesktop} {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
    }
 `;

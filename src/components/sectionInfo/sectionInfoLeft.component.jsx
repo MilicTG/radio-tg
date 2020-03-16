@@ -17,7 +17,7 @@ const infoSection = props => {
       <SectionContainer color={props.color}>
          <Container>
             <InfoSide>
-               <TextWrapper>
+               <TextWrapper className='left'>
                   <Fade left delay={600} cascade>
                      <Title>{props.title}</Title>
                      <Text>

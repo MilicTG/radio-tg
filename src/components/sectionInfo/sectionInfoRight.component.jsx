@@ -20,7 +20,7 @@ const infoSection = props => {
                <Fade left delay={600}>
                   <Image src={props.image} />
                </Fade>
-               <TextWrapper>
+               <TextWrapper className='right'>
                   <Fade right delay={600} cascade>
                      <Title>{props.title}</Title>
                      <Text>

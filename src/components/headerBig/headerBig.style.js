@@ -9,20 +9,43 @@ export const headerImage = styled.header`
    max-height: 100rem;
    background-image: url(${props => props.background});
    background-repeat: no-repeat;
-   background-position: left top;
+   background-position: center;
    background-size: cover;
 `;
 
 export const headerOverlay = styled.div`
-   background-image: linear-gradient(
-      to left,
-      rgba(33, 33, 33, 0.1),
-      rgba(33, 33, 33, 0.9)
-   );
    width: 100%;
    height: 100%;
    display: flex;
    align-items: center;
+   @media ${device.devicePhone} {
+      background-image: linear-gradient(
+         to left,
+         rgba(33, 33, 33, 0.7),
+         rgba(33, 33, 33, 0.7)
+      );
+   }
+   @media ${device.deviceTablet} {
+      background-image: linear-gradient(
+         to left,
+         rgba(33, 33, 33, 0.7),
+         rgba(33, 33, 33, 0.7)
+      );
+   }
+   @media ${device.deviceTabletLand} {
+      background-image: linear-gradient(
+         to left,
+         rgba(33, 33, 33, 0.1),
+         rgba(33, 33, 33, 0.9)
+      );
+   }
+   @media ${device.deviceDesktop} {
+      background-image: linear-gradient(
+         to left,
+         rgba(33, 33, 33, 0.1),
+         rgba(33, 33, 33, 0.9)
+      );
+   }
 `;
 
 export const headerText = styled.div`
@@ -32,15 +55,18 @@ export const headerText = styled.div`
    h1 {
       display: inline;
       @media ${device.devicePhone} {
-         font-size: 7vw;
+         font-size: 9vw;
       }
       @media ${device.deviceTablet} {
-         font-size: ${theme.fontSizeXL};
+         font-size: ${theme.fontSizeL};
       }
       @media ${device.deviceTabletLand} {
-         font-size: ${theme.fontSizeXXL};
+         font-size: ${theme.fontSizeXL};
       }
       @media ${device.deviceDesktop} {
+         font-size: ${theme.fontSizeXXL};
+      }
+      @media ${device.deviceDesktopHD} {
          font-size: ${theme.fontSizeXXXL};
       }
    }
@@ -68,9 +94,6 @@ export const headerText = styled.div`
          font-size: ${theme.fontSizeL};
       }
    }
-   @media ${device.deviceTablet} {
-      text-align: start;
-   }
    @media ${device.deviceTabletLand} {
       text-align: start;
    }
@@ -82,8 +105,11 @@ export const headerText = styled.div`
 export const buttonWrapper = styled.div`
    display: flex;
    justify-content: space-between;
+   @media ${device.devicePhone} {
+      justify-content: center;
+   }
    @media ${device.deviceTablet} {
-      justify-content: flex-start;
+      justify-content: center;
    }
    @media ${device.deviceTabletLand} {
       justify-content: flex-start;

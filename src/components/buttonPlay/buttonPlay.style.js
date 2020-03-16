@@ -5,35 +5,35 @@ import { device } from '../../styles/responsive';
 
 export const buttonContainer = styled.button`
    display: flex;
-   width: 14rem;
-   height: 4.2rem;
+   width: 13.5rem;
+   height: 4.5rem;
    background: #fff;
-   border-radius: 3rem;
+   border-radius: 5rem;
    border: none;
    margin: 100px 0 0 0;
    padding: 0 15px;
    align-items: center;
    transition: all 0.2s ease-in-out;
-   color: ${theme.colorFont};
    p {
+      color: ${theme.colorFont};
       width: 100%;
       display: inherit;
       justify-content: space-between;
-      font-size: ${theme.fontSizeButtonS};
+      font-size: 1.3rem;
    }
    @media ${device.deviceTablet} {
       width: 15rem;
       height: 4.8rem;
       padding: 0 20px;
       p {
-         font-size: ${theme.fontSizeButtonM};
+         font-size: 1.4rem;
       }
    }
    @media ${device.deviceDesktop} {
       width: 17rem;
       height: 5.5rem;
       p {
-         font-size: ${theme.fontSizeButtonL};
+         font-size: 1.6rem;
       }
    }
    :hover {

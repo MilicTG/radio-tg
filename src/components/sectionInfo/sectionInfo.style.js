@@ -5,57 +5,107 @@ import { device } from '../../styles/responsive';
 export const infoSectionContainer = styled.section`
    width: 100%;
    min-height: 40rem;
-   padding: 5rem 0;
    background-color: ${props =>
       props.color ? `${theme.colorLightBck}` : `white;`};
+
+   @media ${device.devicePhone} {
+      padding: 2rem 0;
+   }
+   @media ${device.deviceTablet} {
+      padding: 4.5rem 0;
+   }
+   @media ${device.deviceTabletLand} {
+      padding: 4.5rem 0;
+   }
+   @media ${device.deviceDesktop} {
+      padding: 5rem 0;
+   }
+   @media ${device.deviceDesktopHD} {
+      padding: 5rem 0;
+   }
 `;
 
 export const textInfoSide = styled.div`
    width: 100%;
-   display: grid;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column;
    padding: 2.5rem 0 2.5rem 0;
-   grid-template-columns: 1fr;
-   grid-column-gap: 3rem;
 
    @media ${device.deviceTablet} {
       padding: 3rem 0 3rem 0;
-      grid-template-columns: 1fr;
    }
    @media ${device.deviceTabletLand} {
       padding: 4rem 0 4rem 0;
-      grid-template-columns: 1fr;
    }
    @media ${device.deviceDesktop} {
       padding: 5.5rem 0 5.5rem 0;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 5rem;
+      flex-flow: row;
    }
 `;
 
 export const infoTextWrapper = styled.div`
    display: flex;
    flex-flow: column;
-   justify-content: space-between;
+   justify-content: center;
    text-align: center;
-   width: 80%;
+   width: 100%;
+   &.left {
+      @media ${device.devicePhone} {
+         padding: 0;
+      }
+      @media ${device.deviceTablet} {
+         padding: 0;
+      }
+      @media ${device.deviceTabletLand} {
+         padding: 0;
+      }
+      @media ${device.deviceDesktop} {
+         padding: 0 5rem 0 0;
+      }
+      @media ${device.deviceDesktopHD} {
+         padding: 0 5rem 0 0;
+      }
+   }
+   &.right {
+      @media ${device.devicePhone} {
+         padding: 0;
+      }
+      @media ${device.deviceTablet} {
+         padding: 0;
+      }
+      @media ${device.deviceTabletLand} {
+         padding: 0;
+      }
+      @media ${device.deviceDesktop} {
+         padding: 0 0 0 5rem;
+      }
+      @media ${device.deviceDesktopHD} {
+         padding: 0 0 0 5rem;
+      }
+   }
 `;
 
 export const infoTextTitle = styled.h3`
    color: ${theme.colorFont};
    text-align: center;
-   font-size: ${theme.fontSizeS};
+   font-size: ${theme.fontSizeM};
    font-weight: 500;
-   padding-bottom: 1.5rem;
+   padding-bottom: 2rem;
+   media ${device.devicePhone} {
+      font-size: 6vw;
+   }
    @media ${device.deviceTablet} {
       font-size: ${theme.fontSizeM};
       text-align: center;
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeM};
+      font-size: ${theme.fontSizeL};
       text-align: center;
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeL};
+      font-size: ${theme.fontSizeX};
       text-align: start;
    }
 `;
@@ -67,13 +117,13 @@ export const infoText = styled.article`
    font-size: ${theme.fontSizeXS};
    padding-bottom: 2rem;
    .rowOne {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
    }
    .rowTwo {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
    }
    .rowThree {
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
    }
    @media ${device.deviceTablet} {
       font-size: ${theme.fontSizeXS};
@@ -92,14 +142,16 @@ export const infoText = styled.article`
 
 export const infoImg = styled.img`
    border-radius: 10px;
-   height: 20rem;
+   width: 100%;
+   height: 30rem;
    margin: 0 auto;
+   filter: grayscale(50%);
    background-image: ${props => props.image};
    background-repeat: no-repeat;
-   background-position: left top;
+   background-position: center;
    background-size: cover;
    @media ${device.deviceTablet} {
-      height: 25rem;
+      height: 30rem;
       margin: 0;
    }
    @media ${device.deviceTabletLand} {

@@ -19,7 +19,10 @@ const buttonContainer = styled.button`
       width: 100%;
       display: inherit;
       justify-content: space-between;
-      font-size: ${theme.fontSizeButtonS};
+      font-size: 1.3rem;
+   }
+   @media ${device.devicePhone} {
+      display: none;
    }
    @media ${device.deviceTablet} {
       display: none;
@@ -35,7 +38,7 @@ const buttonContainer = styled.button`
       width: 17rem;
       height: 5.5rem;
       p {
-         font-size: ${theme.fontSizeButtonL};
+         font-size: 1.6rem;
       }
    }
    :hover {
