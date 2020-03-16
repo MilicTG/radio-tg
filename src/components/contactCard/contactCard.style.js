@@ -19,13 +19,13 @@ export const cardWrapper = styled.div`
 `;
 
 export const cardIcon = styled.p`
-   font-size: 2rem;
+   font-size: ${theme.fontSizeBig};
    color: ${theme.colorSecondary};
 `;
 
 export const cardText = styled.div`
    padding: 2rem 0;
-   font-size: 1.6rem;
+   font-size: ${theme.fontSizeBig1X};
    color: ${theme.colorFont};
    text-align: center;
    color: ${theme.colorFont};

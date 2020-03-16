@@ -19,21 +19,21 @@ export const buttonContainer = styled.button`
       width: 100%;
       display: inherit;
       justify-content: space-between;
-      font-size: 1.3rem;
+      font-size: ${theme.fontSizeSmall1X};
    }
    @media ${device.deviceTablet} {
       width: 15rem;
       height: 4.8rem;
       padding: 0 20px;
       p {
-         font-size: 1.4rem;
+         font-size: ${theme.fontSizeSmall1X};
       }
    }
    @media ${device.deviceDesktop} {
       width: 17rem;
       height: 5.5rem;
       p {
-         font-size: 1.6rem;
+         font-size: ${theme.fontSizeNorm};
       }
    }
    :hover {

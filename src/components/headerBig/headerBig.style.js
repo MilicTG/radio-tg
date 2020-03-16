@@ -58,16 +58,16 @@ export const headerText = styled.div`
          font-size: 9vw;
       }
       @media ${device.deviceTablet} {
-         font-size: ${theme.fontSizeL};
+         font-size: ${theme.fontSizeBig4X};
       }
       @media ${device.deviceTabletLand} {
-         font-size: ${theme.fontSizeXL};
+         font-size: ${theme.fontSizeBig4X};
       }
       @media ${device.deviceDesktop} {
-         font-size: ${theme.fontSizeXXL};
+         font-size: ${theme.fontSizeBig5X};
       }
       @media ${device.deviceDesktopHD} {
-         font-size: ${theme.fontSizeXXXL};
+         font-size: ${theme.fontSizeBig5X};
       }
    }
    #radio {
@@ -82,7 +82,7 @@ export const headerText = styled.div`
       font-weight: 100;
       letter-spacing: 0.3rem;
       @media ${device.devicePhone} {
-         font-size: ${theme.fontSizeXS};
+         font-size: ${theme.fontSizeNorm};
       }
       @media ${device.deviceTablet} {
          font-size: ${theme.fontSizeM};
@@ -91,7 +91,7 @@ export const headerText = styled.div`
          font-size: ${theme.fontSizeM};
       }
       @media ${device.deviceDesktop} {
-         font-size: ${theme.fontSizeL};
+         font-size: ${theme.fontSizeBig2X};
       }
    }
    @media ${device.deviceTabletLand} {

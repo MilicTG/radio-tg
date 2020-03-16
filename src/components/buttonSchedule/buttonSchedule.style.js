@@ -26,5 +26,5 @@ export const buttonContainer = styled.button`
 
 export const buttonText = styled.p`
    color: white;
-   font-size: 1.8rem;
+   font-size: ${theme.fontSizeBig};
 `;

@@ -22,23 +22,7 @@ const buttonContainer = styled.button`
       justify-content: space-between;
       font-size: 1.8rem;
    }
-   /* @media ${device.deviceTablet} {
-      display: none;
-      width: 15rem;
-      height: 4.8rem;
-      padding: 0 20px;
-      p {
-         font-size: ${theme.fontSizeButtonM};
-      }
-   }
-   @media ${device.deviceDesktop} {
-      display: flex;
-      width: 17rem;
-      height: 5.5rem;
-      p {
-         font-size: ${theme.fontSizeButtonL};
-      }
-   } */
+
    :hover {
       box-shadow: 3px 10px 28px -13px rgba(33, 33, 33, 0.2);
       cursor: pointer;

@@ -34,7 +34,7 @@ export default class IndexPage extends Component {
       super();
 
       this.state = {
-         titleMain: 'Radio',
+         titleMain: 'Radio ',
          titleSecond: 'Tomislavgrad',
          titleFreq: '95.1,95.9 i 103.3Mhz',
          play: false,

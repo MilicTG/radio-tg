@@ -22,14 +22,14 @@ export const smallHeaderOverlay = styled.div`
 
 export const smallHeaderTitle = styled.h2`
    color: white;
-   font-size: ${theme.fontSizeXXL};
+   font-size: ${theme.fontSizeBig5X};
    text-align: center;
    padding-bottom: 3rem;
 `;
 
 export const smallHeaderDesc = styled.p`
    color: white;
-   font-size: ${theme.fontSizeM};
+   font-size: ${theme.fontSizeBig1X};
    font-weight: 300;
    text-align: center;
 `;
