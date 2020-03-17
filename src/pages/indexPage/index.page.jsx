@@ -95,6 +95,7 @@ export default class IndexPage extends Component {
             >
                <PlayButton
                   key='2'
+                  onTap={this.togglePlay}
                   onClick={this.togglePlay}
                   play={this.state.play}
                />
