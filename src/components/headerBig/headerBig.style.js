@@ -85,10 +85,10 @@ export const headerText = styled.div`
          font-size: ${theme.fontSizeNorm};
       }
       @media ${device.deviceTablet} {
-         font-size: ${theme.fontSizeM};
+         font-size: ${theme.fontSizeBig};
       }
       @media ${device.deviceTabletLand} {
-         font-size: ${theme.fontSizeM};
+         font-size: ${theme.fontSizeBig};
       }
       @media ${device.deviceDesktop} {
          font-size: ${theme.fontSizeBig2X};

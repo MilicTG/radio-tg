@@ -40,7 +40,7 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = 'http://cast2.name.ba:8038/;';
+      this.url = '';
       this.audio = null;
    }
 
@@ -70,6 +70,7 @@ export default class IndexPage extends Component {
       this.setState({
          play: !this.state.play,
       });
+      this.url = 'http://cast2.name.ba:8038/;';
       !this.state.play ? this.startStream() : this.stopStream();
    };
 
@@ -101,9 +102,7 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
-            <audio id='playerHandle' controls='controls'>
-               <source src='http://163.172.213.155:8038/;' />
-            </audio>
+
             <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
