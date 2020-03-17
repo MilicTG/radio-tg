@@ -101,6 +101,9 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
+            <audio id='playerHandle' controls='controls'>
+               <source src='http://163.172.213.155:8038/;' />
+            </audio>
             <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
