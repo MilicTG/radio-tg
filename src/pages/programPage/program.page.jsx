@@ -15,10 +15,18 @@ import Footer from '../../components/footer/footer.component';
 
 //data
 import headImage from '../../assets/img-program.jpg';
-import mondayMorning from '../../data/mondayMorning';
-import mondayAfternoon from '../../data/mondayAfternoon';
-import tuesdayMorning from '../../data/tuesdayMorning';
-import tuesdayAfternoon from '../../data/tuesdayAfternoon';
+import {
+   mondayMorning,
+   mondayAfternoon,
+   tuesdayMorning,
+   tuesdayAfternoon,
+   wednesdayMorning,
+   wednesdayAfternoon,
+   thursdayMorning,
+   thursdayAfternoon,
+   fridayMorning,
+   fridayAfternoon,
+} from '../../data/programScheduleData';
 
 export default class ProgramPage extends Component {
    constructor() {
@@ -46,6 +54,27 @@ export default class ProgramPage extends Component {
       });
    };
 
+   changeToWednesday = () => {
+      this.setState({
+         morning: wednesdayMorning,
+         afternoon: wednesdayAfternoon,
+      });
+   };
+
+   changeToThursday = () => {
+      this.setState({
+         morning: thursdayMorning,
+         afternoon: thursdayAfternoon,
+      });
+   };
+
+   changeToFriday = () => {
+      this.setState({
+         morning: fridayMorning,
+         afternoon: fridayAfternoon,
+      });
+   };
+
    render() {
       return (
          <>
@@ -65,9 +94,18 @@ export default class ProgramPage extends Component {
                         text='utorak'
                         onClick={this.changeToTuesday}
                      />
-                     <ScheduleButton text='srijeda' />
-                     <ScheduleButton text='cetvrtak' />
-                     <ScheduleButton text='petak' />
+                     <ScheduleButton
+                        text='srijeda'
+                        onClick={this.changeToWednesday}
+                     />
+                     <ScheduleButton
+                        text='cetvrtak'
+                        onClick={this.changeToThursday}
+                     />
+                     <ScheduleButton
+                        text='petak'
+                        onClick={this.changeToFriday}
+                     />
                      <ScheduleButton text='subota' />
                      <ScheduleButton text='nedjelja' />
                   </BtnWrapper>

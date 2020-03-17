@@ -30,13 +30,13 @@ export const primaryTitle = styled.h2`
       font-size: 6vw;
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeM};
+      font-size: ${theme.fontSizeNorm};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeL};
+      font-size: ${theme.fontSizeBig};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeX};
+      font-size: ${theme.fontSizeBig3X};
    }
 `;
 
@@ -46,7 +46,6 @@ export const descTitle = styled.p`
    text-align: center;
    white-space: pre-line;
    display: inline-block;
-
    @media ${device.devicePhone} {
       font-size: 1.3rem;
    }
