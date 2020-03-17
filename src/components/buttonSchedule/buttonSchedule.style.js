@@ -3,8 +3,6 @@ import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 
 export const buttonContainer = styled.button`
-   width: 14rem;
-   height: 5.5rem;
    background: ${theme.colorSecondary};
    border: none;
    border-radius: 1rem;
@@ -22,9 +20,35 @@ export const buttonContainer = styled.button`
    :focus {
       background: ${theme.colorPrimary};
    }
+   @media ${device.devicePhone} {
+      display: none;
+   }
+   @media ${device.deviceTablet} {
+      width: 9rem;
+      height: 4rem;
+   }
+   @media ${device.deviceTabletLand} {
+      width: 11rem;
+      height: 4.5rem;
+   }
+   @media ${device.deviceDesktop} {
+      width: 14rem;
+      height: 5.5rem;
+   }
 `;
 
 export const buttonText = styled.p`
    color: white;
-   font-size: ${theme.fontSizeBig};
+   @media ${device.deviceTablet} {
+      font-size: ${theme.fontSizeSmall1X};
+   }
+   @media ${device.deviceTabletLand} {
+      font-size: ${theme.fontSizeNorm};
+   }
+   @media ${device.deviceDesktop} {
+      font-size: ${theme.fontSizeBig};
+   }
+   @media ${device.deviceDesktopHD} {
+      font-size: ${theme.fontSizeBig};
+   }
 `;

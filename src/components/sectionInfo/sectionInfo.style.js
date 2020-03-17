@@ -32,9 +32,9 @@ export const textInfoSide = styled.div`
    align-items: center;
    flex-flow: column;
    padding: 2.5rem 0 2.5rem 0;
-
    @media ${device.deviceTablet} {
       padding: 3rem 0 3rem 0;
+      flex-flow: row;
    }
    @media ${device.deviceTabletLand} {
       padding: 4rem 0 4rem 0;
@@ -57,7 +57,7 @@ export const infoTextWrapper = styled.div`
          padding: 0;
       }
       @media ${device.deviceTablet} {
-         padding: 0;
+         padding: 0 5rem 0 0;
       }
       @media ${device.deviceTabletLand} {
          padding: 0 15rem 0 0;
@@ -74,7 +74,7 @@ export const infoTextWrapper = styled.div`
          padding: 0;
       }
       @media ${device.deviceTablet} {
-         padding: 0;
+         padding: 0 0 0 5rem;
       }
       @media ${device.deviceTabletLand} {
          padding: 0 0 0 5rem;
@@ -92,22 +92,21 @@ export const infoTextWrapper = styled.div`
 export const infoTextTitle = styled.h3`
    color: ${theme.colorFont};
    text-align: center;
-   font-size: ${theme.fontSizeM};
    font-weight: 500;
    padding-bottom: 5rem;
-   media ${device.devicePhone} {
-      font-size: 6vw;
+   @media ${device.devicePhone} {
+      font-size: 7vw;
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeM};
-      text-align: center;
+      font-size: ${theme.fontSizeBig};
+      text-align: start;
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeL};
-      text-align: center;
+      font-size: ${theme.fontSizeBig1X};
+      text-align: start;
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeX};
+      font-size: ${theme.fontSizeBig2X};
       text-align: start;
    }
 `;
@@ -116,7 +115,7 @@ export const infoText = styled.article`
    color: ${theme.colorFont};
    text-align: center;
    font-weight: 400;
-   font-size: ${theme.fontSizeXS};
+   font-size: ${theme.fontSizeSmall1X};
    padding-bottom: 2rem;
    .rowOne {
       padding-bottom: 1.5rem;
@@ -128,16 +127,16 @@ export const infoText = styled.article`
       padding-bottom: 1.5rem;
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeXS};
+      font-size: ${theme.fontSizeNorm};
       text-align: start;
       padding-bottom: 0;
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeXS};
+      font-size: ${theme.fontSizeNorm};
       text-align: start;
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeXS};
+      font-size: ${theme.fontSizeBig};
       text-align: start;
    }
 `;
@@ -154,19 +153,19 @@ export const infoImg = styled.img`
    background-size: cover;
    object-fit: cover;
    @media ${device.deviceTablet} {
-      width: 100%;
-      height: 26rem;
-   }
-   @media ${device.deviceTabletLand} {
-      width: 35rem;
+      width: 30rem;
       height: 40rem;
    }
+   @media ${device.deviceTabletLand} {
+      width: 30rem;
+      height: 45rem;
+   }
    @media ${device.deviceDesktop} {
-      height: 32rem;
-      width: auto;
+      width: 35rem;
+      height: 50rem;
    }
    @media ${device.deviceDesktopHD} {
-      height: 35rem;
-      width: auto;
+      width: 45rem;
+      height: 50rem;
    }
 `;

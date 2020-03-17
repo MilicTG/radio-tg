@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
+import { device } from '../../styles/responsive';
 
 export const buttonWrapper = styled.div`
    display: flex;
@@ -11,8 +12,20 @@ export const buttonWrapper = styled.div`
 export const scheduleWrapper = styled.div`
    display: flex;
    justify-content: center;
-   flex-flow: row;
    padding-bottom: 10rem;
+   @media ${device.devicePhone} {
+      flex-flow: column;
+   }
+   @media ${device.deviceTablet} {
+      flex-flow: column;
+   }
+   @media ${device.deviceTabletLand} {
+      flex-flow: row;
+   }
+   @media ${device.deviceDesktop} {
+      flex-flow: row;
+   }
+
    table {
       display: flex;
       flex-flow: column;

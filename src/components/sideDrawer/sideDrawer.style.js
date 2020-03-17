@@ -33,7 +33,7 @@ export const sideDrawerContainer = styled.nav`
          a {
             text-decoration: none;
             color: ${theme.colorFont};
-            font-size: ${theme.fontSizeM};
+            font-size: ${theme.fontSizeBig};
             font-weight: 500;
             transition: all 0.3s ease;
             :hover {
@@ -56,6 +56,6 @@ export const sideDrawerContainer = styled.nav`
    }
    .rtg-music--link {
       color: white;
-      font-size: 2.2rem;
+      font-size: ${theme.fontSizeBig};
    }
 `;
