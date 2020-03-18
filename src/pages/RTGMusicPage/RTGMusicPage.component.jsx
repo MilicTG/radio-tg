@@ -39,14 +39,13 @@ export default class RTGMusicPage extends Component {
       this.audio = null;
    }
 
-   componentWillMount() {
+   componentDidMount() {
       this.setHeaderBackground();
    }
 
    componentWillUnmount() {
       this.setState({
          play: false,
-         headerBackground: this.getHeaderBackground,
       });
       if (this.audio == null) {
          console.log('ne svira');

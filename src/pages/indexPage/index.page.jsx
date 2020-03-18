@@ -40,15 +40,21 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = 'http://cast2.name.ba:8038/;';
+      this.url = '';
       this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
+
+      const xhr = new XMLHttpRequest();
+      const url = 'http://cast2.name.ba:8038/;';
+
+      xhr.open('GET', url);
+      xhr.onreadystatechange = this.url = url;
    }
 
-   componentDidUnmount() {
+   componentWillUnmount() {
       this.setState({
          play: false,
       });
