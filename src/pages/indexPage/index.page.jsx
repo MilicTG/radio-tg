@@ -40,15 +40,13 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = '';
+      this.url = 'http://163.172.213.155:8038/;';
       this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      this.getStream();
-
-      console.log('test treci');
+      console.log('test 4');
    }
 
    componentWillUnmount() {
@@ -67,19 +65,6 @@ export default class IndexPage extends Component {
       this.setState({
          headerBackground: background,
       });
-   };
-
-   getStream = () => {
-      const xhr = new XMLHttpRequest();
-      const url = 'http://cast2.name.ba:8038/;';
-
-      xhr.open('GET', url);
-      xhr.onreadystatechange = this.setStream(url);
-      xhr.send();
-   };
-
-   setStream = url => {
-      this.url = url;
    };
 
    togglePlay = () => {
