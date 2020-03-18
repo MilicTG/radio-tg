@@ -44,11 +44,9 @@ export default class IndexPage extends Component {
       this.audio = null;
    }
 
-   // https://cors-anywhere.herokuapp.com/{type_your_url_here}
-
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 6');
+      console.log('test 7');
    }
 
    componentWillUnmount() {
@@ -104,15 +102,6 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
-
-            <audio
-               id='stream'
-               controls
-               preload='none'
-               autoplay=''
-               src='http://cast2.name.ba:8038/;'
-               type='audio/mpeg'
-            ></audio>
 
             <SectionTitle
                title='Naše najslušanije emisije'
