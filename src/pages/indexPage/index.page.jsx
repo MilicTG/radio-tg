@@ -49,7 +49,7 @@ export default class IndexPage extends Component {
 
       const xhr = new XMLHttpRequest();
       const url = 'http://cast2.name.ba:8038/;';
-
+      console.log('test prvi');
       xhr.open('GET', url);
       xhr.onreadystatechange = this.url = url;
    }
