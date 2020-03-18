@@ -40,7 +40,7 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = 'cast2.name.ba:8038/';
+      this.url = '//cast2.name.ba:8038/';
       this.audio = null;
    }
 
