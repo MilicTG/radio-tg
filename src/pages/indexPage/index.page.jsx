@@ -46,7 +46,7 @@ export default class IndexPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 4');
+      console.log('test 5');
    }
 
    componentWillUnmount() {
@@ -102,6 +102,9 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
+            <audio controls>
+               <source src='http://163.172.213.155:8038/;' type='audio/mp3' />>
+            </audio>
 
             <SectionTitle
                title='Naše najslušanije emisije'
