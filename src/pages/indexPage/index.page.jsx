@@ -46,12 +46,9 @@ export default class IndexPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
+      this.getStream();
 
-      const xhr = new XMLHttpRequest();
-      const url = 'http://cast2.name.ba:8038/;';
-      console.log('test prvi');
-      xhr.open('GET', url);
-      xhr.onreadystatechange = this.url = url;
+      console.log('test treci');
    }
 
    componentWillUnmount() {
@@ -70,6 +67,19 @@ export default class IndexPage extends Component {
       this.setState({
          headerBackground: background,
       });
+   };
+
+   getStream = () => {
+      const xhr = new XMLHttpRequest();
+      const url = 'http://cast2.name.ba:8038/;';
+
+      xhr.open('GET', url);
+      xhr.onreadystatechange = this.setStream(url);
+      xhr.send();
+   };
+
+   setStream = url => {
+      this.url = url;
    };
 
    togglePlay = () => {
