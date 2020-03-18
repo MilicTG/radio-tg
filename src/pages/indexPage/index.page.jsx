@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 
 //styles
 import { cardSectionContainer as CardContainer } from './index.style';
@@ -42,9 +40,11 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = 'http://163.172.213.155:8038/;';
+      this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
    }
+
+   // https://cors-anywhere.herokuapp.com/{type_your_url_here}
 
    componentDidMount() {
       this.setHeaderBackground();
@@ -105,7 +105,14 @@ export default class IndexPage extends Component {
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
 
-            <AudioPlayer autoPlay src='http://163.172.213.155:8038/;' />
+            <audio
+               id='stream'
+               controls
+               preload='none'
+               autoplay=''
+               src='http://cast2.name.ba:8038/;'
+               type='audio/mpeg'
+            ></audio>
 
             <SectionTitle
                title='Naše najslušanije emisije'
