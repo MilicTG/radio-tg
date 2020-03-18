@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 //styles
 import { cardSectionContainer as CardContainer } from './index.style';
@@ -46,7 +48,7 @@ export default class IndexPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 5');
+      console.log('test 6');
    }
 
    componentWillUnmount() {
@@ -102,9 +104,8 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
-            <audio controls>
-               <source src='http://163.172.213.155:8038/;' type='audio/mp3' />>
-            </audio>
+
+            <AudioPlayer autoPlay src='http://163.172.213.155:8038/;' />
 
             <SectionTitle
                title='Naše najslušanije emisije'
