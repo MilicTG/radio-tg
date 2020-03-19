@@ -7,6 +7,9 @@ export const buttonWrapper = styled.div`
    justify-content: space-between;
    flex-flow: row;
    padding: 10rem 0;
+   @media ${device.devicePhone} {
+      display: none;
+   }
 `;
 
 export const scheduleWrapper = styled.div`

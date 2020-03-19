@@ -10,6 +10,7 @@ import { Container } from '../../styles/Container';
 
 //components
 import SmallHeader from '../../components/headerSmall/headerSmall.component';
+import DaySelect from '../../components/scheduleSelectDay/scheduleSelectDay.component';
 import ScheduleButton from '../../components/buttonSchedule/buttonSchedule.component';
 import Footer from '../../components/footer/footer.component';
 
@@ -84,6 +85,7 @@ export default class ProgramPage extends Component {
                desc={this.state.headDesc}
             />
             <Container>
+               <DaySelect />
                <Fade bottom cascade>
                   <BtnWrapper>
                      <ScheduleButton
