@@ -40,7 +40,8 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = 'http://163.172.213.155:8038/;';
+      // this.url = 'http://163.172.213.155:8038/;';
+      this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       // this.url = 'http://cast2.name.ba:8038/;';
@@ -50,6 +51,20 @@ export default class IndexPage extends Component {
    componentDidMount() {
       this.setHeaderBackground();
       console.log('test 9');
+
+      const proxyRadio = 'https://cors-anywhere.herokuapp.com/';
+      const radioStream = 'http://163.172.213.155:8038/;';
+
+      this.getRadioStream(
+         {
+            method: this.id === 'post' ? 'POST' : 'GET',
+            url: proxyRadio.value,
+            data: radioStream.value,
+         },
+         function printResult(result) {
+            console.log(result);
+         }
+      );
    }
 
    componentWillUnmount() {
@@ -70,7 +85,30 @@ export default class IndexPage extends Component {
       });
    };
 
-   getRadioStream = () => {};
+   getRadioStream = (options, printResult) => {
+      const getStream = new XMLHttpRequest();
+      getStream.open(options.method, options.url + options.data);
+      getStream.onload = getStream.onerror = () => {
+         printResult(
+            options.method +
+               ' ' +
+               options.data +
+               '\n' +
+               getStream.status +
+               ' ' +
+               getStream.statusText +
+               '\n\n' +
+               (getStream.responseText || '')
+         );
+      };
+      if (/^POST/i.test(options.method)) {
+         getStream.setRequestHeader(
+            'Content-Type',
+            'application/x-www-form-urlencoded'
+         );
+      }
+      getStream.send((this.url = options.data));
+   };
 
    togglePlay = () => {
       this.setState({
