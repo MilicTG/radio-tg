@@ -40,16 +40,16 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      // this.url = 'http://163.172.213.155:8038/;stream/1';
-      this.url =
-         'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
+      this.url = 'http://163.172.213.155:8038/;';
+      // this.url =
+      //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       // this.url = 'http://cast2.name.ba:8038/;';
       this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 8');
+      console.log('test 9');
    }
 
    componentWillUnmount() {
