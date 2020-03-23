@@ -41,30 +41,17 @@ export default class IndexPage extends Component {
          headerBackground: '',
       };
       // this.url = 'http://163.172.213.155:8038/;';
-      this.url = '';
+      // this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
-      // this.url = 'http://cast2.name.ba:8038/;';
+      this.url = 'http://cast2.name.ba:8038/;';
+      this.herokuProxy = 'https://radiotg-proxy.herokuapp.com/';
       this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 9');
-
-      const proxyRadio = 'https://cors-anywhere.herokuapp.com/';
-      const radioStream = 'http://163.172.213.155:8038/;';
-
-      this.getRadioStream(
-         {
-            method: this.id === 'post' ? 'POST' : 'GET',
-            url: proxyRadio.value,
-            data: radioStream.value,
-         },
-         function printResult(result) {
-            console.log(result);
-         }
-      );
+      console.log('test 10');
    }
 
    componentWillUnmount() {
@@ -85,29 +72,23 @@ export default class IndexPage extends Component {
       });
    };
 
-   getRadioStream = (options, printResult) => {
-      const getStream = new XMLHttpRequest();
-      getStream.open(options.method, options.url + options.data);
-      getStream.onload = getStream.onerror = () => {
-         printResult(
-            options.method +
-               ' ' +
-               options.data +
-               '\n' +
-               getStream.status +
-               ' ' +
-               getStream.statusText +
-               '\n\n' +
-               (getStream.responseText || '')
-         );
+   contactProxy = () => {
+      const radioProxy = new XMLHttpRequest();
+      radioProxy.open('GET', this.herokuProxy + this.url, '/stream');
+      radioProxy.setRequestHeader(
+         'X-Requested-With',
+         'XMLHttpRequest',
+         'Accept',
+         '*/*'
+      );
+      radioProxy.responseType = 'ArrayBuffer';
+
+      radioProxy.onLoad = () => {
+         const audioData = radioProxy.response;
+
+         return radioProxy.responseText;
       };
-      if (/^POST/i.test(options.method)) {
-         getStream.setRequestHeader(
-            'Content-Type',
-            'application/x-www-form-urlencoded'
-         );
-      }
-      getStream.send((this.url = options.data));
+      radioProxy.send();
    };
 
    togglePlay = () => {
@@ -118,7 +99,10 @@ export default class IndexPage extends Component {
    };
 
    startStream = () => {
-      this.audio = new Audio(this.url);
+      this.audio = new Audio(this.contactProxy());
+      this.audio.preload = 'auto';
+      this.audio.load();
+      this.audio.currentTime = 0;
       this.audio.play();
    };
 
