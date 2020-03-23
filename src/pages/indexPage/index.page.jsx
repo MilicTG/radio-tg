@@ -51,7 +51,7 @@ export default class IndexPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 13');
+      console.log('test 14');
       this.contactProxy();
    }
 
@@ -76,9 +76,9 @@ export default class IndexPage extends Component {
    contactProxy = () => {
       const radioProxy = new XMLHttpRequest();
       radioProxy.open('GET', encodeURI(this.herokuProxy + this.url), true);
-      radioProxy.setRequestHeader('Content-Type', 'application/json');
-      radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-      radioProxy.setRequestHeader('Accept', '*/*');
+      radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
+      // radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      // radioProxy.setRequestHeader('Accept', '*/*');
       radioProxy.responseType = 'blob';
       radioProxy.onLoad = () => {
          const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
