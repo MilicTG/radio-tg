@@ -46,12 +46,13 @@ export default class IndexPage extends Component {
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       this.url = 'http://cast2.name.ba:8038/;';
       this.herokuProxy = 'https://radiotg-proxy.herokuapp.com/';
-      this.audio = null;
+      this.audio = new Audio();
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 10');
+      console.log('test 11');
+      this.contactProxy();
    }
 
    componentWillUnmount() {
@@ -74,21 +75,16 @@ export default class IndexPage extends Component {
 
    contactProxy = () => {
       const radioProxy = new XMLHttpRequest();
-      radioProxy.open('GET', this.herokuProxy + this.url, '/stream');
-      radioProxy.setRequestHeader(
-         'X-Requested-With',
-         'XMLHttpRequest',
-         'Accept',
-         '*/*'
-      );
-      radioProxy.responseType = 'ArrayBuffer';
-
+      radioProxy.open('GET', encodeURI(this.herokuProxy + this.url), true);
+      radioProxy.setRequestHeader('Content-Type', 'application/json');
+      radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      radioProxy.setRequestHeader('Accept', '*/*');
+      radioProxy.responseType = 'blob';
       radioProxy.onLoad = () => {
-         const audioData = radioProxy.response;
-
-         return radioProxy.responseText;
+         const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
+         const objectUrl = URL.createObjectURL(blob);
+         this.url = objectUrl;
       };
-      radioProxy.send();
    };
 
    togglePlay = () => {
@@ -99,16 +95,16 @@ export default class IndexPage extends Component {
    };
 
    startStream = () => {
-      this.audio = new Audio(this.contactProxy());
+      this.audio.src = this.url;
       this.audio.preload = 'auto';
-      this.audio.load();
-      this.audio.currentTime = 0;
+      this.audio.onload = () => {
+         URL.revokeObjectURL(this.url);
+      };
       this.audio.play();
    };
 
    stopStream = () => {
       this.audio.pause();
-      this.audio = null;
    };
 
    render() {
