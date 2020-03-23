@@ -44,9 +44,9 @@ export default class IndexPage extends Component {
       // this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
-      this.url = 'http://163.172.213.155:8038/;';
-      this.herokuProxy = 'https://radiotg-proxy.herokuapp.com/';
-      this.stream = this.contactProxy();
+      this.herokuProxy =
+         'https://radiotg-proxy.herokuapp.com/http://163.172.213.155:8038/;';
+      this.url = '';
       this.audio = null;
    }
 
@@ -88,14 +88,16 @@ export default class IndexPage extends Component {
       //    this.url = objectUrl;
       // };
 
-      fetch(this.herokuProxy + this.url, {
+      fetch(this.herokuProxy, {
          headers: {
             Accept: 'application/json',
             'Access-Control-Allow-Origin': '*',
          },
       })
-         .then(res => {
-            return res.ok ? res.json() : null;
+         .then(response => {
+            const blob = new Blob([response.value], { type: 'audio/mp3' });
+            const objectUrl = URL.createObjectURL(blob);
+            // this.url = objectUrl;
          })
          .catch(error => {
             console.log(error);
@@ -111,10 +113,10 @@ export default class IndexPage extends Component {
 
    startStream = () => {
       this.audio = new Audio();
-      this.audio.src = this.stream;
+      this.audio.src = this.url;
       this.audio.preload = 'auto';
       this.audio.onload = () => {
-         URL.revokeObjectURL(this.stream);
+         URL.revokeObjectURL(this.url);
       };
       this.audio.play();
    };
