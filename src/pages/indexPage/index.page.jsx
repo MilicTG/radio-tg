@@ -40,20 +40,18 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url =
-         'https://www.loadweb.net/corsproxy-new/?q=http://163.172.213.155:8038/;';
-      // this.url = '';
+      this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       this.herokuProxy =
          'https://radiotg-proxy.herokuapp.com/http://163.172.213.155:8038/;';
       this.audio = null;
-      this.blob = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
       console.log('test 16');
+      this.contactProxy();
    }
 
    componentWillUnmount() {
@@ -75,29 +73,26 @@ export default class IndexPage extends Component {
    };
 
    contactProxy = () => {
-      const radioProxy = new XMLHttpRequest();
-      let objectURL = '';
-      radioProxy.open('GET', encodeURI(this.herokuProxy), true);
-      radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-      radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
-      radioProxy.setRequestHeader('Accept', '/stream');
-
-      radioProxy.responseType = 'blob';
-      radioProxy.onLoad = () => {
-         const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
-         let objectUrl = URL.createObjectURL(blob);
-         objectURL = objectUrl;
-      };
-      const audio = new Audio();
-      audio.onload = () => {
-         URL.revokeObjectURL(objectURL);
-      };
-      audio.src = 'http://163.172.213.155:8038/;';
-      console.log('sviram');
-      audio.play();
-
+      // const radioProxy = new XMLHttpRequest();
+      // let objectURL = '';
+      // radioProxy.open('GET', encodeURI(this.herokuProxy), true);
+      // radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      // radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
+      // radioProxy.setRequestHeader('Accept', '/stream');
+      // radioProxy.responseType = 'blob';
+      // radioProxy.onLoad = () => {
+      //    const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
+      //    let objectUrl = URL.createObjectURL(blob);
+      //    objectURL = objectUrl;
+      // };
+      // const audio = new Audio();
+      // audio.onload = () => {
+      //    URL.revokeObjectURL(objectURL);
+      // };
+      // audio.src = 'http://163.172.213.155:8038/;';
+      // console.log('sviram');
+      // audio.play();
       // radioProxy.send();
-
       // fetch(this.herokuProxy, {
       //    headers: {
       //       Accept: 'application/json',
@@ -122,14 +117,9 @@ export default class IndexPage extends Component {
       !this.state.play ? this.startStream() : this.stopStream();
    };
 
-   startStream = () => {
-      this.contactProxy();
-   };
+   startStream = () => {};
 
-   stopStream = () => {
-      this.audio.pause();
-      this.audio = null;
-   };
+   stopStream = () => {};
 
    render() {
       return (
