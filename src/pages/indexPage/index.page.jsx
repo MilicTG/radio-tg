@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 //styles
 import { cardSectionContainer as CardContainer } from './index.style';
@@ -50,7 +52,7 @@ export default class IndexPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 16');
+      console.log('test 17');
       this.contactProxy();
    }
 
@@ -139,8 +141,13 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
-            <audio controls src='http://163.172.213.155:8038/;'></audio>
 
+            <AudioPlayer
+               preload
+               volume
+               src={this.herokuProxy}
+               crossOrigin={"X-Requested-With': 'XMLHttpRequest"}
+            />
             <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
