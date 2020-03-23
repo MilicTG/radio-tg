@@ -46,13 +46,13 @@ export default class IndexPage extends Component {
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       this.url = 'http://163.172.213.155:8038/;';
       this.herokuProxy = 'https://radiotg-proxy.herokuapp.com/';
-      this.audio = new Audio();
+      this.stream = this.contactProxy();
+      this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 14');
-      this.contactProxy();
+      console.log('test 15');
    }
 
    componentWillUnmount() {
@@ -74,17 +74,32 @@ export default class IndexPage extends Component {
    };
 
    contactProxy = () => {
-      const radioProxy = new XMLHttpRequest();
-      radioProxy.open('GET', encodeURI(this.herokuProxy + this.url), true);
-      radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
+      // const radioProxy = new XMLHttpRequest();
+      // radioProxy.open('GET', encodeURI(this.herokuProxy + this.url), true);
+      // radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
       // radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-      // radioProxy.setRequestHeader('Accept', '*/*');
-      radioProxy.responseType = 'blob';
-      radioProxy.onLoad = () => {
-         const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
-         const objectUrl = URL.createObjectURL(blob);
-         this.url = objectUrl;
-      };
+      // radioProxy.setRequestHeader('Accept', '/stream');
+      // radioProxy.setRequestHeader('Origin', 'http://163.172.213.155:8038/;');
+
+      // radioProxy.responseType = 'blob';
+      // radioProxy.onLoad = () => {
+      //    const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
+      //    const objectUrl = URL.createObjectURL(blob);
+      //    this.url = objectUrl;
+      // };
+
+      fetch(this.herokuProxy + this.url, {
+         headers: {
+            Accept: 'application/json',
+            'Access-Control-Allow-Origin': '*',
+         },
+      })
+         .then(res => {
+            return res.ok ? res.json() : null;
+         })
+         .catch(error => {
+            console.log(error);
+         });
    };
 
    togglePlay = () => {
@@ -95,16 +110,18 @@ export default class IndexPage extends Component {
    };
 
    startStream = () => {
-      this.audio.src = this.url;
+      this.audio = new Audio();
+      this.audio.src = this.stream;
       this.audio.preload = 'auto';
       this.audio.onload = () => {
-         URL.revokeObjectURL(this.url);
+         URL.revokeObjectURL(this.stream);
       };
       this.audio.play();
    };
 
    stopStream = () => {
       this.audio.pause();
+      this.audio = null;
    };
 
    render() {
