@@ -44,14 +44,14 @@ export default class IndexPage extends Component {
       // this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
-      this.url = 'http://cast2.name.ba:8038/;';
+      this.url = 'http://163.172.213.155:8038/;';
       this.herokuProxy = 'https://radiotg-proxy.herokuapp.com/';
       this.audio = new Audio();
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 12');
+      console.log('test 13');
       this.contactProxy();
    }
 
