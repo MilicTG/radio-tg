@@ -40,19 +40,20 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      // this.url = 'http://163.172.213.155:8038/;';
+      this.url =
+         'https://www.loadweb.net/corsproxy-new/?q=http://163.172.213.155:8038/;';
       // this.url = '';
       // this.url =
       //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       this.herokuProxy =
          'https://radiotg-proxy.herokuapp.com/http://163.172.213.155:8038/;';
-      this.url = '';
       this.audio = null;
+      this.blob = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 15');
+      console.log('test 16');
    }
 
    componentWillUnmount() {
@@ -74,34 +75,44 @@ export default class IndexPage extends Component {
    };
 
    contactProxy = () => {
-      // const radioProxy = new XMLHttpRequest();
-      // radioProxy.open('GET', encodeURI(this.herokuProxy + this.url), true);
-      // radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
-      // radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-      // radioProxy.setRequestHeader('Accept', '/stream');
-      // radioProxy.setRequestHeader('Origin', 'http://163.172.213.155:8038/;');
+      const radioProxy = new XMLHttpRequest();
+      let objectURL = '';
+      radioProxy.open('GET', encodeURI(this.herokuProxy), true);
+      radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
+      radioProxy.setRequestHeader('Accept', '/stream');
 
-      // radioProxy.responseType = 'blob';
-      // radioProxy.onLoad = () => {
-      //    const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
-      //    const objectUrl = URL.createObjectURL(blob);
-      //    this.url = objectUrl;
-      // };
+      radioProxy.responseType = 'blob';
+      radioProxy.onLoad = () => {
+         const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
+         let objectUrl = URL.createObjectURL(blob);
+         objectURL = objectUrl;
+      };
+      const audio = new Audio();
+      audio.onload = () => {
+         URL.revokeObjectURL(objectURL);
+      };
+      audio.src = 'http://163.172.213.155:8038/;';
+      console.log('sviram');
+      audio.play();
 
-      fetch(this.herokuProxy, {
-         headers: {
-            Accept: 'application/json',
-            'Access-Control-Allow-Origin': '*',
-         },
-      })
-         .then(response => {
-            const blob = new Blob([response.value], { type: 'audio/mp3' });
-            const objectUrl = URL.createObjectURL(blob);
-            // this.url = objectUrl;
-         })
-         .catch(error => {
-            console.log(error);
-         });
+      // radioProxy.send();
+
+      // fetch(this.herokuProxy, {
+      //    headers: {
+      //       Accept: 'application/json',
+      //       'X-Requested-With': 'XMLHttpRequest',
+      //       'Access-Control-Allow-Origin': '*',
+      //    },
+      // })
+      //    .then(response => {
+      //       const blob = new Blob([response.value], { type: 'audio/mp3' });
+      //       const objectUrl = URL.createObjectURL(blob);
+      //       this.url = objectUrl;
+      //    })
+      //    .catch(error => {
+      //       console.log(error);
+      //    });
    };
 
    togglePlay = () => {
@@ -112,13 +123,7 @@ export default class IndexPage extends Component {
    };
 
    startStream = () => {
-      this.audio = new Audio();
-      this.audio.src = this.url;
-      this.audio.preload = 'auto';
-      this.audio.onload = () => {
-         URL.revokeObjectURL(this.url);
-      };
-      this.audio.play();
+      this.contactProxy();
    };
 
    stopStream = () => {
@@ -144,6 +149,7 @@ export default class IndexPage extends Component {
                />
                <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
+            <audio controls src='http://163.172.213.155:8038/;'></audio>
 
             <SectionTitle
                title='Naše najslušanije emisije'
