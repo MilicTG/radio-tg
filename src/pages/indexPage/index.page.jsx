@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import '../../styles/styles.css';
 
 //styles
 import { cardSectionContainer as CardContainer } from './index.style';
@@ -86,7 +86,7 @@ export default class IndexPage extends Component {
                   layout='horizontal-reverse'
                   customControlsSection={[
                      RHAP_UI.MAIN_CONTROLS,
-                     <div>Slusajte RTG uzivo</div>,
+                     <div>Slusajte RTG uzivo </div>,
                   ]}
                   customAdditionalControls={[]}
                   customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
@@ -94,8 +94,8 @@ export default class IndexPage extends Component {
                      width: '350px',
                      border: 'none',
                      borderRadius: '50px',
-                     padding: '1.5rem',
-                     fontSize: '1.6rem',
+                     padding: '1rem 1.5rem ',
+                     fontSize: '1.8rem',
                      marginTop: '10rem',
                      color: '#303030',
                   }}
