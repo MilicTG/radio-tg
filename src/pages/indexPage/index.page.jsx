@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
-import AudioPlayer from 'react-h5-audio-player';
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 //styles
@@ -9,8 +9,6 @@ import { Container } from '../../styles/Container';
 
 //components
 import Header from '../../components/headerBig/headerBig.component';
-import PlayButton from '../../components/buttonPlay/buttonPlay.component';
-import DownloadBtn from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
 import SectionInfo from '../../components/sectionInfo/sectionInfoLeft.component';
@@ -42,18 +40,12 @@ export default class IndexPage extends Component {
          play: false,
          headerBackground: '',
       };
-      this.url = '';
-      // this.url =
-      //    'https://onlineradiobox.com/json/ba/tomislavgrad/play?platform=web';
       this.herokuProxy =
          'https://radiotg-proxy.herokuapp.com/http://163.172.213.155:8038/;';
-      this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
-      console.log('test 17');
-      this.contactProxy();
    }
 
    componentWillUnmount() {
@@ -74,55 +66,6 @@ export default class IndexPage extends Component {
       });
    };
 
-   contactProxy = () => {
-      // const radioProxy = new XMLHttpRequest();
-      // let objectURL = '';
-      // radioProxy.open('GET', encodeURI(this.herokuProxy), true);
-      // radioProxy.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-      // radioProxy.setRequestHeader('Access-Control-Allow-Origin', '*');
-      // radioProxy.setRequestHeader('Accept', '/stream');
-      // radioProxy.responseType = 'blob';
-      // radioProxy.onLoad = () => {
-      //    const blob = new Blob([radioProxy.response], { type: 'audio/mp3' });
-      //    let objectUrl = URL.createObjectURL(blob);
-      //    objectURL = objectUrl;
-      // };
-      // const audio = new Audio();
-      // audio.onload = () => {
-      //    URL.revokeObjectURL(objectURL);
-      // };
-      // audio.src = 'http://163.172.213.155:8038/;';
-      // console.log('sviram');
-      // audio.play();
-      // radioProxy.send();
-      // fetch(this.herokuProxy, {
-      //    headers: {
-      //       Accept: 'application/json',
-      //       'X-Requested-With': 'XMLHttpRequest',
-      //       'Access-Control-Allow-Origin': '*',
-      //    },
-      // })
-      //    .then(response => {
-      //       const blob = new Blob([response.value], { type: 'audio/mp3' });
-      //       const objectUrl = URL.createObjectURL(blob);
-      //       this.url = objectUrl;
-      //    })
-      //    .catch(error => {
-      //       console.log(error);
-      //    });
-   };
-
-   togglePlay = () => {
-      this.setState({
-         play: !this.state.play,
-      });
-      !this.state.play ? this.startStream() : this.stopStream();
-   };
-
-   startStream = () => {};
-
-   stopStream = () => {};
-
    render() {
       return (
          <>
@@ -133,21 +76,31 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-               <PlayButton
-                  key='2'
-                  onTap={this.togglePlay}
-                  onClick={this.togglePlay}
-                  play={this.state.play}
+               <AudioPlayer
+                  className='player'
+                  preload
+                  volume
+                  src={this.herokuProxy}
+                  crossOrigin='anonymous'
+                  showJumpControls={false}
+                  layout='horizontal-reverse'
+                  customControlsSection={[
+                     RHAP_UI.MAIN_CONTROLS,
+                     <div>Slusajte RTG uzivo</div>,
+                  ]}
+                  customAdditionalControls={[]}
+                  customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
+                  style={{
+                     width: '350px',
+                     border: 'none',
+                     borderRadius: '50px',
+                     padding: '1.5rem',
+                     fontSize: '1.6rem',
+                     marginTop: '10rem',
+                     color: '#303030',
+                  }}
                />
-               <DownloadBtn key='3' text='Preuzmite pls' />
             </Header>
-
-            <AudioPlayer
-               preload
-               volume
-               src={this.herokuProxy}
-               crossOrigin={"X-Requested-With': 'XMLHttpRequest"}
-            />
             <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
