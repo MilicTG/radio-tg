@@ -55,19 +55,16 @@ export const headerText = styled.div`
    h1 {
       display: inline;
       @media ${device.devicePhone} {
-         font-size: 9vw;
+         font-size: ${theme.fontSizeHeaderTitlePhone};
       }
       @media ${device.deviceTablet} {
-         font-size: ${theme.fontSizeBig4X};
+         font-size: ${theme.fontSizeHeaderTitleTabPort};
       }
       @media ${device.deviceTabletLand} {
-         font-size: ${theme.fontSizeBig4X};
+         font-size: ${theme.fontSizeHeaderTitleTabLand};
       }
       @media ${device.deviceDesktop} {
-         font-size: ${theme.fontSizeBig5X};
-      }
-      @media ${device.deviceDesktopHD} {
-         font-size: ${theme.fontSizeBig5X};
+         font-size: ${theme.fontSizeHeaderTitleDesk};
       }
    }
    #radio {
@@ -82,16 +79,16 @@ export const headerText = styled.div`
       font-weight: 100;
       letter-spacing: 0.3rem;
       @media ${device.devicePhone} {
-         font-size: ${theme.fontSizeNorm};
+         font-size: ${theme.fontSizeHeaderDescPhone};
       }
       @media ${device.deviceTablet} {
-         font-size: ${theme.fontSizeBig};
+         font-size: ${theme.fontSizeHeaderDescTab};
       }
       @media ${device.deviceTabletLand} {
-         font-size: ${theme.fontSizeBig};
+         font-size: ${theme.fontSizeHeaderDescTabLand};
       }
       @media ${device.deviceDesktop} {
-         font-size: ${theme.fontSizeBig2X};
+         font-size: ${theme.fontSizeHeaderDescDesk};
       }
    }
    @media ${device.deviceTabletLand} {

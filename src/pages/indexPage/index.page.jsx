@@ -78,7 +78,6 @@ export default class IndexPage extends Component {
             >
                <AudioPlayer
                   className='player'
-                  preload
                   volume
                   src={this.herokuProxy}
                   crossOrigin='anonymous'
@@ -86,18 +85,19 @@ export default class IndexPage extends Component {
                   layout='horizontal-reverse'
                   customControlsSection={[
                      RHAP_UI.MAIN_CONTROLS,
-                     <div>Slusajte RTG uzivo </div>,
+                     <div>RTG uzivo </div>,
                   ]}
                   customAdditionalControls={[]}
                   customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
                   style={{
-                     width: '350px',
+                     width: '330px',
+                     height: '60px',
                      border: 'none',
                      borderRadius: '50px',
                      padding: '1rem 1.5rem ',
                      fontSize: '1.8rem',
-                     marginTop: '10rem',
-                     color: '#303030',
+                     marginTop: '15rem',
+                     background: '#fff',
                   }}
                />
             </Header>

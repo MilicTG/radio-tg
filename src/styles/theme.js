@@ -9,6 +9,28 @@ export const theme = {
    colorFont: '#303030',
    colorLightBck: '#eeeeee',
    //font size
+   fontSizeNavLinkDesk: '2.3rem;',
+
+   fontSizeHeaderTitlePhone: '8.5vw',
+   fontSizeHeaderTitleTabPort: '5.5rem',
+   fontSizeHeaderTitleTabLand: '5.8rem',
+   fontSizeHeaderTitleDesk: '6rem',
+
+   fontSizeHeaderDescPhone: '6.5vw',
+   fontSizeHeaderDescTab: '4rem',
+   fontSizeHeaderDescTabLand: '4.5rem',
+   fontSizeHeaderDescDesk: '4.3rem',
+
+   fontSizeSectionTitlePhone: '6vw',
+   fontSizeSectionTitleTab: '3.5rem',
+   fontSizeSectionTitleTabLand: '3.7rem',
+   fontSizeSectionTitleDesk: '4rem',
+
+   fontSizeSectionDescPhone: '3.8vw',
+   fontSizeSectionDescTab: '2.2rem',
+   fontSizeSectionDescTabLand: '2.3rem',
+   fontSizeSectionDescDesk: '2.5rem',
+
    fontSizeSmall3X: `0.8rem`,
    fontSizeSmall2X: `1rem`,
    fontSizeSmall1X: `1.3rem`,

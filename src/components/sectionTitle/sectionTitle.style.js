@@ -24,19 +24,19 @@ export const primaryTitle = styled.h2`
    font-weight: 500;
    color: ${theme.colorFont};
    text-align: center;
-   padding-bottom: 1rem;
+   padding-bottom: 1.5rem;
 
    @media ${device.devicePhone} {
-      font-size: 6vw;
+      font-size: ${theme.fontSizeSectionTitlePhone};
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeNorm};
+      font-size: ${theme.fontSizeSectionTitleTab};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeBig};
+      font-size: ${theme.fontSizeSectionTitleTabLand};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeBig3X};
+      font-size: ${theme.fontSizeSectionTitleDesk};
    }
 `;
 
@@ -47,15 +47,15 @@ export const descTitle = styled.p`
    white-space: pre-line;
    display: inline-block;
    @media ${device.devicePhone} {
-      font-size: 1.3rem;
+      font-size: ${theme.fontSizeSectionDescPhone};
    }
    @media ${device.deviceTablet} {
-      font-size: 1.8rem;
+      font-size: ${theme.fontSizeSectionDescTab};
    }
    @media ${device.deviceTabletLand} {
-      font-size: 1.8rem;
+      font-size: ${theme.fontSizeSectionDescTabLand};
    }
    @media ${device.deviceDesktop} {
-      font-size: 2rem;
+      font-size: ${theme.fontSizeSectionDescDesk};
    }
 `;

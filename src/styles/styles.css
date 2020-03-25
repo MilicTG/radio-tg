@@ -230,11 +230,11 @@
 
 /* Utils */
 .rhap_button-clear {
-   background-color: #fff;
    border: none;
    padding: 0;
    overflow: hidden;
    cursor: pointer;
+   background: none;
 }
 .rhap_button-clear:hover {
    opacity: 0.9;
