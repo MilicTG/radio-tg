@@ -23,12 +23,12 @@ const App = () => {
          <Navbar />
          <Switch>
             <Route exact path='/' component={IndexPage}></Route>
-            <Route path='/rtg-music' component={RTGMusicPage}></Route>
+            <Route exact path='/rtg-music' component={RTGMusicPage}></Route>
             <Route path='/program' component={ProgramPage}></Route>
             <Route path='/marketing' component={MarketingPage}></Route>
             <Route path='/kontakt' component={ContactPage}></Route>
-            <Route path='/strunica' component={StrunicaPage}></Route>
-            <Route path='/zrcalo' component={ZrcaloPage}></Route>
+            {/* <Route path='/strunica' component={StrunicaPage}></Route>
+            <Route path='/zrcalo' component={ZrcaloPage}></Route> */}
          </Switch>
       </Router>
    );
