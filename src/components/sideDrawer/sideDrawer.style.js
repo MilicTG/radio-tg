@@ -46,12 +46,12 @@ export const sideDrawerContainer = styled.nav`
       }
    }
    .rtg-music--wrapper {
-      background: ${theme.colorSecondary};
+      background: ${theme.colorPrimary};
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 17rem;
-      height: 5rem;
+      width: 16rem;
+      height: 4.7rem;
       border-radius: 5rem;
    }
    .rtg-music--link {

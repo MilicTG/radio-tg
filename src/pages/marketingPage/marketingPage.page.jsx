@@ -26,7 +26,7 @@ class MarketingPage extends Component {
 
       this.state = {
          headTitle: 'Marketing',
-         headDesc: 'Omogucite da se vasa reklama daleko cuje',
+         headDesc: 'Uskoro stiže, stranica u izradi',
          headBackground: imgMarketing,
          sectionTitle: 'Zasto se oglasavati na RTG',
          sectionDesc: 'Osigurajte svoje minute u nasem eteru',
@@ -41,7 +41,7 @@ class MarketingPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-            <SectionTitle
+            {/*  <SectionTitle
                title={this.state.sectionTitle}
                desc={this.state.sectionDesc}
             />
@@ -69,7 +69,7 @@ class MarketingPage extends Component {
                rowThree={weddingInfo.rowThree}
                image={imgWedding}
             />
-            <Footer />
+            <Footer /> */}
          </>
       );
    }

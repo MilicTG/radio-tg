@@ -12,15 +12,15 @@ export const logoWrapper = styled.div`
 `;
 export const logoItem = styled.img`
    @media ${device.devicePhone} {
-      height: 3.5rem;
+      height: 2.7rem;
    }
    @media ${device.deviceTablet} {
-      height: 4rem;
+      height: 3rem;
    }
    @media ${device.deviceTabletLand} {
-      height: 4rem;
+      height: 3rem;
    }
    @media ${device.deviceDesktop} {
-      height: 5rem;
+      height: 3.5rem;
    }
 `;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createRef } from "react";
+import { createRef } from 'react';
 import Fade from 'react-reveal/Fade';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import '../../styles/styles.css';
@@ -39,11 +39,10 @@ export default class IndexPage extends Component {
          titleSecond: 'Tomislavgrad',
          titleFreq: '95.1,95.9 i 103.3Mhz',
          headerBackground: '',
-         url: "http://163.172.213.155:8038/;"
+         url: 'http://163.172.213.155:8038/;',
+         showRTGMusic: false,
       };
-      this.herokuProxy =
-         'https://radiotg-proxy.herokuapp.com/http://163.172.213.155:8038/;';
-         this.player = createRef();
+      this.player = createRef();
    }
 
    componentDidMount() {
@@ -67,32 +66,31 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-                <AudioPlayer
-            className="player"
-            preload="none"
-            volume
-            src={this.state.url}
-            showJumpControls={false}
-            layout="horizontal-reverse"
-            customControlsSection={[
-              RHAP_UI.MAIN_CONTROLS,
-              <div>RTG uživo </div>,
-            ]}
-            customAdditionalControls={[]}
-            customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
-            style={{
-              width: "330px",
-              height: "60px",
-              border: "none",
-              borderRadius: "50px",
-              padding: "1rem 1.5rem ",
-              fontSize: "1.8rem",
-              marginTop: "15rem",
-              background: "#fff",
-            }}
-            ref={this.player}
-         
-          />
+               <AudioPlayer
+                  className='player'
+                  preload='none'
+                  volume
+                  src={this.state.url}
+                  showJumpControls={false}
+                  layout='horizontal-reverse'
+                  customControlsSection={[
+                     RHAP_UI.MAIN_CONTROLS,
+                     <div>RTG uživo </div>,
+                  ]}
+                  customAdditionalControls={[]}
+                  customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
+                  style={{
+                     width: '330px',
+                     height: '60px',
+                     border: 'none',
+                     borderRadius: '50px',
+                     padding: '1rem 1.5rem ',
+                     fontSize: '1.8rem',
+                     marginTop: '15rem',
+                     background: '#fff',
+                  }}
+                  ref={this.player}
+               />
             </Header>
             {/* <SectionTitle
                title='Naše najslušanije emisije'

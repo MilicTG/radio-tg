@@ -4,9 +4,9 @@ import { device } from '../../styles/responsive';
 
 const buttonContainer = styled.button`
    display: flex;
-   width: 17rem;
-   height: 5rem;
-   background: ${theme.colorSecondary};
+   width: 16rem;
+   height: 4.5rem;
+   background: ${theme.colorPrimary};
    border-radius: 5rem;
    border: none;
    padding: 0 20px;
@@ -20,13 +20,13 @@ const buttonContainer = styled.button`
       width: 100%;
       display: inherit;
       justify-content: space-between;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
    }
 
    :hover {
       box-shadow: 3px 10px 28px -13px rgba(33, 33, 33, 0.2);
       cursor: pointer;
-      background: ${theme.colorPrimary};
+      background: ${theme.colorSecondary};
    }
    :active {
       transform: scale(0.95);

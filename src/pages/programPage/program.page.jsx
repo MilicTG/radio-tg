@@ -37,7 +37,7 @@ export default class ProgramPage extends Component {
          afternoon: mondayAfternoon,
          headImage: headImage,
          headTitle: 'Raspored programa',
-         headDesc: 'Nas program kroz tjedan',
+         headDesc: 'Uskoro stiže, stranica u izradi',
       };
    }
 
@@ -84,7 +84,7 @@ export default class ProgramPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-            <Container>
+            {/* <Container>
                <DaySelect />
                <Fade bottom cascade>
                   <BtnWrapper>
@@ -141,7 +141,7 @@ export default class ProgramPage extends Component {
                   </SchWrap>
                </Fade>
             </Container>
-            <Footer />
+            <Footer /> */}
          </>
       );
    }

@@ -25,7 +25,7 @@ class ContactPage extends Component {
 
       this.state = {
          headTitle: 'Kontaktirajte nas',
-         headDesc: 'Stojimo vama na usluzi',
+         headDesc: 'Uskoro stiže, stranica u izradi',
          headBackground: imgContact,
          sectionTitle: 'Kontakt informacije',
          sectionDesc: 'Veselimo se suradnji s vama',
@@ -40,7 +40,7 @@ class ContactPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-            <SectionTitle
+            {/*  <SectionTitle
                title={this.state.sectionTitle}
                desc={this.state.sectionDesc}
             />
@@ -64,8 +64,9 @@ class ContactPage extends Component {
                      </ContactCard>
                   </Pulse>
                </CardWrapper>
-            </Container>
+            </Container> 
             <Footer />
+            */}
          </>
       );
    }
