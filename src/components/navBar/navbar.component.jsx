@@ -23,16 +23,8 @@ class Navbar extends Component {
       this.state = {
          sideDrawerOpen: false,
          bodyScrollLock: false,
-         openRTGMusic: false,
       };
    }
-
-   openRTGMusic = () => {
-      this.setState((state) => ({
-         ...state,
-         openRTGMusic: !state.openRTGMusic,
-      }));
-   };
 
    drawerToggleClickHandler = () => {
       this.setState((prevState) => {
