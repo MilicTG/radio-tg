@@ -87,30 +87,16 @@ class Navbar extends Component {
                         </Fade>
                         <Fade right>
                            <li>
-                              <RTGMusicBTN onClick={this.openRTGMusic} />
+                              <RTGMusicBTN   
+                              text='RTG Music'
+                              component={Link}
+                              to='/rtg-music' />   
                            </li>
                         </Fade>
                      </ul>
                   </Navigation>
                </Container>
             </Wrapper>
-
-            {this.state.openRTGMusic && (
-               <PortalToRTGMusic>
-                  <div
-                     style={{
-                        width: '100%',
-                        height: '100%',
-                        backgroundImage:
-                           'url("../../assets/img-RTGBackground.jpg")',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                     }}
-                  >
-                     da da
-                  </div>
-               </PortalToRTGMusic>
             )}
          </>
       );

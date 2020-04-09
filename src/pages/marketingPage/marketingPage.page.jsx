@@ -41,7 +41,7 @@ class MarketingPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-            {/*  <SectionTitle
+             <SectionTitle
                title={this.state.sectionTitle}
                desc={this.state.sectionDesc}
             />
@@ -69,7 +69,7 @@ class MarketingPage extends Component {
                rowThree={weddingInfo.rowThree}
                image={imgWedding}
             />
-            <Footer /> */}
+            <Footer />
          </>
       );
    }

@@ -92,7 +92,7 @@ export default class IndexPage extends Component {
                   ref={this.player}
                />
             </Header>
-            {/* <SectionTitle
+            <SectionTitle
                title='Naše najslušanije emisije'
                desc='Pronađite ono što Vam se najviše sviđa'
             />
@@ -148,7 +148,7 @@ export default class IndexPage extends Component {
                rowThree={indexPageInfoData.rowThree}
                image={imgAmp}
             />
-            <Footer /> */}
+            <Footer />
          </>
       );
    }

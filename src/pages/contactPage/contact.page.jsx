@@ -40,7 +40,7 @@ class ContactPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-            {/*  <SectionTitle
+             <SectionTitle
                title={this.state.sectionTitle}
                desc={this.state.sectionDesc}
             />
@@ -66,7 +66,7 @@ class ContactPage extends Component {
                </CardWrapper>
             </Container> 
             <Footer />
-            */}
+           
          </>
       );
    }
