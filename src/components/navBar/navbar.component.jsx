@@ -7,7 +7,6 @@ import Logo from '../logo/logo.component';
 import BurgerBtn from '../buttonBurger/burgerBtn.component';
 import RTGMusicBTN from '../buttonRTGMusic/buttonRTGMusic.component';
 import SideDrawer from '../sideDrawer/sideDrawer.component';
-import PortalToRTGMusic from '../portalToRTGMusic/portalToRTGMusic.component';
 
 //styles
 import {
@@ -74,6 +73,9 @@ class Navbar extends Component {
                               <Link to='/marketing'>Marketing</Link>
                            </li>
                            <li>
+                              <Link to='/oglasi'>Oglasi</Link>
+                           </li>
+                           <li>
                               <Link to='/kontakt'>Kontakt</Link>
                            </li>
                         </Fade>
@@ -89,7 +91,6 @@ class Navbar extends Component {
                   </Navigation>
                </Container>
             </Wrapper>
-            )}
          </>
       );
    }

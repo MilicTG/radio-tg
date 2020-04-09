@@ -1,19 +1,19 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileAudio } from "@fortawesome/free-solid-svg-icons";
 
 //style
-import ButtonContainer from './btnTransparent.style.js';
+import ButtonContainer from "./btnTransparent.style.js";
 
 const btnTransparent = props => {
-   return (
-      <ButtonContainer>
-         <p className='transparent-button-text'>
-            {props.text}
-            <FontAwesomeIcon icon={faArrowDown} size='lg' />
-         </p>
-      </ButtonContainer>
-   );
+  const downloadFile = () => {
+    window.location.href = props.file;
+  };
+  return (
+    <ButtonContainer onClick={downloadFile}>
+      <FontAwesomeIcon icon={faFileAudio} size="3x" />
+    </ButtonContainer>
+  );
 };
 
 export default btnTransparent;

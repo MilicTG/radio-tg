@@ -10,6 +10,7 @@ import { Container } from '../../styles/Container';
 
 //components
 import Header from '../../components/headerBig/headerBig.component';
+import BtnDownload from "../../components/buttonTransparent/btnTransparent.component";
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
 import SectionInfo from '../../components/sectionInfo/sectionInfoLeft.component';
@@ -29,6 +30,7 @@ import {
    vzr,
    obiteljskiAlbum,
 } from '../../data/showData';
+import plsFile from "../../assets/RadioTG-live.pls";
 
 export default class IndexPage extends Component {
    constructor() {
@@ -40,9 +42,7 @@ export default class IndexPage extends Component {
          titleFreq: '95.1,95.9 i 103.3Mhz',
          headerBackground: '',
          url: 'http://163.172.213.155:8038/;',
-         showRTGMusic: false,
       };
-      this.player = createRef();
    }
 
    componentDidMount() {
@@ -66,31 +66,33 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-               <AudioPlayer
-                  className='player'
-                  preload='none'
-                  volume
-                  src={this.state.url}
-                  showJumpControls={false}
-                  layout='horizontal-reverse'
-                  customControlsSection={[
-                     RHAP_UI.MAIN_CONTROLS,
-                     <div>RTG uživo </div>,
-                  ]}
-                  customAdditionalControls={[]}
-                  customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
-                  style={{
-                     width: '330px',
-                     height: '60px',
-                     border: 'none',
-                     borderRadius: '50px',
-                     padding: '1rem 1.5rem ',
-                     fontSize: '1.8rem',
-                     marginTop: '15rem',
-                     background: '#fff',
-                  }}
-                  ref={this.player}
-               />
+                <AudioPlayer
+            className="player"
+            loop={true}
+            preload="auto"
+            volume
+            src={this.state.url}
+            showJumpControls={false}
+            layout="horizontal-reverse"
+            customControlsSection={[
+              RHAP_UI.MAIN_CONTROLS,
+              <div>RTG uživo </div>,
+            ]}
+            customAdditionalControls={[]}
+            customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
+            style={{
+              width: "330px",
+              height: "60px",
+              border: "none",
+              borderRadius: "50px",
+              padding: "1rem 1.5rem ",
+              fontSize: "1.8rem",
+              marginTop: "15rem",
+              background: "#fff",
+            }}
+          />
+                         <BtnDownload file={plsFile} />
+
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'

@@ -22,6 +22,11 @@ const sideDrawer = props => {
                </Link>
             </li>
             <li>
+               <Link onClick={props.onClick} to='/oglasi'>
+                  Oglasi
+               </Link>
+            </li>
+            <li>
                <Link onClick={props.onClick} to='/kontakt'>
                   Kontakt
                </Link>
