@@ -14,6 +14,7 @@ import obvOne from '../../documents/Dokument1.pdf';
 import obvTwo from '../../documents/Dokument2.pdf';
 import obvThree from '../../documents/Dokument3.pdf';
 import obvFour from '../../documents/Dokument4.pdf';
+import natjecaj from '../../documents/Natjecaj.pdf';
 
 class NoticePage extends Component {
    constructor() {
@@ -48,6 +49,10 @@ class NoticePage extends Component {
                <NoticeHolder
                   title='Obavijest o zabrani paljenja vatre na otvorenom prostoru'
                   file={obvFour}
+               />
+               <NoticeHolder
+                  title='Javni natječaj za ZAPOSLENIKA 2020'
+                  file={natjecaj}
                />
             </Container>
          </>
