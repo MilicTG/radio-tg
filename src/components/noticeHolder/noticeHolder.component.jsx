@@ -1,19 +1,20 @@
 import React from 'react';
 
 //components
-import ButtonNoticeDownload from '../buttonNoticeDownload/buttonNoticeDownload.component';
+import NoticeDwn from '../buttonNoticeDownload/buttonNoticeDownload.component';
 
 //style
 import {
    noticeWrapper as Wrapper,
    noticeTitle as Title,
+   noticeDownload as Download,
 } from './noticeHolder.styles';
 
 const noticeHolder = (props) => {
    return (
       <Wrapper>
-         <Title>Natječaj za primanje tehničara</Title>
-         <ButtonNoticeDownload />
+         <Title>{props.title}</Title>
+         <NoticeDwn file={props.file} />
       </Wrapper>
    );
 };

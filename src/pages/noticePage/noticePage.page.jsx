@@ -10,6 +10,10 @@ import NoticeHolder from '../../components/noticeHolder/noticeHolder.component';
 
 //data
 import headImage from '../../assets/img-notice.jpg';
+import obvOne from '../../documents/Dokument1.pdf';
+import obvTwo from '../../documents/Dokument2.pdf';
+import obvThree from '../../documents/Dokument3.pdf';
+import obvFour from '../../documents/Dokument4.pdf';
 
 class NoticePage extends Component {
    constructor() {
@@ -32,7 +36,19 @@ class NoticePage extends Component {
             />
 
             <Container>
-               <NoticeHolder />
+               <NoticeHolder
+                  title='Obavijest iz Stožera civilne zaštite općine Tomislavgrad'
+                  file={obvOne}
+               />
+               <NoticeHolder title='Obavijest o neradnom danu' file={obvTwo} />
+               <NoticeHolder
+                  title='Obavijest o skraćenom radnom vremenu tijela uprave Općine Tomislavgrad'
+                  file={obvThree}
+               />
+               <NoticeHolder
+                  title='Obavijest o zabrani paljenja vatre na otvorenom prostoru'
+                  file={obvFour}
+               />
             </Container>
          </>
       );
