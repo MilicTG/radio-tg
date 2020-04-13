@@ -11,7 +11,7 @@ export const theme = {
    //font size
 
    fontSizeText: '1.8rem',
-   fontSieMobileText: '1.6rem',
+   fontSieMobileText: '2.4rem',
 
    fontSizeHeadTitle: '5.6rem',
 

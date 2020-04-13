@@ -20,7 +20,8 @@ export const klubPetmil = {
    id: 'showThree',
    showName: 'Klub Petmil',
    showPic: require('../assets/img-petmil.jpg'),
-   showDesc: 'Vratite Petra Milosa',
+   showDesc:
+      'Emisija u kojoj čitamo djela isključivo duvanjskih književnica i književnika. Pokrenuli smo je u spomen na Petra Miloša, koji je kroz svoje priče na najbolji način oslikao život ovdašnjih ljudi.',
    showTime: 'uto u 10:00',
 };
 
@@ -29,22 +30,42 @@ export const razgovoriUgodni = {
    showName: 'Razgovori ugodni',
    showPic: require('../assets/img-razgovori.jpg'),
    showDesc:
-      'Nocna mora tehnicara za sredit, ali emisija koja istrazuje zivote nasih duvnjaka',
+      'Emisija koja je to u pravom smislu riječi. U njoj o svome životu pričaju Duvanjke i Duvnjaci, koji žive ovdje ili negdje u svijetu.',
    showTime: 'pon u 16:00',
 };
 
-export const vzr = {
+export const glazbaonica = {
    id: 'showFive',
-   showName: 'Vrijeme je za rijec',
-   showPic: require('../assets/img-vzr.jpg'),
-   showDesc: 'Samo se ceka fra Mladen i slatkisi',
-   showTime: 'pet u 17:15',
+   showName: 'Glazbaonica',
+   showPic: require('../assets/img-glazbaonica-small.jpg'),
+   showDesc:
+      'Emisija koja kroz različite teme govori o glazbi koja se slušala i koja se sluša.',
+   showTime: 'uto u 16:00',
 };
 
 export const obiteljskiAlbum = {
    id: 'showSix',
    showName: 'Obiteljski album',
    showPic: require('../assets/img-obiteljski.jpg'),
-   showDesc: 'Znaci emisija o starim momcima a Milan vodi, nema dalje',
+   showDesc:
+      'Emisije iz arhiva Radija Tomislavgrad. Kroz zvučne zapise listamo stranice obiteljskih uspomena.',
    showTime: 'pet u 16:00',
+};
+
+export const slusamDakle = {
+   id: 'showSeven',
+   showName: 'Slušam, dakle učim!',
+   showPic: require('../assets/img-obiteljski.jpg'),
+   showDesc:
+      'Edukativna radio slagalica. Emisija o kulturi, znanosti, umjetnosti, ljudima, događajima i pojavama.',
+   showTime: 'pon u 16:00',
+};
+
+export const radioKnjiznica = {
+   id: 'showEight',
+   showName: 'Radio knjižnica',
+   showPic: require('../assets/img-obiteljski.jpg'),
+   showDesc:
+      'Zajednička suradnja RTG-a i Gradske knjižnice KIC-a. U njoj svakoga petka čitamo ulomke iz djela domaćih i svjetskih književnika, sa željom poticanja kulture čitanja, osobito kod mladih ljudi.',
+   showTime: 'pet u 10:00',
 };

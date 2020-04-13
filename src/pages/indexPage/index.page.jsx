@@ -26,8 +26,10 @@ import {
    strunica,
    klubPetmil,
    razgovoriUgodni,
-   vzr,
+   glazbaonica,
    obiteljskiAlbum,
+   slusamDakle,
+   radioKnjiznica,
 } from '../../data/showData';
 import plsFile from '../../assets/RadioTG-live.pls';
 
@@ -126,16 +128,28 @@ export default class IndexPage extends Component {
                         time={razgovoriUgodni.showTime}
                      />
                      <ShowCard
-                        img={vzr.showPic}
-                        title={vzr.showName}
-                        desc={vzr.showDesc}
-                        time={vzr.showTime}
+                        img={glazbaonica.showPic}
+                        title={glazbaonica.showName}
+                        desc={glazbaonica.showDesc}
+                        time={glazbaonica.showTime}
                      />
                      <ShowCard
                         img={obiteljskiAlbum.showPic}
                         title={obiteljskiAlbum.showName}
                         desc={obiteljskiAlbum.showDesc}
                         time={obiteljskiAlbum.showTime}
+                     />
+                     <ShowCard
+                        img={slusamDakle.showPic}
+                        title={slusamDakle.showName}
+                        desc={slusamDakle.showDesc}
+                        time={slusamDakle.showTime}
+                     />
+                     <ShowCard
+                        img={radioKnjiznica.showPic}
+                        title={radioKnjiznica.showName}
+                        desc={radioKnjiznica.showDesc}
+                        time={radioKnjiznica.showTime}
                      />
                   </Fade>
                </CardContainer>

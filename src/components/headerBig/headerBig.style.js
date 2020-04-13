@@ -7,9 +7,9 @@ export const headerImage = styled.header`
    height: 90vh;
    min-height: 50rem;
    max-height: 100rem;
-   background-image: url(${props => props.background});
+   background-image: url(${(props) => props.background});
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center center;
    background-size: cover;
 `;
 

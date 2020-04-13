@@ -19,17 +19,17 @@ export const cardContainer = styled.div`
 
 export const cardTitle = styled.h2`
    color: ${theme.colorFont};
-   font-size: ${theme.fontSizeHeaderTitleDesk};
-   font-weight: 500;
+   font-size: 2.7rem;
+   font-weight: 600;
    padding: 1.7rem 0 0 1.7rem;
    @media ${device.deviceTablet} {
-      font-size: 1.8rem;
+      font-size: 2.7rem;
    }
    @media ${device.deviceTabletLand} {
-      font-size: 1.8rem;
+      font-size: 2.8rem;
    }
    @media ${device.deviceDesktop} {
-      font-size: 2rem;
+      font-size: 3rem;
    }
 `;
 
@@ -53,7 +53,7 @@ export const cardDesc = styled.p`
    letter-spacing: 1px;
    height: 15rem;
    padding: 1.5rem;
-   font-weight: 300;
+   font-weight: 400;
    text-align: start;
 
    @media ${device.deviceTablet} {
