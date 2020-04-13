@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createRef } from 'react';
 import Fade from 'react-reveal/Fade';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import '../../styles/styles.css';
@@ -10,14 +9,14 @@ import { Container } from '../../styles/Container';
 
 //components
 import Header from '../../components/headerBig/headerBig.component';
-import BtnDownload from "../../components/buttonTransparent/btnTransparent.component";
+import BtnDownload from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
 import SectionInfo from '../../components/sectionInfo/sectionInfoLeft.component';
 import Footer from '../../components/footer/footer.component';
 
 //helpers
-import getHeaderBackground from '../../helpers/getHeaderBackground';
+import { getRadioHeaderBackground } from '../../helpers/getHeaderBackground';
 
 //data
 import { indexPageInfoData } from '../../data/infoSectionsData';
@@ -30,7 +29,7 @@ import {
    vzr,
    obiteljskiAlbum,
 } from '../../data/showData';
-import plsFile from "../../assets/RadioTG-live.pls";
+import plsFile from '../../assets/RadioTG-live.pls';
 
 export default class IndexPage extends Component {
    constructor() {
@@ -50,7 +49,7 @@ export default class IndexPage extends Component {
    }
 
    setHeaderBackground = () => {
-      let background = getHeaderBackground();
+      let background = getRadioHeaderBackground();
       this.setState({
          headerBackground: background,
       });
@@ -66,33 +65,32 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-                <AudioPlayer
-            className="player"
-            loop={true}
-            preload="auto"
-            volume
-            src={this.state.url}
-            showJumpControls={false}
-            layout="horizontal-reverse"
-            customControlsSection={[
-              RHAP_UI.MAIN_CONTROLS,
-              <div>RTG uživo </div>,
-            ]}
-            customAdditionalControls={[]}
-            customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
-            style={{
-              width: "330px",
-              height: "60px",
-              border: "none",
-              borderRadius: "50px",
-              padding: "1rem 1.5rem ",
-              fontSize: "1.8rem",
-              marginTop: "15rem",
-              background: "#fff",
-            }}
-          />
-                         <BtnDownload file={plsFile} />
-
+               <AudioPlayer
+                  className='player'
+                  loop={true}
+                  preload='auto'
+                  volume
+                  src={this.state.url}
+                  showJumpControls={false}
+                  layout='horizontal-reverse'
+                  customControlsSection={[
+                     RHAP_UI.MAIN_CONTROLS,
+                     <div>RTG uživo </div>,
+                  ]}
+                  customAdditionalControls={[]}
+                  customProgressBarSection={[RHAP_UI.VOLUME_CONTROLS]}
+                  style={{
+                     width: '330px',
+                     height: '60px',
+                     border: 'none',
+                     borderRadius: '50px',
+                     padding: '1rem 1.5rem ',
+                     fontSize: '1.8rem',
+                     marginTop: '15rem',
+                     background: '#fff',
+                  }}
+               />
+               <BtnDownload file={plsFile} />
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'

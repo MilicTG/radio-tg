@@ -11,7 +11,14 @@ import imgTen from '../assets/img-head-ten.jpg';
 import imgEleven from '../assets/img-head-eleven.jpg';
 import imgTwelve from '../assets/img-head-twelve.jpg';
 
-const imageArray = [
+import imgMusicOne from '../assets/img-music-one.jpg';
+import imgMusicTwo from '../assets/img-music-two.jpg';
+import imgMusicThree from '../assets/img-music-three.jpg';
+import imgMusicFour from '../assets/img-music-four.jpg';
+import imgMusicFive from '../assets/img-music-five.jpg';
+import imgMusicSix from '../assets/img-music-six.jpg';
+
+const radioImageArray = [
    imgOne,
    imgTwo,
    imgThree,
@@ -26,9 +33,23 @@ const imageArray = [
    imgTwelve,
 ];
 
-const getHeaderBackground = () => {
-   let background = imageArray[Math.floor(Math.random() * imageArray.length)];
+const musicImageArray = [
+   imgMusicOne,
+   imgMusicTwo,
+   imgMusicThree,
+   imgMusicFour,
+   imgMusicFive,
+   imgMusicSix,
+];
+
+export const getRadioHeaderBackground = () => {
+   let background =
+      radioImageArray[Math.floor(Math.random() * radioImageArray.length)];
    return background;
 };
 
-export default getHeaderBackground;
+export const getMusicHeaderBackground = () => {
+   let background =
+      musicImageArray[Math.floor(Math.random() * musicImageArray.length)];
+   return background;
+};

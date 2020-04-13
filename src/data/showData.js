@@ -4,7 +4,7 @@ export const dnevnoZrcalo = {
    showPic: require('../assets/img-zrcalo-small.jpg'),
    showDesc:
       'Središnja emisija u kojoj obrađujemo aktualne teme i događaje, kako u našoj sredini, tako i šire. ',
-   showTime: 'uto - pet  u 11:00',
+   showTime: 'uto - pet u 11:00',
 };
 
 export const strunica = {

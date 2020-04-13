@@ -6,7 +6,7 @@ import TitleSection from '../../components/sectionTitle/sectionTitle.component';
 import Footer from '../../components/footer/footer.component';
 
 //data
-import imgStrunica from '../../assets/img-zrcalo.jpg';
+import imgStrunica from '../../assets/img-strunica.jpg';
 import { zrcaloPage } from '../../data/showPagesData';
 
 const showPageStrunica = () => {

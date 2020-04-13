@@ -5,8 +5,8 @@ import { device } from '../../styles/responsive';
 export const infoSectionContainer = styled.section`
    width: 100%;
    min-height: 40rem;
-   background-color: ${props =>
-      props.color ? `${theme.colorLightBck}` : `white;`};
+   /* background-color: ${(props) =>
+      props.color ? `${theme.colorLightBck}` : `white;`}; */
 
    @media ${device.devicePhone} {
       padding: 2rem 0;
@@ -147,7 +147,7 @@ export const infoImg = styled.img`
    height: auto;
    margin: 0 auto;
    filter: grayscale(50%);
-   background-image: ${props => props.image};
+   background-image: ${(props) => props.image};
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;

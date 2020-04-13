@@ -8,18 +8,18 @@ export const cardContainer = styled.div`
    border: none;
    border-radius: 5px;
    transition: all 0.2s ease-in-out;
-   box-shadow: 7px 12px 40px -28px rgba(66, 66, 66, 1);
+   background-color: white;
    a {
       text-decoration: none;
    }
    :hover {
-      box-shadow: 9px 12px 66px -31px rgba(66, 66, 66, 1);
+      box-shadow: 7px 7px 30px -20px rgba(66, 66, 66, 0.7);
    }
 `;
 
 export const cardTitle = styled.h2`
    color: ${theme.colorFont};
-   font-size: 1.8rem;
+   font-size: ${theme.fontSizeHeaderTitleDesk};
    font-weight: 500;
    padding: 1.7rem 0 0 1.7rem;
    @media ${device.deviceTablet} {

@@ -20,6 +20,7 @@ html{
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  background-color: #F1F1F1;
 }
 `;
 

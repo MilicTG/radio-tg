@@ -9,6 +9,12 @@ export const theme = {
    colorFont: '#303030',
    colorLightBck: '#eeeeee',
    //font size
+
+   fontSizeText: '1.8rem',
+   fontSieMobileText: '1.6rem',
+
+   fontSizeHeadTitle: '5.6rem',
+
    fontSizeNavLinkDesk: '2.3rem;',
 
    fontSizeHeaderTitlePhone: '8.5vw',
