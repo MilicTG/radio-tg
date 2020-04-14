@@ -113,7 +113,7 @@ export const infoTextTitle = styled.h3`
 
 export const infoText = styled.article`
    color: ${theme.colorFont};
-   text-align: center;
+   text-align: start;
    font-weight: 400;
    font-size: ${theme.fontSizeSmall1X};
    padding-bottom: 2rem;
@@ -149,7 +149,7 @@ export const infoImg = styled.img`
    filter: grayscale(50%);
    background-image: ${(props) => props.image};
    background-repeat: no-repeat;
-   background-position: center;
+   background-position: center center;
    background-size: cover;
    object-fit: cover;
    @media ${device.deviceTablet} {

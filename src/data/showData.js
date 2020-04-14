@@ -69,3 +69,11 @@ export const radioKnjiznica = {
       'Zajednička suradnja RTG-a i Gradske knjižnice KIC-a. U njoj svakoga petka čitamo ulomke iz djela domaćih i svjetskih književnika, sa željom poticanja kulture čitanja, osobito kod mladih ljudi.',
    showTime: 'pet u 10:00',
 };
+
+export const ostaleEmisije = {
+   id: 'showNine',
+   showName: 'Ostale emisije',
+   showPic: require('../assets/img-obiteljski.jpg'),
+   showDesc: 'Ostale emisije i snimke prijenosa',
+   showTime: 'pon - pet',
+};

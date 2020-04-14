@@ -30,6 +30,7 @@ import {
    obiteljskiAlbum,
    slusamDakle,
    radioKnjiznica,
+   ostaleEmisije,
 } from '../../data/showData';
 import plsFile from '../../assets/RadioTG-live.pls';
 
@@ -150,6 +151,13 @@ export default class IndexPage extends Component {
                         title={radioKnjiznica.showName}
                         desc={radioKnjiznica.showDesc}
                         time={radioKnjiznica.showTime}
+                     />
+                     <ShowCard
+                        className='span-card'
+                        img={ostaleEmisije.showPic}
+                        title={ostaleEmisije.showName}
+                        desc={ostaleEmisije.showDesc}
+                        time={ostaleEmisije.showTime}
                      />
                   </Fade>
                </CardContainer>
