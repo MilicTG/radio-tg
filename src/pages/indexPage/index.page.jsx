@@ -153,7 +153,6 @@ export default class IndexPage extends Component {
                         time={radioKnjiznica.showTime}
                      />
                      <ShowCard
-                        className='span-card'
                         img={ostaleEmisije.showPic}
                         title={ostaleEmisije.showName}
                         desc={ostaleEmisije.showDesc}

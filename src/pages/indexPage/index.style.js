@@ -12,15 +12,13 @@ export const cardSectionContainer = styled.section`
    @media ${device.deviceTablet} {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem;
-      .span-card {
-         grid-column: 5 / span 2;
-      }
+      grid-row-end: span 2;
    }
    @media ${device.deviceTabletLand} {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 2rem;
-      .span-card {
-         grid-column: 5 / span 2;
+      &:last-child {
+         grid-column: span 2;
       }
    }
    @media ${device.deviceDesktop} {
