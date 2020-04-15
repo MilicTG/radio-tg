@@ -35,7 +35,7 @@ export const footerInfoColumn = styled.div`
    flex-flow: column;
    h3 {
       color: ${theme.colorSecondary};
-      font-size: ${theme.fontSizeBig};
+      font-size: ${theme.fontSizeFour};
       padding: 1rem 0;
       text-align: start;
    }
@@ -45,49 +45,54 @@ export const footerInfoColumn = styled.div`
          display: table-cell;
          text-align: start;
          td {
-            font-size: ${theme.fontSizeNorm};
+            font-size: ${theme.fontSizeThree};
             font-weight: 300;
             padding: 0.7rem 0;
             display: block;
             color: white;
+            a {
+               text-decoration: none;
+               color: white;
+               cursor: pointer;
+            }
          }
       }
    }
    @media ${device.deviceTablet} {
       h3 {
-         font-size: ${theme.fontSizeBig};
+         font-size: ${theme.fontSizeFour};
       }
       table {
          tr {
             text-align: start;
             td {
-               font-size: ${theme.fontSizeNorm};
+               font-size: ${theme.fontSizeThree};
             }
          }
       }
    }
    @media ${device.deviceTabletLand} {
       h3 {
-         font-size: ${theme.fontSizeBig};
+         font-size: ${theme.fontSizeFour};
       }
       table {
          tr {
             text-align: start;
             td {
-               font-size: ${theme.fontSizeNorm};
+               font-size: ${theme.fontSizeThree};
             }
          }
       }
    }
    @media ${device.deviceDesktop} {
       h3 {
-         font-size: ${theme.fontSizeBig1X};
+         font-size: ${theme.fontSizeFive};
       }
       table {
          tr {
             text-align: left;
             td {
-               font-size: ${theme.fontSizeNorm};
+               font-size: ${theme.fontSizeThree};
             }
          }
       }

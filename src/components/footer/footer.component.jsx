@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //styles
 import {
@@ -45,9 +46,9 @@ const footer = () => {
                      </thead>
                      <tbody>
                         <tr>
-                           <td>Trg Franje Tudmana,</td>
+                           <td>Trg Franje Tuđmana,</td>
                            <td>80240, Tomislavgrad,</td>
-                           <td>Herceg Bosanska Zupanija,</td>
+                           <td>Herceg Bosanska Županija,</td>
                            <td>Bosna i Hercegovina</td>
                         </tr>
                      </tbody>
@@ -65,6 +66,7 @@ const footer = () => {
                            <td>+387 34 353 768</td>
                            <td>+387 34 352 909</td>
                            <td>radiotomislavgrad@gmail.com</td>
+                           <td>radio.tomislavgrad@tel.net.ba</td>
                         </tr>
                      </tbody>
                   </table>
@@ -78,10 +80,21 @@ const footer = () => {
                      </thead>
                      <tbody>
                         <tr>
-                           <td>Pocetna</td>
-                           <td>Program</td>
-                           <td>Marketing</td>
-                           <td>Kontakt</td>
+                           <td>
+                              <Link to='/program'>Program</Link>
+                           </td>
+                           <td>
+                              <Link to='/marketing'>Marketing</Link>
+                           </td>
+                           <td>
+                              <Link to='/oglasi'>Oglasi</Link>
+                           </td>
+                           <td>
+                              <Link to='/kontakt'>Kontakt</Link>
+                           </td>
+                           <td>
+                              <Link to='/rtg-music'>RTG Music</Link>
+                           </td>
                         </tr>
                      </tbody>
                   </table>

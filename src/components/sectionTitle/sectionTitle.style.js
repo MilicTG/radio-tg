@@ -41,7 +41,7 @@ export const primaryTitle = styled.h2`
 `;
 
 export const descTitle = styled.p`
-   font-weight: 300;
+   font-weight: 400;
    color: ${theme.colorFont};
    text-align: center;
    white-space: pre-line;

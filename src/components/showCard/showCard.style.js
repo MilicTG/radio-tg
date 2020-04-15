@@ -19,20 +19,20 @@ export const cardContainer = styled.div`
 
 export const cardTitle = styled.h2`
    color: ${theme.colorFont};
-   font-size: 2.4rem;
+   font-size: ${theme.fontSizeFour};
    font-weight: 600;
    padding: 1.7rem 0 0 1.7rem;
    @media ${device.deviceTablet} {
-      font-size: 2.6rem;
+      font-size: ${theme.fontSizeFour};
    }
    @media ${device.deviceTabletLand} {
-      font-size: 2.6rem;
+      font-size: ${theme.fontSizeFour};
    }
    @media ${device.deviceDesktop} {
-      font-size: 2.8rem;
+      font-size: ${theme.fontSizeFive};
    }
    @media ${device.deviceDesktopHD} {
-      font-size: 3rem;
+      font-size: ${theme.fontSizeFive};
    }
 `;
 
@@ -52,7 +52,7 @@ export const cardImg = styled.img`
 export const cardDesc = styled.p`
    color: ${theme.colorFont};
    width: 90%;
-   font-size: 1.4rem;
+   font-size: ${theme.fontSizeThree};
    letter-spacing: 1px;
    height: 18rem;
    padding: 1.5rem;
@@ -60,31 +60,31 @@ export const cardDesc = styled.p`
    text-align: start;
 
    @media ${device.deviceTablet} {
-      font-size: 1.6rem;
+      font-size: ${theme.fontSizeThree};
    }
    @media ${device.deviceTabletLand} {
-      font-size: 1.6rem;
+      font-size: ${theme.fontSizeThree};
    }
    @media ${device.deviceDesktop} {
-      font-size: 1.6rem;
+      font-size: ${theme.fontSizeFour};
    }
    @media ${device.deviceDesktopHD} {
-      font-size: 1.8rem;
+      font-size: ${theme.fontSizeFour};
    }
 `;
 
 export const cardTime = styled.p`
-   color: ${theme.colorSecondary};
-   font-size: 1.2rem;
-   padding: 2rem 0 2rem 1.5rem;
+   color: ${theme.colorPrimary};
+   font-size: ${theme.fontSizeTwo};
+   padding: 1.5rem 0 1.5rem 1.5rem;
 
    @media ${device.deviceTablet} {
-      font-size: 1.2rem;
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceTabletLand} {
-      font-size: 1.2rem;
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceDesktop} {
-      font-size: 1.4rem;
+      font-size: ${theme.fontSizeThree};
    }
 `;

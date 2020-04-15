@@ -21,12 +21,12 @@ export const mondayMorning = [
    },
    {
       id: '05',
-      name: 'Jutarnji setac',
+      name: 'Jutarnji šetac',
       time: '08:45',
    },
    {
       id: '06',
-      name: 'Iskre u sijecanju',
+      name: 'Iskre u sijećanju',
       time: '09:00',
    },
    {
@@ -117,12 +117,12 @@ export const tuesdayMorning = [
    },
    {
       id: '05',
-      name: 'O svemu ponesto',
+      name: 'O svemu ponešto',
       time: '08:45',
    },
    {
       id: '06',
-      name: 'Iskre u sijecanju',
+      name: 'Iskre u sijećanju',
       time: '09:00',
    },
    {
@@ -185,7 +185,7 @@ export const tuesdayAfternoon = [
    },
    {
       id: '07',
-      name: 'Slikovnica koja prica i svira',
+      name: 'Slikovnica koja priča i svira',
       time: '17:15',
    },
    {
@@ -223,12 +223,12 @@ export const wednesdayMorning = [
    },
    {
       id: '05',
-      name: 'Jutarnji setac',
+      name: 'Jutarnji šetac',
       time: '08:45',
    },
    {
       id: '06',
-      name: 'Iskre u sijecanju',
+      name: 'Iskre u sijećanju',
       time: '09:00',
    },
    {
@@ -282,7 +282,7 @@ export const wednesdayAfternoon = [
    },
    {
       id: '06',
-      name: 'Strunica sarenica tkanica',
+      name: 'Strunica šarenica tkanica',
       time: '16:00',
    },
    {
@@ -325,7 +325,7 @@ export const thursdayMorning = [
    },
    {
       id: '05',
-      name: 'O svemu ponesto',
+      name: 'O svemu ponešto',
       time: '08:45',
    },
    {
@@ -388,7 +388,7 @@ export const thursdayAfternoon = [
    },
    {
       id: '06',
-      name: 'Po vasem izboru',
+      name: 'Po vašem izboru',
       time: '16:00',
    },
    {
@@ -431,12 +431,12 @@ export const fridayMorning = [
    },
    {
       id: '05',
-      name: 'O svemu ponesto',
+      name: 'O svemu ponešto',
       time: '08:45',
    },
    {
       id: '06',
-      name: 'Iskre u sijecanju',
+      name: 'Iskre u sijećanju',
       time: '09:00',
    },
    {
@@ -451,7 +451,7 @@ export const fridayMorning = [
    },
    {
       id: '09',
-      name: 'Radio knjiznica',
+      name: 'Radio knjižnica',
       time: '10:00',
    },
    {
@@ -499,7 +499,7 @@ export const fridayAfternoon = [
    },
    {
       id: '07',
-      name: 'Vrijeme je za rijec',
+      name: 'Vrijeme je za riječ',
       time: '17:15',
    },
    {
