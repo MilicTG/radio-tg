@@ -4,24 +4,24 @@ import { device } from '../../styles/responsive';
 
 export const smallHeaderContainer = styled.header`
    width: 100%;
-   background: url(${props => props.background});
+   background: url(${(props) => props.background});
    background-repeat: no-repeat;
    background-position: left center;
    background-size: cover;
    @media ${device.devicePhone} {
-      height: 20vh;
+      height: 15rem;
    }
    @media ${device.deviceTablet} {
-      height: 20vh;
+      height: 20rem;
    }
    @media ${device.deviceTabletLand} {
-      height: 20vh;
+      height: 20rem;
    }
    @media ${device.deviceDesktop} {
-      height: 30vh;
+      height: 25rem;
    }
    @media ${device.deviceDesktopHD} {
-      height: 30vh;
+      height: 30rem;
    }
 `;
 
@@ -39,16 +39,16 @@ export const smallHeaderTitle = styled.h2`
    text-align: center;
    padding-bottom: 3rem;
    @media ${device.devicePhone} {
-      font-size: 6vw;
+      font-size: ${theme.fontSizeFive};
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeBig1X};
+      font-size: ${theme.fontSizeFive};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeBig2X};
+      font-size: ${theme.fontSizeSix};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeBig3X};
+      font-size: ${theme.fontSizeSeven};
    }
 `;
 

@@ -20,7 +20,7 @@ const buttonContainer = styled.button`
       width: 100%;
       display: inherit;
       justify-content: space-between;
-      font-size: 1.6rem;
+      font-size: ${theme.fontSizeThree};
    }
 
    :hover {

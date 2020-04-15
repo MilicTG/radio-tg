@@ -27,16 +27,16 @@ export const primaryTitle = styled.h2`
    padding-bottom: 1.5rem;
 
    @media ${device.devicePhone} {
-      font-size: ${theme.fontSizeSectionTitlePhone};
+      font-size: ${theme.fontSizeFour};
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeSectionTitleTab};
+      font-size: ${theme.fontSizeFive};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeSectionTitleTabLand};
+      font-size: ${theme.fontSizeFive};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeSectionTitleDesk};
+      font-size: ${theme.fontSizeSix};
    }
 `;
 
@@ -47,15 +47,15 @@ export const descTitle = styled.p`
    white-space: pre-line;
    display: inline-block;
    @media ${device.devicePhone} {
-      font-size: ${theme.fontSizeSectionDescPhone};
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeSectionDescTab};
+      font-size: ${theme.fontSizeThree};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeSectionDescTabLand};
+      font-size: ${theme.fontSizeThree};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeSectionDescDesk};
+      font-size: ${theme.fontSizeFour};
    }
 `;
