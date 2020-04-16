@@ -9,7 +9,6 @@ import Header from '../../components/headerBig/headerBig.component';
 import BtnDownload from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import InfoSectionLeft from '../../components/sectionInfo/sectionInfoLeft.component';
-import InfoSectionRight from '../../components/sectionInfo/sectionInfoRight.component';
 import Footer from '../../components/footer/footer.component';
 
 //helpers
@@ -98,34 +97,7 @@ export default class RTGMusicPage extends Component {
                />
                <BtnDownload file={plsFile} />
             </Header>
-            <SectionTitle
-               title='Radio koji se ne ponavlja'
-               desc='Saznajte zasto smo najbolji'
-            />
-            <InfoSectionLeft
-               color={false}
-               title={nonStop.title}
-               rowOne={nonStop.rowOne}
-               rowTwo={nonStop.rowTwo}
-               rowThree={nonStop.rowThree}
-               image={imgAntena}
-            />
-            <InfoSectionRight
-               color={true}
-               title={hits.title}
-               rowOne={hits.rowOne}
-               rowTwo={hits.rowTwo}
-               rowThree={hits.rowThree}
-               image={imgParty}
-            />
-            <InfoSectionLeft
-               color={false}
-               title={caffe.title}
-               rowOne={caffe.rowOne}
-               rowTwo={caffe.rowTwo}
-               rowThree={caffe.rowThree}
-               image={imgCaffeBar}
-            />
+
             <Footer />
          </>
       );

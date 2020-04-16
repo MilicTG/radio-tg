@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container } from '../../styles/Container';
+import { Link } from 'react-router-dom';
 
 //styles
 import {
@@ -11,17 +11,15 @@ import {
    infoText as Text,
    infoImg as Image,
 } from './sectionInfo.style';
+import { Container } from '../../styles/Container';
 
-const infoSection = props => {
+const infoSection = (props) => {
    return (
       <SectionContainer color={props.color}>
          <Container>
             <InfoSide>
-               <Fade left delay={600}>
-                  <Image src={props.image} />
-               </Fade>
-               <TextWrapper className='right'>
-                  <Fade right delay={600} cascade>
+               <TextWrapper className='left'>
+                  <Fade left delay={600} cascade>
                      <Title>{props.title}</Title>
                      <Text>
                         <p className='rowOne'>{props.rowOne}</p>
@@ -30,6 +28,9 @@ const infoSection = props => {
                      </Text>
                   </Fade>
                </TextWrapper>
+               <Fade right delay={600}>
+                  <Image src={props.image} />
+               </Fade>
             </InfoSide>
          </Container>
       </SectionContainer>

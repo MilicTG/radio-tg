@@ -12,7 +12,7 @@ import Header from '../../components/headerBig/headerBig.component';
 import BtnDownload from '../../components/buttonTransparent/btnTransparent.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
 import ShowCard from '../../components/showCard/showCard.component';
-import SectionInfo from '../../components/sectionInfo/sectionInfoLeft.component';
+import SectionInfo from '../../components/sectionInfo/sectionInfoLeftNoContact.component';
 import Footer from '../../components/footer/footer.component';
 
 //helpers

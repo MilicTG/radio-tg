@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { Container } from '../../styles/Container';
+import { Link } from 'react-router-dom';
 
 //styles
 import {
@@ -11,8 +11,9 @@ import {
    infoText as Text,
    infoImg as Image,
 } from './sectionInfo.style';
+import { Container } from '../../styles/Container';
 
-const infoSection = props => {
+const infoSection = (props) => {
    return (
       <SectionContainer color={props.color}>
          <Container>
@@ -26,6 +27,7 @@ const infoSection = props => {
                         <p className='rowThree'>{props.rowThree}</p>
                      </Text>
                   </Fade>
+                  <Link to='/kontakt'>Kontaktirajte nas</Link>
                </TextWrapper>
                <Fade right delay={600}>
                   <Image src={props.image} />
