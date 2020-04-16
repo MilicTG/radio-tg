@@ -13,6 +13,7 @@ import SmallHeader from '../../components/headerSmall/headerSmall.component';
 import DaySelect from '../../components/scheduleSelectDay/scheduleSelectDay.component';
 import ScheduleButton from '../../components/buttonSchedule/buttonSchedule.component';
 import Footer from '../../components/footer/footer.component';
+import Select from 'react-select';
 
 //data
 import headImage from '../../assets/img-program.jpg';
@@ -27,7 +28,32 @@ import {
    thursdayAfternoon,
    fridayMorning,
    fridayAfternoon,
+   saturdayMorning,
+   saturdayAfternoon,
+   sundayMorning,
+   sundayAfternoon,
 } from '../../data/programScheduleData';
+
+const optionsForCustomSelect = [
+   { value: 'ponedjeljak', label: 'Ponedjeljak' },
+   { value: 'utorak', label: 'Utorak' },
+   { value: 'srijeda', label: 'Srijeda' },
+   { value: 'četvrtak', label: 'Četvrtak' },
+   { value: 'petak', label: 'Petak' },
+   { value: 'subota', label: 'Subota' },
+   { value: 'nedjelja', label: 'Nedjelja' },
+];
+
+const stylesForCustomSelect = {
+   option: (provided) => ({
+      ...provided,
+      borderBottom: '1px solid black',
+      color: '#003459',
+      fontSize: '1.4rem',
+      width: '100%',
+      padding: '2rem',
+   }),
+};
 
 export default class ProgramPage extends Component {
    constructor() {
@@ -37,7 +63,7 @@ export default class ProgramPage extends Component {
          afternoon: mondayAfternoon,
          headImage: headImage,
          headTitle: 'Raspored programa',
-         headDesc: 'Uskoro stiže, stranica u izradi',
+         headDesc: 'Pregled našeg tjednog programa',
       };
    }
 
@@ -76,6 +102,46 @@ export default class ProgramPage extends Component {
       });
    };
 
+   changeToSaturday = () => {
+      this.setState({
+         morning: saturdayMorning,
+         afternoon: saturdayAfternoon,
+      });
+   };
+
+   changeToSunday = () => {
+      this.setState({
+         morning: sundayMorning,
+         afternoon: sundayAfternoon,
+      });
+   };
+
+   onSelect = (selectedOptions) => {
+      switch (selectedOptions.value) {
+         case 'ponedjeljak':
+            this.changeToMonday();
+            break;
+         case 'utorak':
+            this.changeToTuesday();
+            break;
+         case 'srijeda':
+            this.changeToWednesday();
+            break;
+         case 'četvrtak':
+            this.changeToThursday();
+            break;
+         case 'petak':
+            this.changeToFriday();
+            break;
+         case 'subote':
+            this.changeToSaturday();
+            break;
+         case 'nedjelja':
+            this.changeToSunday();
+            break;
+      }
+   };
+
    render() {
       return (
          <>
@@ -87,29 +153,41 @@ export default class ProgramPage extends Component {
             <Container>
                <DaySelect />
                <Fade bottom cascade>
+                  <Select
+                     className='custom-select'
+                     options={optionsForCustomSelect}
+                     styles={stylesForCustomSelect}
+                     onChange={this.onSelect}
+                  />
                   <BtnWrapper>
                      <ScheduleButton
-                        text='ponedjeljak'
+                        text='Ponedjeljak'
                         onClick={this.changeToMonday}
                      />
                      <ScheduleButton
-                        text='utorak'
+                        text='Utorak'
                         onClick={this.changeToTuesday}
                      />
                      <ScheduleButton
-                        text='srijeda'
+                        text='Srijeda'
                         onClick={this.changeToWednesday}
                      />
                      <ScheduleButton
-                        text='cetvrtak'
+                        text='Četvrtak'
                         onClick={this.changeToThursday}
                      />
                      <ScheduleButton
-                        text='petak'
+                        text='Petak'
                         onClick={this.changeToFriday}
                      />
-                     <ScheduleButton text='subota' />
-                     <ScheduleButton text='nedjelja' />
+                     <ScheduleButton
+                        text='Subota'
+                        onClick={this.changeToSaturday}
+                     />
+                     <ScheduleButton
+                        text='Nedjelja'
+                        onClick={this.changeToSunday}
+                     />
                   </BtnWrapper>
                </Fade>
                <Fade bottom delay={1000} effect='fadeInUp'>
@@ -117,19 +195,25 @@ export default class ProgramPage extends Component {
                      <table>
                         <thead>
                            <tr>Jutarnji program</tr>
-                           <tr>Popodnevni program</tr>
                         </thead>
                         <tbody>
                            <tr>
-                              {this.state.morning.map(shows => (
+                              {this.state.morning.map((shows) => (
                                  <td id={shows.id}>
                                     <p>{shows.time}</p>
                                     <h4>{shows.name}</h4>
                                  </td>
                               ))}
                            </tr>
+                        </tbody>
+                     </table>
+                     <table>
+                        <thead>
+                           <tr>Popodnevni program</tr>
+                        </thead>
+                        <tbody>
                            <tr>
-                              {this.state.afternoon.map(shows => (
+                              {this.state.afternoon.map((shows) => (
                                  <td id={shows.id}>
                                     <p>{shows.time}</p>
                                     <h4>{shows.name}</h4>

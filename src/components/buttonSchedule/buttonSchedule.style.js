@@ -3,7 +3,7 @@ import { theme } from '../../styles/theme';
 import { device } from '../../styles/responsive';
 
 export const buttonContainer = styled.button`
-   background: ${theme.colorSecondary};
+   background: ${theme.colorPrimary};
    border: none;
    border-radius: 1rem;
    transition: all 0.2s ease-in-out;
@@ -11,7 +11,7 @@ export const buttonContainer = styled.button`
    :hover {
       box-shadow: 3px 10px 28px -13px rgba(33, 33, 33, 0.2);
       cursor: pointer;
-      background: ${theme.colorPrimary};
+      background: ${theme.colorSecondary};
    }
    :active {
       transform: scale(0.95);
@@ -40,15 +40,15 @@ export const buttonContainer = styled.button`
 export const buttonText = styled.p`
    color: white;
    @media ${device.deviceTablet} {
-      font-size: ${theme.fontSizeSmall1X};
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceTabletLand} {
-      font-size: ${theme.fontSizeNorm};
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceDesktop} {
-      font-size: ${theme.fontSizeBig};
+      font-size: ${theme.fontSizeTwo};
    }
    @media ${device.deviceDesktopHD} {
-      font-size: ${theme.fontSizeBig};
+      font-size: ${theme.fontSizeTwo};
    }
 `;

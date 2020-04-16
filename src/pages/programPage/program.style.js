@@ -6,7 +6,7 @@ export const buttonWrapper = styled.div`
    display: flex;
    justify-content: space-between;
    flex-flow: row;
-   padding: 10rem 0;
+   padding: 10rem 0 7rem 0;
    @media ${device.devicePhone} {
       display: none;
    }
@@ -32,9 +32,11 @@ export const scheduleWrapper = styled.div`
    table {
       display: flex;
       flex-flow: column;
+      justify-content: flex-start;
       width: 100%;
-      justify-content: space-between;
+      padding-top: 3rem;
       thead {
+         width: 100%;
          color: ${theme.colorFont};
          font-size: 2.8rem;
          padding-bottom: 5rem;
@@ -44,12 +46,19 @@ export const scheduleWrapper = styled.div`
       }
       tbody {
          padding: 0 2rem 2rem 2rem;
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-column-gap: 1.5rem;
-         grid-row-gap: 3rem;
+         display: inherit;
          flex-flow: row;
          justify-content: space-evenly;
+         @media ${device.devicePhone} {
+         }
+         @media ${device.deviceTablet} {
+         }
+         @media ${device.deviceTabletLand} {
+         }
+         @media ${device.deviceDesktop} {
+         }
+         @media ${device.deviceDesktopHD} {
+         }
          tr {
             display: flex;
             flex-flow: column;

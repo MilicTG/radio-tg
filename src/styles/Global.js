@@ -21,7 +21,14 @@ body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #F1F1F1;
+
+  .custom-select{
+    margin-top: 2rem;
+    display: block;
+      @media  (min-width: 600px) {
+        display: none;}}
 }
+
 `;
 
 export default GlobalStyles;

@@ -7,6 +7,7 @@ import { Container } from '../../styles/Container';
 //components
 import HeaderSmall from '../../components/headerSmall/headerSmall.component';
 import NoticeHolder from '../../components/noticeHolder/noticeHolder.component';
+import Footer from '../../components/footer/footer.component';
 
 //data
 import headImage from '../../assets/img-notice.jpg';
@@ -55,6 +56,7 @@ class NoticePage extends Component {
                   file={natjecaj}
                />
             </Container>
+            <Footer />
          </>
       );
    }
