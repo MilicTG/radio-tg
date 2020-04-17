@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
    faPhone,
+   faFax,
    faEnvelopeOpenText,
    faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
@@ -25,10 +26,10 @@ class ContactPage extends Component {
 
       this.state = {
          headTitle: 'Kontaktirajte nas',
-         headDesc: 'Uskoro stiže, stranica u izradi',
+         headDesc: 'Obratite nam se s povjerenjem',
          headBackground: imgContact,
          sectionTitle: 'Kontakt informacije',
-         sectionDesc: 'Veselimo se suradnji s vama',
+         sectionDesc: '',
       };
    }
 
@@ -40,7 +41,7 @@ class ContactPage extends Component {
                title={this.state.headTitle}
                desc={this.state.headDesc}
             />
-             <SectionTitle
+            <SectionTitle
                title={this.state.sectionTitle}
                desc={this.state.sectionDesc}
             />
@@ -49,8 +50,13 @@ class ContactPage extends Component {
                   <Pulse delay={300}>
                      <ContactCard icon={faPhone}>
                         <h3>Telefon</h3>
-                        <p>+387 34 353 768</p>
+                        <p>+387 34 352 549</p>
                         <p>+387 34 352 909</p>
+                     </ContactCard>
+                     <ContactCard icon={faFax}>
+                        <h3>Fax</h3>
+                        <p>+387 34 353 768</p>
+                        <p></p>
                      </ContactCard>
                      <ContactCard icon={faEnvelopeOpenText}>
                         <h3>E-Mail</h3>
@@ -59,14 +65,14 @@ class ContactPage extends Component {
                      </ContactCard>
                      <ContactCard icon={faMapMarkerAlt}>
                         <h3>Adresa</h3>
-                        <p>Trg doktora</p>
-                        <p>Franje Tudmana</p>
+                        <p>Trg dr. Franje Tuđmana</p>
+                        <p>80240, Tomislavgrad,</p>
+                        <p>Bosna i Hercegovina</p>
                      </ContactCard>
                   </Pulse>
                </CardWrapper>
-            </Container> 
+            </Container>
             <Footer />
-           
          </>
       );
    }

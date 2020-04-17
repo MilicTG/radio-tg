@@ -48,7 +48,7 @@ const footer = () => {
                         <tr>
                            <td>Trg Franje Tuđmana,</td>
                            <td>80240, Tomislavgrad,</td>
-                           <td>Herceg Bosanska Županija,</td>
+                           <td>Hercegbosanska županija,</td>
                            <td>Bosna i Hercegovina</td>
                         </tr>
                      </tbody>
@@ -63,7 +63,7 @@ const footer = () => {
                      </thead>
                      <tbody>
                         <tr>
-                           <td>+387 34 353 768</td>
+                           <td>+387 34 352 549</td>
                            <td>+387 34 352 909</td>
                            <td>radiotomislavgrad@gmail.com</td>
                            <td>radio.tomislavgrad@tel.net.ba</td>

@@ -7,34 +7,86 @@ export const cardWrapper = styled.div`
    align-items: center;
    justify-content: center;
    flex-flow: column;
-   padding: 3rem 2rem;
-   width: 35rem;
-   height: 45rem;
+   padding: 2rem 2rem;
+   width: 100%;
    transition: all 0.2s ease-in-out;
-   border: 1px solid #ccc;
    border-radius: 10px;
-   :hover {
-      border: 1.1px solid #777;
+   @media ${device.devicePhone} {
+   }
+   @media ${device.deviceTablet} {
+   }
+   @media ${device.deviceTabletLand} {
+   }
+   @media ${device.deviceDesktop} {
+   }
+   @media ${device.deviceDesktopHD} {
    }
 `;
 
 export const cardIcon = styled.p`
-   font-size: ${theme.fontSizeBig};
-   color: ${theme.colorSecondary};
+   color: ${theme.colorPrimary};
+   @media ${device.devicePhone} {
+      font-size: ${theme.fontSizeTwo};
+   }
+   @media ${device.deviceTablet} {
+      font-size: ${theme.fontSizeThree};
+   }
+   @media ${device.deviceTabletLand} {
+      font-size: ${theme.fontSizeThree};
+   }
+   @media ${device.deviceDesktop} {
+   }
+   @media ${device.deviceDesktopHD} {
+   }
 `;
 
 export const cardText = styled.div`
    padding: 2rem 0;
-   font-size: ${theme.fontSizeBig1X};
    color: ${theme.colorFont};
    text-align: center;
-   color: ${theme.colorFont};
    h3 {
-      font-size: 2.8rem;
-      padding: 3rem 0;
+      font-weight: 500;
+      @media ${device.devicePhone} {
+         font-size: ${theme.fontSizeFour};
+         padding: 2rem 0;
+      }
+      @media ${device.deviceTablet} {
+         font-size: ${theme.fontSizeFive};
+         padding: 2rem 0;
+      }
+      @media ${device.deviceTabletLand} {
+         font-size: ${theme.fontSizeFive};
+         padding: 2rem 0;
+      }
+      @media ${device.deviceDesktop} {
+         font-size: ${theme.fontSizeFive};
+         padding: 2rem 0;
+      }
+      @media ${device.deviceDesktopHD} {
+         font-size: ${theme.fontSizeFive};
+         padding: 2rem 0;
+      }
    }
    p {
-      font-size: 1.8rem;
-      padding: 1rem 0;
+      @media ${device.devicePhone} {
+         font-size: ${theme.fontSizeThree};
+         padding: 1rem 0;
+      }
+      @media ${device.deviceTablet} {
+         font-size: ${theme.fontSizeThree};
+         padding: 1rem 0;
+      }
+      @media ${device.deviceTabletLand} {
+         font-size: ${theme.fontSizeThree};
+         padding: 1rem 0;
+      }
+      @media ${device.deviceDesktop} {
+         font-size: ${theme.fontSizeThree};
+         padding: 1rem 0;
+      }
+      @media ${device.deviceDesktopHD} {
+         font-size: ${theme.fontSizeFour};
+         padding: 1rem 0;
+      }
    }
 `;

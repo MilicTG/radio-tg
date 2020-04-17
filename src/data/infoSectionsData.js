@@ -19,7 +19,7 @@ export const marketingPageInfoBusiness = {
 };
 
 export const marketingPageInfoWedding = {
-   title: 'Čestitajte dan vjenčana, rođendan, godišnjicu...',
+   title: 'Prigodne čestitke',
    rowOne: 'Lijepo je usrećiti nekoga u našem svakodnevnom životu.',
    rowTwo:
       'Vjenčanja, godišnjice braka, rođendani, imendani, prigoda su da na neki način iznenadimo i razveselimo drage ljude. A najbolji način za to je uputiti im čestitku s najljepšim željama i prigodnim pjesmama putem valova Radija Tomislavgrad.',

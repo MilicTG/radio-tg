@@ -12,7 +12,6 @@ import Footer from '../../components/footer/footer.component';
 import imgMarketing from '../../assets/img-marketing.jpg';
 import imgBusiness from '../../assets/img-marketing-business.jpg';
 import imgWedding from '../../assets/img-marketing-wedding.jpg';
-import imgBirthday from '../../assets/img-marketing-birthday.jpg';
 import {
    marketingPageInfoBusiness as businessInfo,
    marketingPageInfoWedding as weddingInfo,
