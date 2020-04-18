@@ -16,6 +16,7 @@ import obvTwo from '../../documents/Dokument2.pdf';
 import obvThree from '../../documents/Dokument3.pdf';
 import obvFour from '../../documents/Dokument4.pdf';
 import natjecaj from '../../documents/Natjecaj.pdf';
+import natjecaj2 from '../../documents/Natjecaj2.pdf';
 
 class NoticePage extends Component {
    constructor() {
@@ -54,6 +55,10 @@ class NoticePage extends Component {
                <NoticeHolder
                   title='Javni natječaj za ZAPOSLENIKA 2020'
                   file={natjecaj}
+               />
+               <NoticeHolder
+                  title='Javni natječaj za izbor i imenovanje: Direktora JP ”RADIO TOMISLAVGRAD d.o.o.", Tomislavgrad'
+                  file={natjecaj2}
                />
             </Container>
             <Footer />
