@@ -50,8 +50,8 @@ class ContactPage extends Component {
                   <Pulse delay={300}>
                      <ContactCard icon={faPhone}>
                         <h3>Telefon</h3>
-                        <p>+387 34 352 549</p>
-                        <p>+387 34 352 909</p>
+                        <p>Redakcija: +387 34 352 909</p>
+                        <p>Marketing: +387 34 353 768</p>
                      </ContactCard>
                      <ContactCard icon={faFax}>
                         <h3>Fax</h3>

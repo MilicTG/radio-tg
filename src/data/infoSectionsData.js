@@ -11,11 +11,10 @@ export const indexPageInfoData = {
 export const marketingPageInfoBusiness = {
    title: 'Reklamirajte svoj posao',
    rowOne:
-      'Obično se kaže da, uz kvalitetu, proizvod prodaje i dobra reklama. To je općepoznata činjenica u poslovnom svijetu.',
+      'Obično se kaže da, uz kvalitetu, proizvod prodaje i dobra reklama. To je općepoznata činjenica u poslovnom svijetu.Kreativnost i radiofoničnost glasova ljudi pred mikrofonom i osposobljenost naših tehničkih urednika, jamče dobar i uspješan marketinški proizvod.',
    rowTwo:
       'Kreativnost i radiofoničnost glasova ljudi pred mikrofonom i osposobljenost naših tehničkih urednika, jamče dobar i uspješan marketinški proizvod.',
-   rowThree:
-      'Zato iskoristite mogućnost oglašavanja na Radiju Tomislavgrad, kako bismo zajednički doprinijeli vašem poslovnom uspjehu.',
+   rowThree: 'Kontaktirajte nas na telefon: +387 34 353 768',
 };
 
 export const marketingPageInfoWedding = {

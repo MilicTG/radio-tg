@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 //components
 import HeaderSmall from '../../components/headerSmall/headerSmall.component';
 import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
-import InfoSectionLeft from '../../components/sectionInfo/sectionInfoLeft.component';
+import InfoSectionLeft from '../../components/sectionInfo/sectionInfoLeftNoContact.component';
 import Footer from '../../components/footer/footer.component';
 
 //data

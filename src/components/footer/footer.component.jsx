@@ -63,8 +63,8 @@ const footer = () => {
                      </thead>
                      <tbody>
                         <tr>
-                           <td>+387 34 352 549</td>
-                           <td>+387 34 352 909</td>
+                           <td>Marketing: +387 34 353 768</td>
+                           <td>Redakcija: +387 34 352 909</td>
                            <td>radiotomislavgrad@gmail.com</td>
                            <td>radio.tomislavgrad@tel.net.ba</td>
                         </tr>
