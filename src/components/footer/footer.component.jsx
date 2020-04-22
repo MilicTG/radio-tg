@@ -46,7 +46,7 @@ const footer = () => {
                      </thead>
                      <tbody>
                         <tr>
-                           <td>Trg Franje Tuđmana,</td>
+                           <td>Trg dr. Franje Tuđmana,</td>
                            <td>80240, Tomislavgrad,</td>
                            <td>Hercegbosanska županija,</td>
                            <td>Bosna i Hercegovina</td>
