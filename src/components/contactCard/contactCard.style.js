@@ -18,8 +18,10 @@ export const cardWrapper = styled.div`
    @media ${device.deviceTabletLand} {
    }
    @media ${device.deviceDesktop} {
+      padding: 1rem 1rem;
    }
    @media ${device.deviceDesktopHD} {
+      padding: 2rem 2rem;
    }
 `;
 

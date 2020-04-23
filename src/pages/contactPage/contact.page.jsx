@@ -65,7 +65,7 @@ class ContactPage extends Component {
                      </ContactCard>
                      <ContactCard icon={faMapMarkerAlt}>
                         <h3>Adresa</h3>
-                        <p>Trg dr. Franje Tuđmana</p>
+                        <p>Trg dr. Franje Tuđmana bb</p>
                         <p>80240, Tomislavgrad,</p>
                         <p>Bosna i Hercegovina</p>
                      </ContactCard>
