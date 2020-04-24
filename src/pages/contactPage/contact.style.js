@@ -21,6 +21,7 @@ export const contactCardsWrapper = styled.section`
    }
    @media ${device.deviceDesktop} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 0.5rem;
    }
    @media ${device.deviceDesktopHD} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
