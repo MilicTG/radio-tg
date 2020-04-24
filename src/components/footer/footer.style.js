@@ -10,22 +10,22 @@ export const footerContainer = styled.footer`
 export const footerInfoContainer = styled.div`
    display: grid;
    grid-template-columns: 1fr;
-   grid-row-gap: 3rem;
+   grid-row-gap: 2rem;
    padding: 4rem 0;
    @media ${device.deviceTablet} {
       justify-self: stretch;
       grid-column-gap: 10rem;
-      grid-row-gap: 3rem;
+      grid-row-gap: 2rem;
       grid-template-columns: 1fr 1fr;
    }
    @media ${device.deviceTabletLand} {
       justify-self: stretch;
       grid-column-gap: 10rem;
-      grid-row-gap: 3rem;
+      grid-row-gap: 2rem;
       grid-template-columns: 1fr 1fr;
    }
    @media ${device.deviceDesktop} {
-      grid-column-gap: 7rem;
+      grid-column-gap: 5rem;
       grid-template-columns: 1fr 1fr 1fr 1fr;
    }
 `;
