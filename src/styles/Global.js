@@ -27,6 +27,7 @@ body {
     display: block;
       @media  (min-width: 600px) {
         display: none;}}
+
 }
 
 `;

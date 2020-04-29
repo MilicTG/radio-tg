@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play } from '@styled-icons/fa-solid/Play';
+import { Stop } from '@styled-icons/fa-solid/Stop';
 import { Playlist } from '@styled-icons/boxicons-solid/Playlist';
 import { Android } from '@styled-icons/fa-brands/Android';
 import { Windows } from '@styled-icons/boxicons-logos/Windows';
@@ -26,18 +27,29 @@ const audioPlayer = (props) => {
 
    return (
       <Wrapper>
-         <PlayerBtn>
-            <Play size='32' text='Radio Tomislavgrad' />
+         <PlayerBtn
+            tooltip='Slusajte online'
+            tooltip-position='top'
+            onClick={props.checkStream}
+            className='tooltips'
+         >
+            {!props.isPlaying ? <Play size='32' /> : <Stop size='32' />}
+            <span>{props.tooltipPlayText}</span>
          </PlayerBtn>
          <Text>{props.text}</Text>
-         <PlayerBtn onClick={downloadFile}>
+         <PlayerBtn onClick={downloadFile} className='hide-on-mobile tooltips'>
             <Playlist />
+            <span>Preuzmite za slušanje u winampu ili drugom playeru</span>
          </PlayerBtn>
-         <PlayerBtn onClick={windowsApp}>
+         <PlayerBtn onClick={windowsApp} className='hide-on-mobile tooltips'>
             <Windows />
+            <span>Preuzmite aplikaciju za vaše računalo, trentno u izradi</span>
          </PlayerBtn>
-         <PlayerBtn onClick={androidApp}>
+         <PlayerBtn onClick={androidApp} className='hide-on-mobile tooltips'>
             <Android />
+            <span>
+               Preuzmite aplikaciju za vaš mobilni uređaj, trenutno u izradi
+            </span>
          </PlayerBtn>
       </Wrapper>
    );

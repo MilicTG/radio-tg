@@ -43,12 +43,28 @@ export default class IndexPage extends Component {
          titleSecond: 'Tomislavgrad',
          titleFreq: '95.1,95.9 i 103.3Mhz',
          headerBackground: '',
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
          url: 'http://163.172.213.155:8038/;',
+         tooltipPlayText: 'Slušajte Radio Tomislavgrad online',
       };
+      this.audio = null;
    }
 
    componentDidMount() {
       this.setHeaderBackground();
+   }
+
+   componentWillUnmount() {
+      this.setState({
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
+      });
+      if (this.audio == null) {
+         console.log('ne svira');
+      } else {
+         this.audio.pause();
+      }
    }
 
    setHeaderBackground = () => {
@@ -56,6 +72,35 @@ export default class IndexPage extends Component {
       this.setState({
          headerBackground: background,
       });
+   };
+
+   checkStream = () => {
+      if (!this.state.isPlaying) {
+         this.playStream();
+      } else {
+         this.stopStream();
+      }
+   };
+
+   playStream = () => {
+      this.setState({
+         isPlaying: true,
+         isPlayingText: 'Slušate uživo',
+      });
+      this.audio = new Audio(this.state.url);
+      this.audio.load();
+      this.audio.play();
+      console.log('svira');
+   };
+
+   stopStream = () => {
+      this.setState({
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
+      });
+      this.audio.pause();
+      this.audio = null;
+      console.log('stao');
    };
 
    render() {
@@ -68,7 +113,13 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-               <AudioPlayer text='Slusajte Uzivo' file={plsFile} />
+               <AudioPlayer
+                  text={this.state.isPlayingText}
+                  file={plsFile}
+                  checkStream={this.checkStream}
+                  isPlaying={this.state.isPlaying}
+                  tooltipPlayText={this.state.tooltipPlayText}
+               />
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'

@@ -33,7 +33,10 @@ export default class RTGMusicPage extends Component {
          titleSecond: 'Music',
          titleFreq: 'Vaš najbolji internet radio',
          headerBackground: '',
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
          url: 'http://163.172.213.155:8197/stream',
+         tooltipPlayText: 'Slušajte RTG Music - najbolji online radio',
       };
    }
 
@@ -43,7 +46,8 @@ export default class RTGMusicPage extends Component {
 
    componentWillUnmount() {
       this.setState({
-         play: false,
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
       });
       if (this.audio == null) {
          console.log('ne svira');
@@ -59,6 +63,35 @@ export default class RTGMusicPage extends Component {
       });
    };
 
+   checkStream = () => {
+      if (!this.state.isPlaying) {
+         this.playStream();
+      } else {
+         this.stopStream();
+      }
+   };
+
+   playStream = () => {
+      this.setState({
+         isPlaying: true,
+         isPlayingText: 'Slušate uživo',
+      });
+      this.audio = new Audio(this.state.url);
+      this.audio.load();
+      this.audio.play();
+      console.log('svira');
+   };
+
+   stopStream = () => {
+      this.setState({
+         isPlaying: false,
+         isPlayingText: 'Slušajte uživo',
+      });
+      this.audio.pause();
+      this.audio = null;
+      console.log('stao');
+   };
+
    render() {
       return (
          <>
@@ -69,7 +102,13 @@ export default class RTGMusicPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-               <AudioPlayer text='Slusajte Uzivo' file={plsFile} />
+               <AudioPlayer
+                  text={this.state.isPlayingText}
+                  file={plsFile}
+                  checkStream={this.checkStream}
+                  isPlaying={this.state.isPlaying}
+                  tooltipPlayText={this.state.tooltipPlayText}
+               />
             </Header>
 
             <Footer />
