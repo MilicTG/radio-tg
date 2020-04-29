@@ -68,7 +68,7 @@ export default class IndexPage extends Component {
                titleFreq={this.state.titleFreq}
                background={this.state.headerBackground}
             >
-               <AudioPlayer text='Slusajte Uzivo' />
+               <AudioPlayer text='Slusajte Uzivo' file={plsFile} />
             </Header>
             <SectionTitle
                title='Naše najslušanije emisije'

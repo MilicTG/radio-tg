@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
+import { Headphone } from '@styled-icons/boxicons-regular/Headphone';
 
 //style
 import ButtonContainer from './buttonRTGMusic.style';
@@ -17,7 +16,7 @@ const btnRTGMusic = (props) => {
             >
                <p className='transparent-button-text'>
                   {props.text}
-                  <FontAwesomeIcon icon={faHeadphones} size='lg' />
+                  <Headphone size='28' />
                </p>
             </ButtonContainer>
          )}

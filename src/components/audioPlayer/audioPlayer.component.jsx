@@ -1,10 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-   faPlay,
-   faPause,
-   faFileAudio,
-} from '@fortawesome/free-solid-svg-icons';
+import { Play } from '@styled-icons/fa-solid/Play';
+import { Playlist } from '@styled-icons/boxicons-solid/Playlist';
+import { Android } from '@styled-icons/fa-brands/Android';
+import { Windows } from '@styled-icons/boxicons-logos/Windows';
 
 //styles
 import {
@@ -14,17 +12,32 @@ import {
 } from './audioPlayer.style';
 
 const audioPlayer = (props) => {
+   const downloadFile = () => {
+      window.location.href = props.file;
+   };
+
+   const windowsApp = () => {
+      alert('Windows aplikacija u izrai');
+   };
+
+   const androidApp = () => {
+      alert('Android aplikacija u izradi');
+   };
+
    return (
       <Wrapper>
          <PlayerBtn>
-            <FontAwesomeIcon icon={faPlay} size='3x' />
+            <Play size='32' text='Radio Tomislavgrad' />
          </PlayerBtn>
          <Text>{props.text}</Text>
-         <PlayerBtn>
-            <FontAwesomeIcon icon={faFileAudio} size='3x' />
+         <PlayerBtn onClick={downloadFile}>
+            <Playlist />
          </PlayerBtn>
-         <PlayerBtn>
-            <FontAwesomeIcon icon='android' size='3x' />
+         <PlayerBtn onClick={windowsApp}>
+            <Windows />
+         </PlayerBtn>
+         <PlayerBtn onClick={androidApp}>
+            <Android />
          </PlayerBtn>
       </Wrapper>
    );

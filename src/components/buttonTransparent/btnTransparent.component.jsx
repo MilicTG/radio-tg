@@ -1,19 +1,13 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileAudio } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
 
 //style
-import ButtonContainer from "./btnTransparent.style.js";
+import ButtonContainer from './btnTransparent.style.js';
 
-const btnTransparent = props => {
-  const downloadFile = () => {
-    window.location.href = props.file;
-  };
-  return (
-    <ButtonContainer onClick={downloadFile}>
-      <FontAwesomeIcon icon={faFileAudio} size="3x" />
-    </ButtonContainer>
-  );
+const btnTransparent = (props) => {
+   const downloadFile = () => {
+      window.location.href = props.file;
+   };
+   return <ButtonContainer onClick={downloadFile}></ButtonContainer>;
 };
 
 export default btnTransparent;

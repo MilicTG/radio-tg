@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-   faPhone,
-   faFax,
-   faEnvelopeOpenText,
-   faMapMarkerAlt,
-} from '@fortawesome/free-solid-svg-icons';
 import Pulse from 'react-reveal/Pulse';
 
 //styles
@@ -48,22 +42,22 @@ class ContactPage extends Component {
             <Container>
                <CardWrapper>
                   <Pulse delay={300}>
-                     <ContactCard icon={faPhone}>
+                     <ContactCard iconStyle='Phone'>
                         <h3>Telefon</h3>
                         <p>Redakcija: +387 34 352 909</p>
                         <p>Marketing: +387 34 353 768</p>
                      </ContactCard>
-                     <ContactCard icon={faFax}>
+                     <ContactCard iconStyle='Fax'>
                         <h3>Fax</h3>
                         <p>+387 34 353 768</p>
                         <p></p>
                      </ContactCard>
-                     <ContactCard icon={faEnvelopeOpenText}>
+                     <ContactCard iconStyle='Email'>
                         <h3>E-Mail</h3>
                         <p>radiotomislavgrad@gmail.com</p>
                         <p>radio.tomislavgrad@tel.net.ba</p>
                      </ContactCard>
-                     <ContactCard icon={faMapMarkerAlt}>
+                     <ContactCard iconStyle='Map'>
                         <h3>Adresa</h3>
                         <p>Trg dr. Franje Tuđmana bb</p>
                         <p>80240, Tomislavgrad,</p>
