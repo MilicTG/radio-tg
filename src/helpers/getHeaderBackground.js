@@ -10,6 +10,15 @@ import imgNine from '../assets/img-head-nine.jpg';
 import imgTen from '../assets/img-head-ten.jpg';
 import imgEleven from '../assets/img-head-eleven.jpg';
 import imgTwelve from '../assets/img-head-twelve.jpg';
+import imgThirteen from '../assets/img-head-thirteen.jpg';
+import imgFourteen from '../assets/img-head-fourteen.jpg';
+import imgFifteen from '../assets/img-head-fifteen.jpg';
+import imgSixteen from '../assets/img-head-sixteen.jpg';
+import imgSeventeen from '../assets/img-head-seventeen.jpg';
+import imgEighteen from '../assets/img-head-eighteen.jpg';
+import imgNineteen from '../assets/img-head-nineteen.jpg';
+import imgTwenty from '../assets/img-head-twenty.jpg';
+import imgTwentyOne from '../assets/img-head-twentyone.jpg';
 
 import imgMusicOne from '../assets/img-music-one.jpg';
 import imgMusicTwo from '../assets/img-music-two.jpg';
@@ -31,6 +40,15 @@ const radioImageArray = [
    imgTen,
    imgEleven,
    imgTwelve,
+   imgThirteen,
+   imgFourteen,
+   imgFifteen,
+   imgSixteen,
+   imgSeventeen,
+   imgEighteen,
+   imgNineteen,
+   imgTwenty,
+   imgTwentyOne,
 ];
 
 const musicImageArray = [

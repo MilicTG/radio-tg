@@ -5,17 +5,31 @@ import { theme } from '../../styles/theme';
 export const playerWrapper = styled.section`
    display: flex;
    align-items: center;
-   height: 7rem;
    border-radius: 10rem;
    background: white;
    margin-top: 10rem;
-   padding: 1rem 3rem;
+   @media ${device.devicePhone} {
+      padding: 1.3rem 1rem;
+   }
+   @media ${device.deviceTablet} {
+      padding: 2rem;
+   }
+   @media ${device.deviceTabletLand} {
+      padding: 2rem;
+   }
+   @media ${device.deviceDesktop} {
+      padding: 2rem;
+   }
+   @media ${device.deviceDesktopHD} {
+      padding: 2rem;
+   }
 `;
 
 export const playerButton = styled.button`
    z-index: 90;
    width: 3rem;
    height: 3rem;
+   background: none;
    border-radius: 50%;
    border: none;
    color: ${theme.colorPrimary};
