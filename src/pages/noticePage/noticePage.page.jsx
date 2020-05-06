@@ -14,7 +14,6 @@ import headImage from '../../assets/img-notice.jpg';
 import obvTwo from '../../documents/CZ.pdf';
 import obvThree from '../../documents/Dokument3.pdf';
 import obvFour from '../../documents/Dokument4.pdf';
-import natjecaj2 from '../../documents/Natjecaj2.pdf';
 
 class NoticePage extends Component {
    constructor() {
@@ -48,10 +47,6 @@ class NoticePage extends Component {
                <NoticeHolder
                   title='Obavijest o zabrani paljenja vatre na otvorenom prostoru'
                   file={obvFour}
-               />
-               <NoticeHolder
-                  title='Javni natječaj za izbor i imenovanje: Direktora JP ”RADIO TOMISLAVGRAD d.o.o.", Tomislavgrad'
-                  file={natjecaj2}
                />
             </Container>
             <Footer />
