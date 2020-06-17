@@ -14,15 +14,16 @@ import Footer from '../../components/footer/footer.component';
 import { getMusicHeaderBackground } from '../../helpers/getHeaderBackground';
 
 //data
-import {
-   musicPageInfoNonStop as nonStop,
-   musicPageInfoParty as hits,
-   musicPageInfoCaffeBar as caffe,
-} from '../../data/infoSectionsData';
-import imgAntena from '../../assets/img-musicPage-antena.jpg';
-import imgParty from '../../assets/img-musicPage-party.jpg';
-import imgCaffeBar from '../../assets/img-musicPage-caffebar.jpg';
+// import {
+//    musicPageInfoNonStop as nonStop,
+//    musicPageInfoParty as hits,
+//    musicPageInfoCaffeBar as caffe,
+// } from '../../data/infoSectionsData';
+// import imgAntena from '../../assets/img-musicPage-antena.jpg';
+// import imgParty from '../../assets/img-musicPage-party.jpg';
+// import imgCaffeBar from '../../assets/img-musicPage-caffebar.jpg';
 import plsFile from '../../assets/RTG-Music.pls';
+import { TreasureMap } from 'styled-icons/remix-fill';
 
 export default class RTGMusicPage extends Component {
    constructor() {
@@ -33,6 +34,7 @@ export default class RTGMusicPage extends Component {
          titleSecond: 'Music',
          titleFreq: 'Vaš najbolji internet radio',
          headerBackground: '',
+         isOnline: false,
          isPlaying: false,
          isPlayingText: 'Slušajte uživo',
          url: 'http://163.172.213.155:8197/stream',
@@ -42,6 +44,20 @@ export default class RTGMusicPage extends Component {
 
    componentDidMount() {
       this.setHeaderBackground();
+      window.addEventListener('online', () => {
+         this.setState({
+            isConnected: true,
+            isPlaying: false,
+         });
+         this.onStableInternetConnection();
+      });
+      window.addEventListener('offline', () => {
+         this.setState({
+            isConnected: false,
+            isPlaying: false,
+         });
+         this.onLostConnection();
+      });
    }
 
    componentWillUnmount() {
@@ -69,6 +85,18 @@ export default class RTGMusicPage extends Component {
       } else {
          this.stopStream();
       }
+   };
+
+   onStableInternetConnection = () => {
+      console.log('ima konekcije');
+      if (this.state.isConnected) {
+         this.playStream();
+      }
+   };
+
+   onLostConnection = () => {
+      console.log('nema konekcije');
+      this.stopStream();
    };
 
    playStream = () => {
