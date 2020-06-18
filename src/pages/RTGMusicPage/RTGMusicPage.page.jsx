@@ -6,8 +6,6 @@ import '../../styles/styles.css';
 //Components
 import Header from '../../components/headerBig/headerBig.component';
 import AudioPlayer from '../../components/audioPlayer/audioPlayer.component';
-import SectionTitle from '../../components/sectionTitle/sectionTitle.component';
-import InfoSectionLeft from '../../components/sectionInfo/sectionInfoLeft.component';
 import Footer from '../../components/footer/footer.component';
 
 //helpers
@@ -23,7 +21,6 @@ import { getMusicHeaderBackground } from '../../helpers/getHeaderBackground';
 // import imgParty from '../../assets/img-musicPage-party.jpg';
 // import imgCaffeBar from '../../assets/img-musicPage-caffebar.jpg';
 import plsFile from '../../assets/RTG-Music.pls';
-import { TreasureMap } from 'styled-icons/remix-fill';
 
 export default class RTGMusicPage extends Component {
    constructor() {
@@ -47,14 +44,12 @@ export default class RTGMusicPage extends Component {
       window.addEventListener('online', () => {
          this.setState({
             isConnected: true,
-            isPlaying: false,
          });
-         this.onStableInternetConnection();
+         this.onReConnect();
       });
       window.addEventListener('offline', () => {
          this.setState({
             isConnected: false,
-            isPlaying: false,
          });
          this.onLostConnection();
       });
@@ -87,16 +82,27 @@ export default class RTGMusicPage extends Component {
       }
    };
 
-   onStableInternetConnection = () => {
+   onReConnect = () => {
       console.log('ima konekcije');
-      if (this.state.isConnected) {
-         this.playStream();
+      if (this.state.isConnected && this.state.isPlaying) {
+         this.audio.load();
+         this.audio.play();
       }
    };
 
    onLostConnection = () => {
       console.log('nema konekcije');
-      this.stopStream();
+   };
+
+   onStreamEnd = () => {
+      console.log('pokrenuo');
+      this.audio.addEventListener('stalled', () => {
+         console.log('stalled');
+         alert(
+            'Internet veza prespora, molimo osvježite stranicu i pokenite player ponovno'
+         );
+         this.onReConnect();
+      });
    };
 
    playStream = () => {
@@ -107,6 +113,8 @@ export default class RTGMusicPage extends Component {
       this.audio = new Audio(this.state.url);
       this.audio.load();
       this.audio.play();
+      this.onStreamEnd();
+
       console.log('svira');
    };
 

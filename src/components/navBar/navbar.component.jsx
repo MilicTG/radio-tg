@@ -72,19 +72,20 @@ class Navbar extends Component {
                            <li>
                               <Link to='/marketing'>Marketing</Link>
                            </li>
-                           <li>
+                           {/* <li>
                               <Link to='/oglasi'>Oglasi</Link>
-                           </li>
+                           </li> */}
                            <li>
                               <Link to='/kontakt'>Kontakt</Link>
                            </li>
                         </Fade>
                         <Fade right>
                            <li>
-                              <RTGMusicBTN   
-                              text='RTG Music'
-                              component={Link}
-                              to='/rtg-music' />   
+                              <RTGMusicBTN
+                                 text='RTG Music'
+                                 component={Link}
+                                 to='/rtg-music'
+                              />
                            </li>
                         </Fade>
                      </ul>
