@@ -34,7 +34,7 @@ export default class RTGMusicPage extends Component {
          isOnline: false,
          isPlaying: false,
          isPlayingText: 'Slušajte uživo',
-         url: 'http://163.172.213.155:8197/stream',
+         url: 'http://163.172.47.181:8197/stream',
          tooltipPlayText: 'Slušajte RTG Music - najbolji online radio',
       };
    }

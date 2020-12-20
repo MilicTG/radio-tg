@@ -45,7 +45,7 @@ export default class IndexPage extends Component {
          headerBackground: '',
          isPlaying: false,
          isPlayingText: 'Slušajte uživo',
-         url: 'http://163.172.213.155:8038/;',
+         url: 'http://163.172.47.181:8038/;',
          tooltipPlayText: 'Slušajte Radio Tomislavgrad online',
       };
       this.audio = null;
